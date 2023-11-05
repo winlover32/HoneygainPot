@@ -21,5 +21,5 @@
 ![Screenshot 2023-11-05 at 13 36 25](https://github.com/gorouflex/HoneygainPot/assets/98001973/8db3a977-3102-4400-aa4b-08c2f1400313)
 
 
-## Thanks to
+## Big thanks to
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
