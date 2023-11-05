@@ -6,6 +6,7 @@
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
 <img alt="Manual trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg">
 <p align="center">
+
   <a href="#feature">Feature</a>
   •
   <a href="#usage">Usage</a>     
@@ -21,7 +22,7 @@
   4. For the secret name, use `MAIL_JWD` to set your honeygain mail and `PASS_JWD` for your password
   5. Go to your forked repository and go to the Actions tab and press the button `I understand my workflows, go ahead and enable them`
 
-<img src="Img/GitSettings.png" alt="GitHub Settings" title="GitHub Settings">
+![GitSettings](https://github.com/gorouflex/HoneygainPot/assets/98001973/d8d33621-5717-488d-9a80-6db395c8ac9d)
 
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
