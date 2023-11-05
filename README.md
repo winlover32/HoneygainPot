@@ -24,9 +24,9 @@
 
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
-Well, GitHub uses UTC time for scheduling workflows, so we should convert it to our timezone.
+Well, GitHub uses UTC time (UTC +0) for scheduling workflows, so we should convert it to our timezone.
 
-For example: If I want to set the daily trigger to trigger at 9pm (UTC +7), I have to set it to 2pm or 14pm (24-hour format) (UTC) (2+7=9).
+For example: If I want to set the daily trigger to trigger at 9pm (UTC +7), I have to set it to 2pm or 14pm (24-hour format) (UTC±0) (2+7=9).
 
 ```
 name: Daily claim
@@ -34,7 +34,7 @@ on:
   schedule:
     - cron: '0 14 * * *' # UTC Time, replace 0 14
 ```
-So, if I want the daily trigger to run at 5am (UTC +7), I have to set it to 10pm (UTC) (use 24-hour format):
+So, if I want the daily trigger to run at 5am (UTC +7), I have to set it to 10pm (UTC±0) (use 24-hour format):
 ```
 name: Daily claim
 on:
