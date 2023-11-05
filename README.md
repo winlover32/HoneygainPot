@@ -1,12 +1,10 @@
 <h1 align="center">Honeygain Pot</h1>
 <h4 align="center">A bot that gains honeygain pot every day</h4>
 <h4 align="center">Powered by GitHub Actions and Python</h4>
-
 <p align="center">
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
 <img alt="Manual trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg">
 <p align="center">
-
   <a href="#feature">Feature</a>
   •
   <a href="#usage">Usage</a>     
@@ -32,4 +30,4 @@ For example: If I want to set the daily trigger to trigger at 9pm (UTC +7) so I 
 
 ## Big thanks to
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
-- [rfoal](https://github.com/rfoel/)-[duolingo](https://github.com/rfoel/duolingo) for idea
+- [rfoal](https://github.com/rfoel/)-[duolingo](https://github.com/rfoel/duolingo) for ideas
