@@ -1,5 +1,5 @@
 <h1 align="center">Honeygain Pot</h1>
-<h4 align="center">A bot that claim honeygain pot every day</h4>
+<h4 align="center">🐝 A bot that claim honeygain pot every day 🍯</h4>
 <h4 align="center">Powered by GitHub Actions and Python</h4>
 <p align="center">
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
@@ -10,9 +10,9 @@
   <a href="#usage">Usage</a>     
 </p>
 
-# Feature
-- Claims honeygain pot and achievement rewards every day
-# Usage
+# Feature 
+- Claims honeygain pot and achievement rewards every day 🔥
+# Usage 
 
   1. [Fork this repository](https://github.com/gorouflex/honeygainpot/fork)  
   2. Go to your forked repository
