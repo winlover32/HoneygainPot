@@ -1,5 +1,5 @@
 <h1 align="center">Honeygain Pot</h1>
-<h4 align="center">A bot that gains honeygain pot every day</h4>
+<h4 align="center">A bot that claim honeygain pot every day</h4>
 <h4 align="center">Powered by GitHub Actions and Python</h4>
 <p align="center">
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
@@ -24,10 +24,23 @@
 
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
-Well, GitHub uses UTC time as the workflow time scheduled so we should convert it to our timezone.
+Well, GitHub uses UTC time for scheduling workflows, so we should convert it to our timezone.
 
-For example: If I want to set the daily trigger to trigger at 9pm (UTC +7) so I have to set it to 2pm (UTC) (2+7=9)
+For example: If I want to set the daily trigger to trigger at 9pm (UTC +7), I have to set it to 2pm or 14pm (24-hour format) (UTC) (2+7=9).
 
+```
+name: Daily claim
+on:
+  schedule:
+    - cron: '0 14 * * *' # UTC Time, replace 0 14
+```
+So, if I want the daily trigger to run at 5am (UTC +7), I have to set it to 10pm (UTC) (use 24-hour format):
+```
+name: Daily claim
+on:
+  schedule:
+    - cron: '0 22 * * *' # UTC Time
+```
 ## Big thanks to
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
 - [rfoal](https://github.com/rfoel/)-[duolingo](https://github.com/rfoel/duolingo) for ideas
