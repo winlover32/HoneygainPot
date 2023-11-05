@@ -3,6 +3,9 @@
 <h4 align="center">Powered by GitHub Actions</h4>
 
 <p align="center">
+<img alt="Daily status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
+<img alt="Daily status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg">
+<p align="center">
   <a href="#feature">Feature</a>
   •
   <a href="#usage">Usage</a>     
