@@ -18,7 +18,8 @@
   4. For the secret name use `MAIL_JWD` , set to your honeygain mail and `PASS_JWD` for your password
   5. Go the your forked repository and go the Actions tab and press the button `I understand my workflows, go ahead and enable them`
 
-![image](https://github.com/gorouflex/HoneyGainPot/assets/98001973/f9e1c56d-23d0-4662-9d0b-9dd1e8e8ad59)
+![Screenshot 2023-11-05 at 13 36 25](https://github.com/gorouflex/HoneygainPot/assets/98001973/8db3a977-3102-4400-aa4b-08c2f1400313)
+
 
 ## Thanks to
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
