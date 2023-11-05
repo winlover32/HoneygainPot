@@ -21,7 +21,7 @@
   4. For the secret name, use `MAIL_JWD` to set your honeygain mail and `PASS_JWD` for your password
   5. Go to your forked repository and go to the Actions tab and press the button `I understand my workflows, go ahead and enable them`
 
-<p align="center"><img src="Img/GitSettings.png" alt="GitHub Settings" title="GitHub Settings"></p>
+<img src="Img/GitSettings.png" alt="GitHub Settings" title="GitHub Settings">
 
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
