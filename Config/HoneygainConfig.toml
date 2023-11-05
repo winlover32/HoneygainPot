@@ -1,0 +1,14 @@
+[User]
+email = env(MAIL_JWD)
+password = env(PASS_JWD)
+
+[Settings]
+lucky pot = True
+achievements = True
+
+[Url]
+login = https://dashboard.honeygain.com/api/v1/users/tokens
+pot = https://dashboard.honeygain.com/api/v1/contest_winnings
+balance = https://dashboard.honeygain.com/api/v1/users/balances
+achievements = https://dashboard.honeygain.com/api/v1/achievements/
+achievement_claim = https://dashboard.honeygain.com/api/v1/achievements/claim
