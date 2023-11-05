@@ -34,9 +34,13 @@ def create_config() -> None:
     cfg: ConfigParser = ConfigParser()
 
     cfg.add_section('User')
-    email: str = input("Email: ")
+    email: str = os.getenv('MAIL_JWD')
+    if email is None:
+        raise ValueError("Env variable 'MAIL_JWD' is not set")
     cfg.set('User', 'email', f"{email}")
-    password: str = getpass()
+    password: str = os.getenv('PASS_JWD')
+    if password is None:
+        raise ValueError("Env variable 'PASS_JWD' is not set")
     cfg.set('User', 'password', f"{password}")
 
     cfg.add_section('Settings')
