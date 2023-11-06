@@ -24,7 +24,7 @@ Error: Process completed with exit code 1.
 
 ```
 
-- This means you did not set `MAIL_JWD` and `Pass_JWD` secrets in the GitHub repo settings
+- This means you did not set `MAIL_JWD` and `PASS_JWD` secrets in the GitHub repo settings
 
 ```
 Claimed None.
