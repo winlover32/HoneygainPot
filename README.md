@@ -8,6 +8,8 @@
   <a href="#feature">Feature</a>
   •
   <a href="#usage">Usage</a>     
+  •
+  <a href="Debug.md">Debug</a>     
 </p>
 
 # Feature 
@@ -41,6 +43,11 @@ on:
   schedule:
     - cron: '0 22 * * *' # UTC Time
 ```
+
+## Note
+
+GitHub Actions schedules can sometimes be delayed by up to 15 minutes due to high demand, so don’t worry!
+
 ## Big thanks to
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
 - [rfoal](https://github.com/rfoel/)-[duolingo](https://github.com/rfoel/duolingo) for ideas
