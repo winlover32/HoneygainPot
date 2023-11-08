@@ -30,20 +30,15 @@ def create_config() -> None:
           email: str = os.getenv('MAIL_JWD')
           password: str = os.getenv('PASS_JWD')
         except:
-          print("Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD' ")
-          print("Please refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation")
-          print("Or create an Issues on GitHub if it still doesn't for you")
-          exit(-1)
+          print("Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD'.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
           
     else:
         try:
           email: str = input("Email: ")
           password: str = getpass()
         except:
-          print("Error code 3: Cannot receive any input, make sure 'IsGit' = 1")
-          print("Please refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation")
-          print("Or create an Issues on GitHub if it still doesn't for you")
-          exit(-1)
+          print("Error code 3: Cannot receive any input, make sure 'IsGit' = 1.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
+          
     cfg.set('User', 'email', f"{email}")
     cfg.set('User', 'password', f"{password}")
 
@@ -170,7 +165,7 @@ def gen_token(s: requests.session, invalid: bool = False) -> str | None:
             token: dict = login(s)
             # check if token is valid and doesn't have false credentials in it.
             if "title" in token:
-                print("Error code 4: Wrong login credentials,please enter the right ones.")
+                print("Error code 4: Wrong login credentials,please enter the right ones.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
                 return None
             json.dump(token, f)
 
@@ -190,7 +185,10 @@ def achievements_claim(s: requests.session) -> bool:
     if settings['achievements_bool']:
         # get all achievements
         achievements: Response = s.get(urls['achievements'], headers=header)
-        achievements: dict = achievements.json()
+        try:
+          achievements: dict = achievements.json()
+        except:
+            print("Error code 2: You are not eligible to get the lucky pot.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
         # Loop over all achievements and claim them, if completed.
         try:
             for achievement in achievements['data']:
@@ -234,6 +232,7 @@ def main() -> None:
         header = {'Authorization': f'Bearer {token}'}
         if not achievements_claim(s):
             print('Failed to claim achievements.')
+            print("Error code 2: You are not eligible to get the lucky pot.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
         # check if the token is valid by trying to get the current balance with it
         dashboard: Response = s.get(urls['balance'], headers=header)
         dashboard: dict = dashboard.json()
@@ -252,12 +251,8 @@ def main() -> None:
             try:
               print(f'Claimed {pot_claim["data"]["credits"]} Credits.')
             except:
-              print("Error code 2: You are not eligible to get the lucky pot")
-              print("Please refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation")
-              print("Or create an Issues on GitHub if it still doesn't for you")
-              exit(-1)
-
-
+              print("Error code 2: You are not eligible to get the lucky pot.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
+  
         # gets the pot winning credits
         pot_winning: Response = s.get(urls['pot'], headers=header)
         pot_winning: dict = pot_winning.json()
