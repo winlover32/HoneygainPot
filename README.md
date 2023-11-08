@@ -26,7 +26,7 @@
 
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
-Daily workflows file path : `.github/workflows/daily.yml`
+Daily workflows file path (default is 14:00 UTC +0): `.github/workflows/daily.yml`
 
 Well, GitHub uses UTC time (UTC +0) for scheduling workflows, so we should convert it to our timezone.
 
