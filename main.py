@@ -16,29 +16,34 @@ config_path: str = config_folder + '/HoneygainConfig.toml'
 
 header: dict[str, str] = {'Authorization': ''}
 
-# Creates a Log
-if not os.path.exists('Logs'):
-    os.mkdir('Logs')
-logging.basicConfig(filename='Logs/HoneygainAutoClaim.log', filemode='w', encoding='utf-8', level=logging.INFO,
-                    format='%(levelname)s ' '%(asctime)s ' '%(message)s', datefmt='%d/%m/%Y %H:%M:%S')
-logging.info("Started HoneygainAutoClaim!")
-print('Started HoneygainAutoClaim!')
+print('Starting HoneygainPot')
 
 def create_config() -> None:
     """
     Creates a config with default values.
     """
-    logging.warning('Generating new Config.')
-    print('Generating new Config!')
     cfg: ConfigParser = ConfigParser()
 
     cfg.add_section('User')
     if os.getenv('IsGit') == '1':
-        email: str = os.getenv('MAIL_JWD')
-        password: str = os.getenv('PASS_JWD')
+        try:
+          email: str = os.getenv('MAIL_JWD')
+          password: str = os.getenv('PASS_JWD')
+        except:
+          print("Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD' ")
+          print("Please refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation")
+          print("Or create an Issues on GitHub if it still doesn't for you")
+          exit(-1)
+          
     else:
-        email: str = input("Email: ")
-        password: str = getpass()
+        try:
+          email: str = input("Email: ")
+          password: str = getpass()
+        except:
+          print("Error code 3: Cannot receive any input, make sure 'IsGit' = 1")
+          print("Please refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation")
+          print("Or create an Issues on GitHub if it still doesn't for you")
+          exit(-1)
     cfg.set('User', 'email', f"{email}")
     cfg.set('User', 'password', f"{password}")
 
@@ -105,8 +110,6 @@ def get_settings(cfg: ConfigParser) -> dict[str, bool]:
 
 
 if not os.path.exists(config_folder):
-    logging.warning('Creating config folder!')
-    print('Creating config folder!')
     os.mkdir(config_folder)
 
 if not os.path.isfile(config_path) or os.stat(config_path).st_size == 0:
@@ -139,19 +142,12 @@ except configparser.NoOptionError or configparser.NoSectionError:
 
 
 def login(s: requests.session) -> json.loads:
-    """
-    Gets the new token with login data.
-    :param s: currently used session
-    :return: json containing the new token
-    """
-    logging.warning('Logging in to Honeygain!')
-    print('Logging in to Honeygain!')
+    print('Logging in to Honeygain')
     token: Response = s.post(urls['login'], json=payload)
     try:
         return json.loads(token.text)
     except json.decoder.JSONDecodeError:
-        logging.error('You have exceeded your login tries.\n\nPlease wait a few hours or return tomorrow.')
-        print("You have exceeded your login tries.\n\nPlease wait a few hours or return tomorrow.")
+        print("Error code 10: You have exceeded your login tries.\n\nPlease wait a few hours or return tomorrow.")
         exit(-1)
 
 
@@ -164,7 +160,6 @@ def gen_token(s: requests.session, invalid: bool = False) -> str | None:
     """
     # creating token.json if not existent
     if not os.path.isfile(token_file) or os.stat(token_file).st_size == 0 or invalid:
-        logging.warning('Generating new Token!')
         print('Generating new Token!')
         # generating new token if the file is empty or is invalid
         with open(token_file, 'w') as f:
@@ -175,8 +170,7 @@ def gen_token(s: requests.session, invalid: bool = False) -> str | None:
             token: dict = login(s)
             # check if token is valid and doesn't have false credentials in it.
             if "title" in token:
-                print("Wrong Login Credentials. Please enter the right ones.")
-                logging.error("Wrong Login Credentials. Please enter the right ones.")
+                print("Error code 4: Wrong login credentials,please enter the right ones.")
                 return None
             json.dump(token, f)
 
@@ -217,8 +211,7 @@ def achievements_claim(s: requests.session) -> bool:
             if 'message' in achievements:
                 token: str = gen_token(s, True)
                 if token is None:
-                    print("Closing HoneygainAutoClaim! Due to false login Credentials.")
-                    logging.info("Closing HoneygainAutoClaim! Due to false login Credentials.")
+                    print("Exiting HoneygainPot due to false login credentials")
                     exit(-1)
                 # header for all further requests
                 header = {'Authorization': f'Bearer {token}'}
@@ -235,20 +228,17 @@ def main() -> None:
     with requests.session() as s:
         token: str = gen_token(s)
         if token is None:
-            print("Closing HoneygainAutoClaim! Due to false login Credentials.")
-            logging.info("Closing HoneygainAutoClaim! Due to false login Credentials.")
+            print("Closing HoneygainPot due to false login credentials")
             exit(-1)
         # header for all further requests
         header = {'Authorization': f'Bearer {token}'}
         if not achievements_claim(s):
-            logging.error('Failed to claim achievements.')
             print('Failed to claim achievements.')
         # check if the token is valid by trying to get the current balance with it
         dashboard: Response = s.get(urls['balance'], headers=header)
         dashboard: dict = dashboard.json()
         if 'code' in dashboard and dashboard['code'] == 401:
             print('Invalid token generating new one.')
-            logging.info('Invalid token generating new one.')
             token: str = gen_token(s, True)
             header['Authorization'] = f'Bearer {token}'
         # gets the pot winning credits
@@ -259,8 +249,14 @@ def main() -> None:
             # The post below sends the request, so that the pot claim gets made
             pot_claim: Response = s.post(urls['pot'], headers=header)
             pot_claim: dict = pot_claim.json()
-            print(f'Claimed {pot_claim["data"]["credits"]} Credits.')
-            logging.info(f'Claimed {pot_claim["data"]["credits"]} Credits.')
+            try:
+              print(f'Claimed {pot_claim["data"]["credits"]} Credits.')
+            except:
+              print("Error code 2: You are not eligible to get the lucky pot")
+              print("Please refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation")
+              print("Or create an Issues on GitHub if it still doesn't for you")
+              exit(-1)
+
 
         # gets the pot winning credits
         pot_winning: Response = s.get(urls['pot'], headers=header)
@@ -271,10 +267,7 @@ def main() -> None:
         balance: Response = s.get(urls['balance'], headers=header)
         balance: dict = balance.json()
         print(f'You currently have {balance["data"]["payout"]["credits"]} Credits.')
-        logging.info(f'You currently have {balance["data"]["payout"]["credits"]} Credits.')
-        print('Closing HoneygainAutoClaim!')
-        logging.info('Closing HoneygainAutoClaim!')
-
+        print('Closing HoneygainPot')
 
 if __name__ == '__main__':
     main()

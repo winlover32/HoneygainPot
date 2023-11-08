@@ -1,7 +1,8 @@
 <h1 align="center">Debug</h1>
 
-### GitHub Actions
+## GitHub Actions
 
+### Error code 1
 ```
 Logging in to Honeygain!
 Traceback (most recent call last):
@@ -24,7 +25,20 @@ Error: Process completed with exit code 1.
 
 ```
 
-- This means you did not set `MAIL_JWD` and `PASS_JWD` secrets in the GitHub repo settings
+or
+
+```
+Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD' 
+```
+- Fix: This means you did not set `MAIL_JWD` and `PASS_JWD` secrets in the GitHub repo settings
+
+### Error code 2
+
+```
+Error code 2: You are not eligible to get the lucky pot
+```
+
+or
 
 ```
 Claimed None.
@@ -37,7 +51,16 @@ KeyError: 'data'
 
 ```
 
-- You are not eligible to get the lucky pot if you do not reach 15mb of sharing
+- Fix: You are not eligible to get the lucky pot if you do not reach 15mb of sharing
+
+### Error code 3
+
+```
+Error code 3: Cannot receive any input, make sure 'IsGit' = 1
+```
+
+or
+
 
 ```
 Generating new Config!
@@ -51,5 +74,13 @@ Email:
 
 ```
 
-- This is because GitHub Actions is basically a non-input console, so the code cannot receive the input, make sure that `IsGit` is set to 1 in the workflows file `daily.yml`
+- Fix: This is because GitHub Actions is basically a non-input console, so the code cannot receive the input, make sure that `IsGit` is set to 1 in the workflows file `daily.yml`
 
+
+### Error code 4
+
+```
+Error code 4: Wrong login credentials,please enter the right ones
+```
+
+- Fix: Check your credenrials again

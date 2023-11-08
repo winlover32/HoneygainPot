@@ -5,13 +5,17 @@
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
 <img alt="Manual trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg">
 <p align="center">
+  <a href="#notes">Notes</a>
+  •
+  <a href="Debug.md">Debug</a>     
+  •
   <a href="#feature">Feature</a>
   •
   <a href="#usage">Usage</a>     
-  •
-  <a href="Debug.md">Debug</a>     
 </p>
 
+# Notes
+- Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
 # Feature 
 - Claims honeygain pot and achievement rewards every day 🔥
 # Usage 
