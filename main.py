@@ -9,14 +9,21 @@ from getpass import getpass
 import requests
 from requests import Response
 
-# path to the token file
 config_folder: str = 'Config'
 token_file: str = config_folder + '/HoneygainToken.json'
 config_path: str = config_folder + '/HoneygainConfig.toml'
 
 header: dict[str, str] = {'Authorization': ''}
 
-print('Starting HoneygainPot')
+print("""██╗  ██╗ ██████╗ ███╗   ██╗███████╗██╗   ██╗ ██████╗  █████╗ ██╗███╗   ██╗██████╗  ██████╗ ████████╗
+██║  ██║██╔═══██╗████╗  ██║██╔════╝╚██╗ ██╔╝██╔════╝ ██╔══██╗██║████╗  ██║██╔══██╗██╔═══██╗╚══██╔══╝
+███████║██║   ██║██╔██╗ ██║█████╗   ╚████╔╝ ██║  ███╗███████║██║██╔██╗ ██║██████╔╝██║   ██║   ██║   
+██╔══██║██║   ██║██║╚██╗██║██╔══╝    ╚██╔╝  ██║   ██║██╔══██║██║██║╚██╗██║██╔═══╝ ██║   ██║   ██║   
+██║  ██║╚██████╔╝██║ ╚████║███████╗   ██║   ╚██████╔╝██║  ██║██║██║ ╚████║██║     ╚██████╔╝   ██║   
+╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚═╝      ╚═════╝    ╚═╝   
+""")
+print()
+print('Starting HoneygainPot 🍯')
 
 def create_config() -> None:
     """
@@ -138,7 +145,7 @@ except configparser.NoOptionError or configparser.NoSectionError:
 
 
 def login(s: requests.session) -> json.loads:
-    print('Logging in to Honeygain')
+    print('Logging in to Honeygain 📣')
     token: Response = s.post(urls['login'], json=payload)
     try:
         return json.loads(token.text)
@@ -211,7 +218,7 @@ def achievements_claim(s: requests.session) -> bool:
             if 'message' in achievements:
                 token: str = gen_token(s, True)
                 if token is None:
-                    print("Exiting HoneygainPot due to false login credentials")
+                    print("Exiting HoneygainPot due to false login credentials ❌")
                     exit(-1)
                 # header for all further requests
                 header = {'Authorization': f'Bearer {token}'}
@@ -228,12 +235,12 @@ def main() -> None:
     with requests.session() as s:
         token: str = gen_token(s)
         if token is None:
-            print("Closing HoneygainPot due to false login credentials")
+            print("Closing HoneygainPot due to false login credentials ❌")
             exit(-1)
         # header for all further requests
         header = {'Authorization': f'Bearer {token}'}
         if not achievements_claim(s):
-            print('Failed to claim achievements.')
+            print('Failed to claim achievements ❌')
             print("Error code 2: You are not eligible to get the lucky pot.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
             exit(-1)
         # check if the token is valid by trying to get the current balance with it
@@ -265,8 +272,8 @@ def main() -> None:
         # gets the current balance
         balance: Response = s.get(urls['balance'], headers=header)
         balance: dict = balance.json()
-        print(f'You currently have {balance["data"]["payout"]["credits"]} Credits.')
-        print('Closing HoneygainPot')
+        print(f'You currently have {balance["data"]["payout"]["credits"]} credits 🍯')
+        print('Closing HoneygainPot ✅')
 
 if __name__ == '__main__':
     main()
