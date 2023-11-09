@@ -6,13 +6,10 @@ jobs:
   Manual trigger:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          fetch-depth: 0
+      - uses: actions/checkout@v3    
       - name: Run HoneygainPot
-        - run: python main.py
-          env:
-            MAIL_JWD: ${{ secrets.MAIL_JWD }}
-            PASS_JWD: ${{ secrets.PASS_JWD }}
-            IsGit: 1
+        run: python main.py
+        env:
+         MAIL_JWD: ${{ secrets.MAIL_JWD }}
+         PASS_JWD: ${{ secrets.PASS_JWD }}
+         IsGit: 1
