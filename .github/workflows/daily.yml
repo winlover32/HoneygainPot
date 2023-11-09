@@ -12,9 +12,9 @@ jobs:
               ref: ${{ github.event.pull_request.head.sha }}
               fetch-depth: 0
           - name: Run HoneygainPot
-             run: python main.py
-             env:
-               MAIL_JWD: ${{ secrets.MAIL_JWD }}
-               PASS_JWD: ${{ secrets.PASS_JWD }}
-               IsGit: 1
+            run: python main.py
+            env:
+              MAIL_JWD: ${{ secrets.MAIL_JWD }}
+              PASS_JWD: ${{ secrets.PASS_JWD }}
+              IsGit: 1
     
