@@ -199,7 +199,6 @@ def achievements_claim(s: requests.session) -> bool:
                         s.post(urls['achievement_claim'], json={"user_achievement_id": achievement['id']},
                                headers=header)
                         print(f'Claimed {achievement["title"]} ✅')
-                        logging.info(f'Claimed {achievement["title"]}.')
                 except IndexError:
                     if not achievement['is_claimed']:
                         s.post(urls['achievement_claim'], json={"user_achievement_id": achievement['id']},
