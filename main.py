@@ -29,14 +29,14 @@ def create_config() -> None:
           email: str = os.getenv('MAIL_JWD')
           password: str = os.getenv('PASS_JWD')
         except:
-          print("❌ Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD'.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
+          print("❌ Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD'.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it is still doesn't work for you")
           exit(-1)
     else:
         try:
           email: str = input("Email: ")
           password: str = getpass()
         except:
-          print("❌ Error code 3: Cannot receive any input, make sure 'IsGit' = 1.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
+          print("❌ Error code 3: Cannot receive any input, make sure 'IsGit' = 1.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it is still doesn't work for you")
           exit(-1)
             
     cfg.set('User', 'email', f"{email}")
@@ -165,7 +165,7 @@ def gen_token(s: requests.session, invalid: bool = False) -> str | None:
             token: dict = login(s)
             # check if token is valid and doesn't have false credentials in it.
             if "title" in token:
-                print("❌ Error code 4: Wrong login credentials,please enter the right ones.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
+                print("❌ Error code 4: Wrong login credentials,please enter the right ones.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it is still doesn't work for you")
                 return None
             json.dump(token, f)
 
@@ -188,7 +188,7 @@ def achievements_claim(s: requests.session) -> bool:
         try:
           achievements: dict = achievements.json()
         except:
-            print("❌ Error code 2: You are not eligible to get the lucky pot.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
+            print("❌ Error code 2: You are not eligible to get the lucky pot.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it is still doesn't work for you")
             exit(-1)
         # Loop over all achievements and claim them, if completed.
         try:
@@ -232,7 +232,7 @@ def main() -> None:
         header = {'Authorization': f'Bearer {token}'}
         if not achievements_claim(s):
             print('Failed to claim achievements ❌')
-            print("❌ Error code 2: You are not eligible to get the lucky pot.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
+            print("❌ Error code 2: You are not eligible to get the lucky pot because you still did not reach 15mb of sharing.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it is still doesn't work for you")
             exit(-1)
         # check if the token is valid by trying to get the current balance with it
         dashboard: Response = s.get(urls['balance'], headers=header)
@@ -252,7 +252,7 @@ def main() -> None:
             try:
               print(f'Claimed {pot_claim["data"]["credits"]} Credits.')
             except:
-              print("❌ Error code 2: You are not eligible to get the lucky pot.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
+              print("❌ Error code 2: You are not eligible to get the lucky pot because you still did not reach 15mb of sharing.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it is still doesn't work for you")
               exit(-1)
   
         # gets the pot winning credits
