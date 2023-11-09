@@ -5,6 +5,10 @@
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
 <img alt="Manual trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg">
 <p align="center">
+  <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
+  •
+  <a href="README-vn.md">Vietnamese 🇻🇳</a>
+<p align="center">
   <a href="#notes">Notes</a>
   •
   <a href="Debug.md">Debug</a>     
@@ -16,6 +20,8 @@
 
 # Notes
 - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
+- 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
+  
 # Feature 
 - Claims honeygain pot and achievement rewards every day 🔥
 # Usage 
