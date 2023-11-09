@@ -24,7 +24,7 @@
 
 <img src="https://i.imgur.com/htGeFlY.jpg">
   
-# Tính năngvà
+# Tính năng
 - Giúp bạn nhận lucky pot của Honeygain mỗi ngày mà không cần treo máy, tăng thêm thu nhập cho bạn! 🔥
 # Cách sử dụng
 
