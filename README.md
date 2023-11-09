@@ -3,7 +3,7 @@
 <h4 align="center">Powered by GitHub Actions and Python</h4>
 <p align="center">
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
-<img alt="Manual trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg">
+<img alt="Manual trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"> (*)
 <p align="center">
   <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
@@ -20,6 +20,7 @@
 
 # Notes
 - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
+- (*): Do not fork this repo if two of these (not only 1) GitHub Actions status badge show failing
 - 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
 
 <img src="https://i.imgur.com/htGeFlY.jpg">
