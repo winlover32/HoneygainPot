@@ -4,7 +4,7 @@ on:
     - cron: '0 14 * * *' # UTC Time, change your time here
 
 jobs:
-    Daily-trigger:
+    Daily:
         runs-on: ubuntu-latest
         steps:
           - uses: actions/checkout@v3        
