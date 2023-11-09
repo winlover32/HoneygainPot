@@ -20,7 +20,7 @@
 
 # Notes
 - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
-- (*): Do not fork this repo if two of these (not only 1) GitHub Actions status badge show failing
+- (*): Do not fork this repo if two of these (not only 1) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
 - 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
 
 <img src="https://i.imgur.com/htGeFlY.jpg">
