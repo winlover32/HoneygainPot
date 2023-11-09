@@ -5,9 +5,9 @@
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
 <img alt="Manual trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg">
 <p align="center">
-  <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
+  <a href="https://github.com/gorouflex/HoneygainPot/">Tiếng Anh 🇺🇸</a>
   •
-  <a href="README-vn.md">Vietnamese 🇻🇳</a>
+  <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
 <p align="center">
   <a href="#lưu-ý">Lưu ý</a>
   •
@@ -20,9 +20,11 @@
 
 # Lưu ý
 - Lưu ý luôn cập nhật repo của các bạn theo repo gốc này để nhận được những bản cập nhật và vá lỗi mới nhất, và tôi GorouFlex sẽ không hỗ trợ nếu phát hiện repo của bạn đã lỗi thời và không được cập nhật
-- 'Daily claim' sẽ luôn luôn tự động chạy vào lúc 14:00 giờ UTC +0 tức là 9:00 tối theo giờ UTC +7, nếu muốn chỉnh thì tham khảo tại [đây](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
+- 'Daily claim' sẽ luôn luôn tự động chạy vào lúc 14:00 giờ UTC +0 tức là 9:00 tối theo giờ UTC +7, nếu muốn chỉnh thì tham khảo tại [đây](https://github.com/gorouflex/HoneygainPot/blob/main/README-vn.md#l%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-ch%E1%BB%89nh-l%E1%BA%A1i-th%E1%BB%9Di-gian-t%E1%BB%B1-%C4%91%E1%BB%99ng-ch%E1%BA%A1y-m%E1%BB%97i-ng%C3%A0y)
+
+<img src="https://i.imgur.com/htGeFlY.jpg">
   
-# Tính năng
+# Tính năngvà
 - Giúp bạn nhận lucky pot của Honeygain mỗi ngày mà không cần treo máy, tăng thêm thu nhập cho bạn! 🔥
 # Cách sử dụng
 
