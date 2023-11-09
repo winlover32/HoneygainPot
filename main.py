@@ -204,9 +204,9 @@ def achievements_claim(s: requests.session) -> bool:
                 except IndexError:
                     if not achievement['is_claimed']:
                         e s.post(urls['achievement_claim'], json={"user_achievement_id": achievement['id']},
-                               headers=header)
+                        headers=header)
                         print(f'Claimed {achievement["title"]}.')
-                        logging.info(f'Claimed {achievement["title"]}.')
+                        
         except KeyError:
             if 'message' in achievements:
                 token: str = gen_token(s, True)
