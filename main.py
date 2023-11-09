@@ -30,15 +30,16 @@ def create_config() -> None:
           email: str = os.getenv('MAIL_JWD')
           password: str = os.getenv('PASS_JWD')
         except:
-          print("Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD'.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
-          
+          print("Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD'.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
+          exit(-1)
     else:
         try:
           email: str = input("Email: ")
           password: str = getpass()
         except:
-          print("Error code 3: Cannot receive any input, make sure 'IsGit' = 1.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
-          
+          print("Error code 3: Cannot receive any input, make sure 'IsGit' = 1.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
+          exit(-1)
+            
     cfg.set('User', 'email', f"{email}")
     cfg.set('User', 'password', f"{password}")
 
@@ -142,7 +143,7 @@ def login(s: requests.session) -> json.loads:
     try:
         return json.loads(token.text)
     except json.decoder.JSONDecodeError:
-        print("Error code 10: You have exceeded your login tries.\n\nPlease wait a few hours or return tomorrow.")
+        print("Error code 10: You have exceeded your login tries.\nPlease wait a few hours or return tomorrow.")
         exit(-1)
 
 
@@ -165,7 +166,7 @@ def gen_token(s: requests.session, invalid: bool = False) -> str | None:
             token: dict = login(s)
             # check if token is valid and doesn't have false credentials in it.
             if "title" in token:
-                print("Error code 4: Wrong login credentials,please enter the right ones.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
+                print("Error code 4: Wrong login credentials,please enter the right ones.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
                 return None
             json.dump(token, f)
 
@@ -188,7 +189,8 @@ def achievements_claim(s: requests.session) -> bool:
         try:
           achievements: dict = achievements.json()
         except:
-            print("Error code 2: You are not eligible to get the lucky pot.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
+            print("Error code 2: You are not eligible to get the lucky pot.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
+            exit(-1)
         # Loop over all achievements and claim them, if completed.
         try:
             for achievement in achievements['data']:
@@ -201,7 +203,7 @@ def achievements_claim(s: requests.session) -> bool:
                         logging.info(f'Claimed {achievement["title"]}.')
                 except IndexError:
                     if not achievement['is_claimed']:
-                        s.post(urls['achievement_claim'], json={"user_achievement_id": achievement['id']},
+                        e s.post(urls['achievement_claim'], json={"user_achievement_id": achievement['id']},
                                headers=header)
                         print(f'Claimed {achievement["title"]}.')
                         logging.info(f'Claimed {achievement["title"]}.')
@@ -232,7 +234,8 @@ def main() -> None:
         header = {'Authorization': f'Bearer {token}'}
         if not achievements_claim(s):
             print('Failed to claim achievements.')
-            print("Error code 2: You are not eligible to get the lucky pot.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
+            print("Error code 2: You are not eligible to get the lucky pot.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
+            exit(-1)
         # check if the token is valid by trying to get the current balance with it
         dashboard: Response = s.get(urls['balance'], headers=header)
         dashboard: dict = dashboard.json()
@@ -251,7 +254,8 @@ def main() -> None:
             try:
               print(f'Claimed {pot_claim["data"]["credits"]} Credits.')
             except:
-              print("Error code 2: You are not eligible to get the lucky pot.\n\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\n\nOr create an Issues on GitHub if it still doesn't for you")
+              print("Error code 2: You are not eligible to get the lucky pot.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more infomation.\nOr create an Issues on GitHub if it still doesn't for you")
+              exit(-1)
   
         # gets the pot winning credits
         pot_winning: Response = s.get(urls['pot'], headers=header)
