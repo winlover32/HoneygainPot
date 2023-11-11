@@ -1,3 +1,4 @@
+
 <h1 align="center">Honeygain Pot</h1>
 <h4 align="center">🐝 A bot that claim honeygain pot every day 🍯</h4>
 <h4 align="center">Powered by GitHub Actions and Python</h4>
@@ -17,7 +18,12 @@
   •
   <a href="#usage">Usage</a>     
 </p>
-
+ <p align="left">
+   
+<img src="Img/IMG_0029.png"               
+     width="100" 
+     height="100"></p>
+     
 # Notes
 - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
 - (*): Do not fork this repo if two of these (not only 1) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
