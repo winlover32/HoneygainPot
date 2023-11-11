@@ -18,6 +18,11 @@
   <a href="#cách-sử-dụng">Cách sử dụng</a>     
 </p>
 
+<p align="left">
+<img src="Img/IMG_0029.png"               
+     width="100" 
+     height="100"></p>
+     
 # Lưu ý
 - Lưu ý luôn cập nhật repo của các bạn theo repo gốc này để nhận được những bản cập nhật và vá lỗi mới nhất, và tôi GorouFlex sẽ không hỗ trợ nếu phát hiện repo của bạn đã lỗi thời và không được cập nhật
 - (*) Không được fork repo nếu bạn thấy cả 2 ( không phải chỉ có 1 ) trạng thái của GitHub Actions đều chuyển sang đỏ, hãy chờ cho đến khi 1 trong 2 hoặc cả 2 chuyển sang màu xanh thì có thể fork
