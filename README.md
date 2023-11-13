@@ -20,12 +20,13 @@
 </p>
  <p align="left">
    
-<img src="Img/IMG_0029.png"               
+<img src="Img/Logo.png"               
      width="100" 
      height="100"></p>
      
 # Notes
 - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
+- If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
 - (*): Do not fork this repo if two of these (not only 1) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
 - 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
 
