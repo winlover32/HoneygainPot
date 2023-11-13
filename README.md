@@ -21,8 +21,8 @@
  <p align="left">
    
 <img src="Img/Logo.png"               
-     width="100" 
-     height="100"></p>
+     width="150" 
+     height="150"></p>
      
 # Notes
 - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
