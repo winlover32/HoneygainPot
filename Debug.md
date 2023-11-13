@@ -1,5 +1,20 @@
 <h1 align="center">Debug</h1>
 
+# How to get debug logs?
+1. Go Actions tab
+2. Click to the failure task
+3. Then click to `Trigger` or `Daily` tab then click to the `Run HoneygainPot` section, you will see the debug logs
+
+<p align="left">
+  <img src="Img/002.jpeg">
+</p>
+<p align="center">
+  <img src="Img/001.jpeg">
+</p>
+<p align="right">
+  <img src="Img/003.jpeg">
+</p>
+  
 ## GitHub Actions
 
 ### Error code 1
@@ -30,7 +45,7 @@ or
 ```
 Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD' 
 ```
-- Fix: This means you did not set `MAIL_JWD` and `PASS_JWD` secrets in the GitHub repo settings
+- Solution : This means you did not set `MAIL_JWD` and `PASS_JWD` secrets in the GitHub repo settings
 
 ### Error code 2
 
@@ -51,7 +66,7 @@ KeyError: 'data'
 
 ```
 
-- Fix: You are not eligible to get the lucky pot if you do not reach 15mb of sharing
+- Solution : You are not eligible to get the lucky pot if you do not reach 15mb of sharing
 
 ### Error code 3
 
@@ -74,7 +89,7 @@ Email:
 
 ```
 
-- Fix: This is because GitHub Actions is basically a non-input console, so the code cannot receive the input, make sure that `IsGit` is set to 1 in the workflows file `daily.yml`
+- Solution : This is because GitHub Actions is basically a non-input console, so the code cannot receive the input, make sure that `IsGit` is set to 1 in the workflows file `daily.yml`
 
 
 ### Error code 4
@@ -83,4 +98,4 @@ Email:
 Error code 4: Wrong login credentials,please enter the right ones
 ```
 
-- Fix: Check your credenrials again
+- Solution : Check your credenrials again
