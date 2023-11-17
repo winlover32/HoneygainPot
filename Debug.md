@@ -1,23 +1,39 @@
 <h1 align="center">Debug</h1>
 
+Error code list:
+- [1](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-1)
+- [2](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-2)
+- [3](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-3)
+- [4](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-4)
+- [10](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-10)
 # How to get debug logs?
 1. Go Actions tab
 2. Click to the failure task
-3. Then click to `Trigger` or `Daily` tab then click to the `Run HoneygainPot` section, you will see the debug logs
+3. Then click to `Manual` or `Daily` tab then click to the `Run HoneygainPot` section, you will see the debug logs
 
 <p align="left">
-  <img src="Img/002.jpeg">
+  <img src="Img/step-1.png">
 </p>
 <p align="center">
-  <img src="Img/001.jpeg">
+  <img src="Img/step-2.png">
 </p>
-<p align="right">
-  <img src="Img/003.jpeg">
+<p align="center">
+  <img src="Img/step-3.png">
+</p>
+<p align="left">
+  <img src="Img/step-4.png">
 </p>
   
 ## GitHub Actions
 
 ### Error code 1
+
+```
+❌ Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD'
+```
+
+or
+
 ```
 Logging in to Honeygain!
 Traceback (most recent call last):
@@ -40,17 +56,12 @@ Error: Process completed with exit code 1.
 
 ```
 
-or
-
-```
-Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD' 
-```
 - Solution : This means you did not set `MAIL_JWD` and `PASS_JWD` secrets in the GitHub repo settings
 
 ### Error code 2
 
 ```
-Error code 2: You are not eligible to get the lucky pot
+❌ Error code 2: You are not eligible to get the lucky pot
 ```
 
 or
@@ -71,7 +82,7 @@ KeyError: 'data'
 ### Error code 3
 
 ```
-Error code 3: Cannot receive any input, make sure 'IsGit' = 1
+❌ Error code 3: Cannot receive any input, make sure 'IsGit' = 1
 ```
 
 or
@@ -95,7 +106,15 @@ Email:
 ### Error code 4
 
 ```
-Error code 4: Wrong login credentials,please enter the right ones
+❌ Error code 4: Wrong login credentials,please enter the right ones
 ```
 
 - Solution : Check your credenrials again
+
+### Error code 10
+
+```
+❌ Error code 10: You have exceeded your login tries.\nPlease wait a few hours or return tomorrow
+```
+
+- Solution : Ask for GitHub...
