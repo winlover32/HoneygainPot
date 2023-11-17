@@ -9,8 +9,6 @@
   •
   <a href="README-vn.md">Vietnamese 🇻🇳</a>
 <p align="center">
-  <a href="!note">Note</a>
-  •
   <a href="Debug.md">Debug</a>     
   •
   <a href="#feature">Feature</a>
