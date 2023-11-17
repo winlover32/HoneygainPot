@@ -1,6 +1,6 @@
 
 <h1 align="center">Honeygain Pot</h1>
-<h4 align="center">🐝 A Bot that claim Honeygain pot every day 🍯</h4>
+<h4 align="center">🐝A Bot that claim Honeygain pot every day🍯</h4>
 <h4 align="center">Powered by GitHub Actions and Python</h4>
 <p align="center">
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
@@ -73,6 +73,6 @@ on:
 
 GitHub Actions schedules can sometimes be delayed by up to 15 minutes due to high demand, so don’t worry!
 
-## Big thanks to
+## Thanks to
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
-- [rfoal](https://github.com/rfoel/) x [duolingo](https://github.com/rfoel/duolingo) for ideas
+- [rfoal](https://github.com/rfoel/) x [duolingo](https://github.com/rfoel/duolingo) for idea
