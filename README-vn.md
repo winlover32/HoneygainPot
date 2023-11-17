@@ -9,8 +9,6 @@
   •
   <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
 <p align="center">
-  <a href="#lưu-ý">Lưu ý</a>
-  •
   <a href="Debug.md">Sửa các lỗi thường gặp khi sử dụng GitHub Actions</a>     
   •
   <a href="#tính-năng">Tính năng</a>
@@ -23,13 +21,12 @@
      width="170" 
      height="170"></p>
      
-# Lưu ý
-- Luôn cập nhật repo của các bạn theo repo gốc này để nhận được những bản cập nhật và vá lỗi mới nhất, và tôi GorouFlex sẽ không hỗ trợ nếu phát hiện repo của bạn đã lỗi thời và không được cập nhật theo repo chính.
-- Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Debug.md](Debug.md).
-- (*) Không được fork repo nếu bạn thấy cả 2 ( không phải chỉ có 1 ) trạng thái của GitHub Actions đều chuyển sang đỏ, hãy chờ cho đến khi 1 trong 2 hoặc cả 2 chuyển sang màu xanh thì có thể fork.
-- 'Daily claim' sẽ luôn luôn tự động chạy vào lúc 14:00 giờ UTC +0 tức là 9:00 tối theo giờ UTC +7, nếu muốn chỉnh thì tham khảo tại [đây](https://github.com/gorouflex/HoneygainPot/blob/main/README-vn.md#l%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-ch%E1%BB%89nh-l%E1%BA%A1i-th%E1%BB%9Di-gian-t%E1%BB%B1-%C4%91%E1%BB%99ng-ch%E1%BA%A1y-m%E1%BB%97i-ng%C3%A0y).
-
-<img src="https://i.imgur.com/htGeFlY.jpg">
+> [!NOTE]
+> - Luôn cập nhật repo của các bạn theo repo gốc này để nhận được những bản cập nhật và vá lỗi mới nhất, và tôi GorouFlex sẽ không hỗ trợ nếu phát hiện repo của bạn đã lỗi thời và không được cập nhật theo repo chính.
+> - Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Debug.md](Debug.md).
+> - (*) Không được fork repo nếu bạn thấy cả 2 ( không phải chỉ có 1 ) trạng thái của GitHub Actions đều chuyển sang đỏ, hãy chờ cho đến khi 1 trong 2 hoặc cả 2 chuyển sang màu xanh thì có thể fork.
+> - 'Daily claim' sẽ luôn luôn tự động chạy vào lúc 14:00 giờ UTC +0 tức là 9:00 tối theo giờ UTC +7, nếu muốn chỉnh thì tham khảo tại [đây](https://github.com/gorouflex/HoneygainPot/blob/main/README-vn.md#l%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-ch%E1%BB%89nh-l%E1%BA%A1i-th%E1%BB%9Di-gian-t%E1%BB%B1-%C4%91%E1%BB%99ng-ch%E1%BA%A1y-m%E1%BB%97i-ng%C3%A0y).
+> <img src="https://i.imgur.com/htGeFlY.jpg">
   
 # Tính năng
 
@@ -48,6 +45,7 @@
 
 ## Làm thế nào để chỉnh lại thời gian tự động chạy mỗi ngày?
 
+> [!IMPORTANT]
 File tự động chạy mỗi ngày ở ( mặc định là 14:00 UTC +0 ): `.github/workflows/daily.yml`
 
 GitHub sử dụng giờ UTC quốc tế (UTC +0) để đặt lịch trình chạy GitHub Actions, nên chúng ta phải đổi sang múi giờ của mình
@@ -69,9 +67,8 @@ on:
     - cron: '0 22 * * *' # UTC Time
 ```
 
-## Lưu ý
-
-GitHub Actions có thể bị delay hơn so với giờ dự kiến đã đặt khoảng từ 3p đến 15p vì do nhu cầu chạy đang cao nên đừng lo lắng vì sao nó không chạy đúng giờ nhé!
+> [!NOTE]
+> GitHub Actions có thể bị delay hơn so với giờ dự kiến đã đặt khoảng từ 3p đến 15p vì do nhu cầu chạy đang cao nên đừng lo lắng vì sao nó không chạy đúng giờ nhé!
 
 ## Cảm ơn
 - [MrLolf](https://github.com/MrLoLf/) cho [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
