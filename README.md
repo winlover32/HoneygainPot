@@ -1,4 +1,3 @@
-
 <h1 align="center">Honeygain Pot</h1>
 <h4 align="center">🐝A Bot that claim Honeygain pot every day🍯</h4>
 <h4 align="center">Powered by GitHub Actions and Python</h4>
