@@ -1,6 +1,6 @@
 
 <h1 align="center">Honeygain Pot</h1>
-<h4 align="center">🐝 A bot that claim honeygain pot every day 🍯</h4>
+<h4 align="center">🐝 A Bot that claim Honeygain pot every day 🍯</h4>
 <h4 align="center">Powered by GitHub Actions and Python</h4>
 <p align="center">
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
@@ -21,9 +21,9 @@
  <p align="left">
    
 <img src="Img/Logo.png"               
-     width="150" 
-     height="150"></p>
-     
+     width="170" 
+     height="170"></p>
+    
 # Notes
 - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
 - If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
@@ -33,10 +33,13 @@
 <img src="https://i.imgur.com/htGeFlY.jpg">
   
 # Feature 
-- Claims honeygain pot and achievement rewards every day 🔥
+
+- Claim Honeygain pot and achievements rewards every day with GitHub Actions 🔥
+- Checking your current balance
+
 # Usage 
 
-  1. [Fork this repository](https://github.com/gorouflex/honeygainpot/fork)  
+  1. [Fork this repository](https://github.com/gorouflex/HoneygainPot/fork)
   2. Go to your forked repository
   3. Go to Settings > Secrets and Variables > Actions. And click the button `New Repository secret`
   4. For the secret name, use `MAIL_JWD` to set your honeygain mail and `PASS_JWD` for your password
@@ -72,4 +75,4 @@ GitHub Actions schedules can sometimes be delayed by up to 15 minutes due to hig
 
 ## Big thanks to
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
-- [rfoal](https://github.com/rfoel/)-[duolingo](https://github.com/rfoel/duolingo) for ideas
+- [rfoal](https://github.com/rfoel/) x [duolingo](https://github.com/rfoel/duolingo) for ideas
