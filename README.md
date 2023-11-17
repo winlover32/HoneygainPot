@@ -9,7 +9,7 @@
   •
   <a href="README-vn.md">Vietnamese 🇻🇳</a>
 <p align="center">
-  <a href="#notes">Notes</a>
+  <a href="!note">Note</a>
   •
   <a href="Debug.md">Debug</a>     
   •
@@ -23,13 +23,12 @@
      width="170" 
      height="170"></p>
     
-# Notes
-- Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
-- If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
-- (*): Do not fork this repo if two of these (not only 1) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
-- 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
-
-<img src="https://i.imgur.com/htGeFlY.jpg">
+> [!NOTE]
+> - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
+> - If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
+> - (*): Do not fork this repo if two of these (not only 1) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
+> - 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
+> <img src="https://i.imgur.com/htGeFlY.jpg">
   
 # Feature 
 
@@ -48,6 +47,7 @@
 
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
+> [!IMPORTANT]
 Daily workflows file path (default is 14:00 UTC +0): `.github/workflows/daily.yml`
 
 Well, GitHub uses UTC time (UTC +0) for scheduling workflows, so we should convert it to our timezone.
@@ -68,9 +68,8 @@ on:
     - cron: '0 22 * * *' # UTC Time
 ```
 
-## Note
-
-GitHub Actions schedules can sometimes be delayed by up to 15 minutes due to high demand, so don’t worry!
+> [!NOTE]
+> GitHub Actions schedules can sometimes be delayed by up to 15 minutes due to high demand, so don’t worry!
 
 ## Thanks to
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
