@@ -1,11 +1,12 @@
 <h1 align="center">Debug</h1>
 
-Error code list:
-- [1](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-1)
-- [2](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-2)
-- [3](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-3)
-- [4](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-4)
-- [10](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-10)
+> [!NOTE]
+> Error code list:
+> - [1](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-1)
+> - [2](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-2)
+> - [3](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-3)
+> - [4](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-4)
+> - [10](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-10)
 # How to get debug logs?
 1. Go Actions tab
 2. Click to the failure task
@@ -56,7 +57,8 @@ Error: Process completed with exit code 1.
 
 ```
 
-- Solution : This means you did not set `MAIL_JWD` and `PASS_JWD` secrets in the GitHub repo settings
+> [!TIP]
+> This means you did not set `MAIL_JWD` and `PASS_JWD` secrets in the GitHub repo settings
 
 ### Error code 2
 
@@ -77,7 +79,8 @@ KeyError: 'data'
 
 ```
 
-- Solution : You are not eligible to get the lucky pot if you do not reach 15mb of sharing
+> [!TIP]
+> You are not eligible to get the lucky pot if you do not reach 15mb of sharing
 
 ### Error code 3
 
@@ -100,7 +103,8 @@ Email:
 
 ```
 
-- Solution : This is because GitHub Actions is basically a non-input console, so the code cannot receive the input, make sure that `IsGit` is set to 1 in the workflows file `daily.yml`
+> [!TIP]
+> This is because GitHub Actions is basically a non-input console, so the code cannot receive the input, make sure that `IsGit` is set to 1 in the workflows file `daily.yml`
 
 
 ### Error code 4
@@ -109,7 +113,8 @@ Email:
 ❌ Error code 4: Wrong login credentials,please enter the right ones
 ```
 
-- Solution : Check your credenrials again
+> [!TIP]
+> Check your credenrials again
 
 ### Error code 10
 
@@ -117,4 +122,5 @@ Email:
 ❌ Error code 10: You have exceeded your login tries.\nPlease wait a few hours or return tomorrow
 ```
 
-- Solution : Ask for GitHub...
+> [!TIP]
+> Ask for GitHub
