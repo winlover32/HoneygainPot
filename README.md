@@ -7,7 +7,9 @@
 <p align="center">
   <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
-  <a href="README-vn.md">Vietnamese 🇻🇳</a>
+  <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
+  •
+  <a href="README-fr.md">Français 🇫🇷</a>
 <p align="center">
   <a href="Debug.md">Debug</a>     
   •
