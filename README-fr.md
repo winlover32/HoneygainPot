@@ -13,9 +13,9 @@
 <p align="center">
   <a href="Debug.md">Débogage</a>     
   •
-  <a href="#feature">Fonctionnalités</a>
+  <a href="#fonctionnalités">Fonctionnalités</a>
   •
-  <a href="#usage">Utilisation</a>     
+  <a href="#utilisation">Utilisation</a>     
 </p>
  <p align="left">
    
@@ -31,12 +31,12 @@
 > - Les workflows de 'Réclamation quotidienne' s'exécutent toujours à 14:00 UTC +0, si vous voulez le changer, référez-vous à [ceci](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
 > <img src="https://i.imgur.com/htGeFlY.jpg">
   
-# Fonctionnalités 
+# Fonctionnalités
 
 - Réclamez le Honeygain pot et les récompenses des réalisations tous les jours avec GitHub Actions 🔥
 - Vérification de votre solde actuel
 
-# Utilisation 
+# Utilisation
 
   1. [Faites un fork de ce dépôt](https://github.com/gorouflex/HoneygainPot/fork)
   2. Accédez à votre dépôt forké
