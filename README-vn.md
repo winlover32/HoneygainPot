@@ -5,9 +5,11 @@
 <img alt="Trạng thái Daily" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
 <img alt="Trạng thadi Manual trigger" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"> (*)
 <p align="center">
-  <a href="https://github.com/gorouflex/HoneygainPot/">Tiếng Anh 🇺🇸</a>
+  <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
   <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
+  •
+  <a href="README-fr.md">Français 🇫🇷</a>
 <p align="center">
   <a href="Debug.md">Sửa các lỗi thường gặp khi sử dụng GitHub Actions</a>     
   •
