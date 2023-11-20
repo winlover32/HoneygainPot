@@ -10,6 +10,8 @@
   <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
   •
   <a href="README-fr.md">Français 🇫🇷</a>
+  •
+  <a href="README-de.md">Deutsch 🇩🇪</a>
 <p align="center">
   <a href="Debug.md">Debug</a>     
   •
@@ -39,7 +41,7 @@
 
   1. [Fork this repository](https://github.com/gorouflex/HoneygainPot/fork)
   2. Go to your forked repository
-  3. Go to Settings > Secrets and Variables > Actions. And click the button `New Repository secret`
+  3. Go to `Settings > Secrets and Variables > Actions`, and click the button `New Repository secret`
   4. For the secret name, use `MAIL_JWD` to set your honeygain mail and `PASS_JWD` for your password
   5. Go to your forked repository and go to the Actions tab and press the button `I understand my workflows, go ahead and enable them`
 
