@@ -40,9 +40,9 @@
 
   1. [Faites un fork de ce dépôt](https://github.com/gorouflex/HoneygainPot/fork)
   2. Accédez à votre dépôt forké
-  3. Allez dans Paramètres > Secrets et Variables > Actions. Et cliquez sur le bouton `Nouveau secret de dépôt`
+  3. Allez dans `Settings > Secrets and Variables > Actions`, et cliquez sur le bouton `New Repository secret`
   4. Pour le nom secret, utilisez `MAIL_JWD` pour définir votre mail Honeygain et `PASS_JWD` pour votre mot de passe
-  5. Accédez à votre dépôt forké et allez dans l'onglet Actions, puis appuyez sur le bouton `Je comprends mes workflows, activez-les`
+  5. Accédez à votre dépôt forké et allez dans l'onglet Actions, puis appuyez sur le bouton `I understand my workflows, go ahead and enable them`
 
 ![GitSettings](https://github.com/gorouflex/HoneygainPot/assets/98001973/d8d33621-5717-488d-9a80-6db395c8ac9d)
 
