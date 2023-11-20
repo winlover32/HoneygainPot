@@ -1,6 +1,6 @@
 <h1 align="center">Honeygain Pot</h1>
 <h4 align="center">🐝Một con bot giúp bạn nhận lucky pot của Honeygain mỗi ngày🍯</h4>
-<h4 align="center">Dưới sự hỗ trợ bởi GitHub Actions và Python</h4>
+<h4 align="center">Dưới sự hỗ trợ của GitHub Actions và Python</h4>
 <p align="center">
 <img alt="Trạng thái Daily" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
 <img alt="Trạng thadi Manual trigger" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"> (*)
@@ -10,6 +10,8 @@
   <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
   •
   <a href="README-fr.md">Français 🇫🇷</a>
+  •
+  <a href="README-de.md">Deutsch 🇩🇪</a>
 <p align="center">
   <a href="Debug.md">Sửa các lỗi thường gặp khi sử dụng GitHub Actions</a>     
   •
@@ -17,7 +19,6 @@
   •
   <a href="#cách-sử-dụng">Cách sử dụng</a>     
 </p>
-
 <p align="left">
 <img src="Img/Logo.png"               
      width="170" 
@@ -39,7 +40,7 @@
 
   1. [Fork repo này](https://github.com/gorouflex/HoneygainPot/fork)  
   2. Đến repo mà bạn đã fork
-  3. Vào Settings > Secrets and Variables > Actions, và ấn nút `New Repository secret`
+  3. Vào `Settings > Secrets and Variables > Actions`, và ấn nút `New Repository secret`
   4. Đặt tên secrets đầu tiên tên là `MAIL_JWD` và điền mail Honeygain của bạn vào, sau đó tạo thêm secrets thứ 2 tên là `PASS_JWD` rồi nhập pass của bạn vào
   5. Trở lại repo của bạn đã fork, vào Actions trên thanh công cụ repo rồi ấn `I understand my workflows, go ahead and enable them`
 
