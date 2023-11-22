@@ -22,7 +22,8 @@
   •
   <a href="#fonctionnalités">Fonctionnalités</a>
   •
-  <a href="#utilisation">Utilisation</a>    •
+  <a href="#utilisation">Utilisation</a>    
+  •
   <a href="#aperçu">Aperçu</a>
 </p>
  <p align="left">
@@ -36,7 +37,7 @@
 > - Mettez toujours à jour votre repo en suivant le repo original pour obtenir les dernières mises à jour + corrections de bugs, je ne prendrai pas en charge quoi que ce soit si votre repo est obsolète.
 > - Si vous rencontrez des erreurs lors de l'utilisation de GitHub Actions, veuillez vous référer à cette [section de débogage](Debug.md)
 > - (*): Ne pas fork ce repo si deux de ces (pas seulement 1) badges de statut GitHub Actions montrent un échec, et attendez jusqu'à ce que 1 de ceux-ci ou deux de ceux-ci montrent un succès, puis vous pouvez fork à nouveau
-> - Les workflows de 'Réclamation quotidienne' s'exécutent toujours à 14:00 UTC +0, si vous voulez le changer, référez-vous à [ceci](https://github.com/gorouflex/HoneygainPot/blob/main/README-fr.md#comment-changer-lhoraire-pour-correspondre-%C3%A0-mon-fuseau-horaire-avant-la-r%C3%A9initialisation-du-pot-)
+> - Les workflows de `Daily claim` exécutent toujours à 14:00 UTC +0, si vous voulez le changer, référez-vous à [ceci](https://github.com/gorouflex/HoneygainPot/blob/main/README-fr.md#comment-changer-lhoraire-pour-correspondre-%C3%A0-mon-fuseau-horaire-avant-la-r%C3%A9initialisation-du-pot-)
 > <img src="https://i.imgur.com/htGeFlY.jpg">
   
 # Fonctionnalités
