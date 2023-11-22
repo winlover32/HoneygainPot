@@ -17,7 +17,9 @@
   •
   <a href="#Feature">Funktionen</a>
   •
-  <a href="#Nutzung">Nutzung</a>     
+  <a href="#Nutzung">Nutzung</a> 
+  •
+  <a href="#vorschau">Vorschau</a>
 </p>
  <p align="left">
    
@@ -73,6 +75,13 @@ on:
 
 > [!NOTE]
 > GitHub Actions-Zeitpläne können aufgrund hoher Nachfrage manchmal um bis zu 15 Minuten verzögert sein, also keine Sorge!
+
+# Vorschau
+
+<p align="center">
+  <img src="Img/preview (1).jpeg">
+  <img src="Img/preview.jpeg">
+</p>
 
 ## Dank an
 - [MrLolf](https://github.com/MrLoLf/) für [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
