@@ -2,6 +2,11 @@
 <h4 align="center">🐝A Bot that claim Honeygain pot every day🍯</h4>
 <h4 align="center">Powered by GitHub Actions and Python</h4>
 <p align="center">
+<img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
+<img src="https://img.shields.io/github/stars/gorouflex/HoneygainPot?style=flat">
+<img src="https://img.shields.io/github/contributors/gorouflex/HoneygainPot?style=flat">
+<p align="center">
+<img alt="CodeQL status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml/badge.svg">
 <img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
 <img alt="Manual trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"> (*)
 <p align="center">
@@ -29,7 +34,7 @@
 > [!NOTE]
 > - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
 > - If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
-> - (*): Do not fork this repo if two of these (not only 1) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
+> - (*): Do not fork this repo if two of these (not only 1 and CodeQL) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
 > - 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
 > <img src="https://i.imgur.com/htGeFlY.jpg">
   
