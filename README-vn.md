@@ -17,7 +17,9 @@
   •
   <a href="#tính-năng">Tính năng</a>
   •
-  <a href="#cách-sử-dụng">Cách sử dụng</a>     
+  <a href="#cách-sử-dụng">Cách sử dụng</a>
+  •
+  <a href="#xem-trước">Xem trước</a>
 </p>
 <p align="left">
 <img src="Img/Logo.png"               
@@ -72,6 +74,13 @@ on:
 
 > [!NOTE]
 > GitHub Actions có thể bị delay hơn so với giờ dự kiến đã đặt khoảng từ 3p đến 15p vì do nhu cầu chạy đang cao nên đừng lo lắng vì sao nó không chạy đúng giờ nhé!
+
+# Xem trước
+
+<p align="center">
+  <img src="Img/preview (1).jpeg">
+  <img src="Img/preview.jpeg">
+</p>
 
 ## Cảm ơn
 - [MrLolf](https://github.com/MrLoLf/) cho [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
