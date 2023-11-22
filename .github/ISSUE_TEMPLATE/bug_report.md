@@ -8,7 +8,8 @@ assignees: ''
 ---
 
 # Debug/Traceback log
-Refer to [Debug.md](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md) if you don't know how to get it.
+
+ <!-- Refer to https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md if you don't know how to get it. -->
 
 ```
 
