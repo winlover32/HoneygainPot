@@ -17,7 +17,8 @@
   •
   <a href="#fonctionnalités">Fonctionnalités</a>
   •
-  <a href="#utilisation">Utilisation</a>     
+  <a href="#utilisation">Utilisation</a>    •
+  <a href="#aperçu">Aperçu</a>
 </p>
  <p align="left">
    
@@ -74,6 +75,13 @@ on:
 
 > [!NOTE]
 > Les horaires des déclencheurs GitHub Actions peuvent parfois être retardés de jusqu'à 15 minutes en raison d'une forte demande, donc ne vous inquiétez pas !
+
+# Aperçu
+
+<p align="center">
+  <img src="Img/preview (1).jpeg">
+  <img src="Img/preview.jpeg">
+</p>
 
 ## Remerciements
 - [MrLolf](https://github.com/MrLoLf/) pour [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
