@@ -32,7 +32,7 @@
 > - Aktualisieren Sie Ihr Repository immer gemäß dem Original-Repository, um die neuesten Updates + Bugfixes zu erhalten. Ich werde keine Unterstützung bieten, wenn Ihr Repository veraltet ist.
 > - Wenn Sie bei der Verwendung von GitHub Actions auf Fehler stoßen, beziehen Sie sich bitte auf diesen [Debug-Bereich](Debug.md)
 > - (*): Forken Sie dieses Repo nicht, wenn zwei dieser (nicht nur 1) GitHub Actions-Statussymbole einen Fehler zeigen, und warten Sie, bis 1 oder beide davon korrekt angezeigt werden, bevor Sie erneut forken.
-> - Der Workflow 'Tägliche Beanspruchung' wird immer um 14:00 Uhr UTC +0 ausgeführt. Wenn Sie dies ändern möchten, lesen Sie [dies](https://github.com/gorouflex/HoneygainPot/blob/main/README-de.md#wie-%C3%A4ndere-ich-den-zeitplan-um-zu-meiner-zeitzone-zu-passen-bevor-der-pot-zur%C3%BCckgesetzt-wird)
+> - Der Workflow `Daily claim` wird immer um 14:00 Uhr UTC +0 ausgeführt. Wenn Sie dies ändern möchten, lesen Sie [dies](https://github.com/gorouflex/HoneygainPot/blob/main/README-de.md#wie-%C3%A4ndere-ich-den-zeitplan-um-zu-meiner-zeitzone-zu-passen-bevor-der-pot-zur%C3%BCckgesetzt-wird)
 > <img src="https://i.imgur.com/htGeFlY.jpg">
   
 # Funktionen 
