@@ -18,7 +18,8 @@
   <a href="#feature">Feature</a>
   •
   <a href="#usage">Usage</a>     
-</p>
+  •
+  <a href="#preview">Preview</p>
  <p align="left">
    
 <img src="Img/Logo.png"               
@@ -72,6 +73,12 @@ on:
 
 > [!NOTE]
 > GitHub Actions schedules can sometimes be delayed by up to 15 minutes due to high demand, so don’t worry!
+
+# Preview
+<p align="center">
+  <img src="Img/preview (1).jpeg">
+  <img src="Img/preview.jpeg">
+</p>
 
 ## Thanks to
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
