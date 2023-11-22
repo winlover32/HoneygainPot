@@ -2,8 +2,13 @@
 <h4 align="center">🐝Un bot qui réclame le Honeygain pot chaque jour🍯</h4>
 <h4 align="center">Propulsé par GitHub Actions et Python</h4>
 <p align="center">
-<img alt="Statut du déclencheur quotidien" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
-<img alt="Statut du déclencheur manuel" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"> (*)
+<img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
+<img src="https://img.shields.io/github/stars/gorouflex/HoneygainPot?style=flat">
+<img src="https://img.shields.io/github/contributors/gorouflex/HoneygainPot?style=flat">
+<p align="center">
+<img alt="CodeQL status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml/badge.svg">
+<img alt="Daily trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg">
+<img alt="Manual trigger status" src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"> (*)
 <p align="center">
   <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
