@@ -2,11 +2,13 @@
 
 > [!NOTE]
 > Error code list:
-> - [1](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-1)
-> - [2](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-2)
-> - [3](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-3)
-> - [4](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-4)
-> - [10](https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md#error-code-10)
+> <p align="left">
+> <a href="#error-code-1">1 </a>
+> <a href="#error-code-2">2 </a>
+> <a href="#error-code-2">3 </a>
+> <a href="#error-code-4">4 </a>
+> <a href="#error-code-10">10 </a>
+> </p>
 # How to get debug logs?
 1. Go Actions tab
 2. Click to the failure task
