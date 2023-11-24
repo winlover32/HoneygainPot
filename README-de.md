@@ -15,7 +15,7 @@
 <p align="center">
   <a href="Debug.md">Debuggen</a>     
   •
-  <a href="#Feature">Funktionen</a>
+  <a href="#funktionen">Funktionen</a>
   •
   <a href="#Nutzung">Nutzung</a> 
   •
