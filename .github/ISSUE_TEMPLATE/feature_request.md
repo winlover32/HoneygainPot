@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an idea for Honeygain
+about: Suggest an idea for HoneygainPot project
 title: ''
 labels: ''
 assignees: ''
