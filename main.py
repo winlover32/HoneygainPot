@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
+import json, os
 import configparser
-import json
-import logging
-import os
 from configparser import ConfigParser
 from getpass import getpass
 import requests
@@ -13,13 +11,14 @@ token_file: str = config_folder + '/HoneygainToken.json'
 config_path: str = config_folder + '/HoneygainConfig.toml'
 header: dict[str, str] = {'Authorization': ''}
 
-print('--------- Welcome to GitHub Actions ---------')
+print('-------- Welcome to HoneygainPot --------')
 print('Made by GFx and MrLolf')
-print('---------------------------------------------')
+print('Powered by GitHub Actions V3 and Python')
+print('-----------------------------------------')
 print('Starting HoneygainPot 🍯')
 
 def create_config() -> None:
-    print('Collecting infomation...')
+    print('Collecting information from OS env 💻')
     cfg: ConfigParser = ConfigParser()
     cfg.add_section('User')
     if os.getenv('IsGit') == '1':
@@ -185,7 +184,7 @@ def main() -> None:
             pot_claim: Response = s.post(urls['pot'], headers=header)
             pot_claim: dict = pot_claim.json()
             try:
-              print(f'Claimed {pot_claim["data"]["credits"]} Credits.')
+              print(f'Claimed {pot_claim["data"]["credits"]} credits.')
             except:
               print("------ Traceback log ------\n❌ Error code 2: You are not eligible to get the lucky pot because you still did not reach 15mb of sharing.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
               exit(-1)
