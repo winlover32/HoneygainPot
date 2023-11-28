@@ -18,13 +18,15 @@
   •
   <a href="README-de.md">Deutsch 🇩🇪</a>
 <p align="center">
-  <a href="Debug.md">Sửa các lỗi thường gặp khi sử dụng GitHub Actions</a>     
+  <a href="Debug.md">Sửa các lỗi thường gặp</a>     
   •
   <a href="#tính-năng">Tính năng</a>
   •
   <a href="#cách-sử-dụng">Cách sử dụng</a>
   •
   <a href="#xem-trước">Xem trước</a>
+  •
+  <a href="FAQ.md">FAQ</a>  
 </p>
 <p align="left">
 <img src="Img/Logo.png"               
