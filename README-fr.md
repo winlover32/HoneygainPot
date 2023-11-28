@@ -25,6 +25,8 @@
   <a href="#utilisation">Utilisation</a>    
   •
   <a href="#aperçu">Aperçu</a>
+  •
+  <a href="FAQ.md">FAQ</a> 
 </p>
  <p align="left">
    
