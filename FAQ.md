@@ -6,11 +6,11 @@
 - I have also implemented this feature into the original repository ([PR #9](https://github.com/MrLoLf/HoneygainAutoClaim/pull/9)).
 
 ### 2. What is the difference between `HoneygainPot` and `HoneygainAutoClaim`?
-- `HoneygainPot` is primarily designed to fully support GitHub Actions but still supports Docker. I have removed some code from the main source, such as the logging feature, and improved the debug section, which `HoneygainAutoClaim` does not have.
+- `HoneygainPot` is primarily designed to fully support GitHub Actions but still supports for physically PC. I have removed some code from the main source, such as the logging feature, and improved the debug section, which `HoneygainAutoClaim` does not have.
 
 ### 3. What should I mainly use between `HoneygainPot` and `HoneygainAutoClaim`?
 - If you want to use this script online without taking up space or resources on your PC, and you only want to run the Honeygain app in the background for sharing internet, then `HoneygainPot` is the best option.
-- If your PC is powerful, and you don't mind utilizing resources, then use `HoneygainAutoClaim` for the best support for Docker.
+- If your PC is powerful, and you don't mind utilizing resources, then use `HoneygainAutoClaim` for the best support
 
 # Fact
 ### 1. 60% of this repo is written on an iPhone and an iPad
