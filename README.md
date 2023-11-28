@@ -26,7 +26,7 @@
   •
   <a href="#preview">Preview</a>
   •
-  <a href="#FAQ.md">FAQ</a>   
+  <a href="FAQ.md">FAQ</a>   
  <p align="left">
    
 <img src="Img/Logo.png"               
