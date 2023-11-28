@@ -13,10 +13,6 @@
   <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
   <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
-  •
-  <a href="README-fr.md">Français 🇫🇷</a>
-  •
-  <a href="README-de.md">Deutsch 🇩🇪</a>
 <p align="center">
   <a href="Debug.md">Debug</a>     
   •
@@ -32,7 +28,14 @@
 <img src="Img/Logo.png"               
      width="170" 
      height="170"></p>
-    
+
+### [Honeygain](https://r.honeygain.me/BADBO762DE) is a service that allows you to 💵 earn **passive income** by **sharing** your **internet** connection with businesses  for web statistics, price comparison, and other verified business processes
+
+> [!WARNING]
+> This script is **not** affiliated with or endorsed by Honeygain. Use it at your **own risk** and responsibility.  
+The **author** is **not responsible** for any consequences that may arise from using this script. If Honeygain wants me 
+to delete this bot, I'll do it.
+  
 > [!NOTE]
 > - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
 > - If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
