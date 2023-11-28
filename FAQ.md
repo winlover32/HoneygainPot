@@ -13,4 +13,4 @@
 - If your PC is powerful, and you don't mind utilizing resources, then use `HoneygainAutoClaim` for the best support for Docker.
 
 # Fact
-### 1. 60% of this repo was written by an iPhone and an iPad!
+### 1. 60% of this repo is written on an iPhone and an iPad
