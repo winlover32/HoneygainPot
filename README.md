@@ -24,7 +24,9 @@
   •
   <a href="#usage">Usage</a>     
   •
-  <a href="#preview">Preview</p>
+  <a href="#preview">Preview</a>
+  •
+  <a href="#FAQ.md">FAQ</a>   
  <p align="left">
    
 <img src="Img/Logo.png"               
