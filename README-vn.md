@@ -13,10 +13,6 @@
   <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
   <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
-  •
-  <a href="README-fr.md">Français 🇫🇷</a>
-  •
-  <a href="README-de.md">Deutsch 🇩🇪</a>
 <p align="center">
   <a href="Debug.md">Sửa các lỗi thường gặp</a>     
   •
@@ -32,7 +28,14 @@
 <img src="Img/Logo.png"               
      width="170" 
      height="170"></p>
-     
+
+  ### [Honeygain](https://r.honeygain.me/BADBO762DE)  là một nền tảng trực tuyến sử dụng các thiết bị mạng của bạn như một cánh cổng để giúp các nhà doanh nghiệp hay các nhà phân tích dữ liệu để thực hiện các chiến dịch SEO, nghiên cứu thị trường, bảo vệ thương hiệu....
+
+> [!WARNING]
+> - Script/Bot này **KHÔNG** có liên kết hay được xác nhận bởi Honeygain
+> - **Tôi GorouFlex và MrLolf** **không có trách nhiệm** cho bất kỳ hậu quả mà có thể phát sinh trong quá trình dùng Script/Bot này
+> - Nếu Honeygain muốn chúng tôi xoá con bot này thì chúng tôi sẽ làm
+
 > [!NOTE]
 > - Luôn cập nhật repo của các bạn theo repo gốc này để nhận được những bản cập nhật và vá lỗi mới nhất, và tôi GorouFlex sẽ không hỗ trợ nếu phát hiện repo của bạn đã lỗi thời và không được cập nhật theo repo chính.
 > - Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Debug.md](Debug.md).
