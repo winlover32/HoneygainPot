@@ -1,8 +1,8 @@
 <h1 align="center">Welcome to FAQ - Fact</h1>
 
 # FAQ
-### 1. What is `Honeygain Pot`?
-- `Honeygain Pot` is a Python-based project that utilizes GitHub Actions to run a Python script for claiming the Honeygain lucky pot, instead of using Docker like the original repository [HoneygainAutoClaim by MrLolf](https://github.com/MrLoLf/HoneygainAutoClaim).
+### 1. What is `HoneygainPot`?
+- `HoneygainPot` is a Python-based project that utilizes GitHub Actions to run a Python script for claiming the Honeygain lucky pot, instead of using Docker like the original repository [HoneygainAutoClaim by MrLolf](https://github.com/MrLoLf/HoneygainAutoClaim).
 - I have also implemented this feature into the original repository ([PR #9](https://github.com/MrLoLf/HoneygainAutoClaim/pull/9)).
 
 ### 2. What is the difference between `HoneygainPot` and `HoneygainAutoClaim`?
