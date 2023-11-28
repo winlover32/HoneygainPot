@@ -31,6 +31,7 @@ def create_config() -> None:
     else:
         try:
           email: str = input("Email: ")
+          print("Password: ")
           password: str = getpass()
         except:
           print("------ Traceback log ------\n❌ Error code 3: Cannot receive any input, make sure 'IsGit' = 1.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
