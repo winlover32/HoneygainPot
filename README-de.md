@@ -20,6 +20,8 @@
   <a href="#Nutzung">Nutzung</a> 
   •
   <a href="#vorschau">Vorschau</a>
+  •
+  <a href="FAQ.md">FAQ</a> 
 </p>
  <p align="left">
    
