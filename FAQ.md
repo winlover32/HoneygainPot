@@ -1,16 +1,16 @@
-<h1 align="center">Welcome to FAQ - Fact</h1>
+<h1 align="center">Welcome to FAQ</h1>
 
 # FAQ
 ### 1. What is `HoneygainPot`?
-- `HoneygainPot` is a Python-based project that utilizes GitHub Actions to run a Python script for claiming the Honeygain lucky pot, instead of using physical PC like the original repository [HoneygainAutoClaim by MrLolf](https://github.com/MrLoLf/HoneygainAutoClaim).
-- I have also implemented this feature into the original repository ([PR #9](https://github.com/MrLoLf/HoneygainAutoClaim/pull/9)).
+- `HoneygainPot` is a project using Python and utilizes GitHub Actions server to run a script/bot for claiming Honeygain's lucky pot, instead of manually running it on a 'physical' computer, as seen in the original repository [HoneygainAutoClaim by MrLolf](https://github.com/MrLoLf/HoneygainAutoClaim).
+- I've also added this feature to the original repo but cannot guarantee good support for GitHub Actions ([PR #9](https://github.com/MrLoLf/HoneygainAutoClaim/pull/9)).
 
-### 2. What is the difference between `HoneygainPot` and `HoneygainAutoClaim`?
-- `HoneygainPot` is primarily designed to fully support GitHub Actions but still supports for physically PC. I have removed some code from the main source, such as the logging feature, and improved the debug section, which `HoneygainAutoClaim` does not have.
+### 2. What's the difference between `HoneygainPot` and `HoneygainAutoClaim`?
+- `HoneygainPot` aims to provide 100% support for GitHub Actions and still supports running on 'physical' machines (like your computer). I have removed features that I felt were somewhat useless, such as logging, and added a debug section for easier troubleshooting. In contrast, `HoneygainAutoClaim` does not have these.
 
-### 3. What should I mainly use between `HoneygainPot` and `HoneygainAutoClaim`?
-- If you want to use this script online without taking up space or resources on your PC, and you only want to run the Honeygain app in the background for sharing internet, then `HoneygainPot` is the best option.
-- If your PC is powerful, and you don't mind utilizing resources, then use `HoneygainAutoClaim` for the best support
+### 3. Which one should I use, `HoneygainPot` or `HoneygainAutoClaim`?
+- If you want to use this script/bot online without using your computer's resources and only run the Honeygain app to earn money by sharing network bandwidth, then you should use `HoneygainPot`.
+- If you want to use this script/bot on your computer, not automatically online, and don't care about the resources used, you can still use `HoneygainAutoClaim`!
 
-# Fact
-### 1. 60% of this repo is written on an iPhone and an iPad
+# Mind-blowing Fact 🤯
+### 1. 60% of this repo was written on an iPhone and an iPad.
