@@ -1,4 +1,9 @@
 <h1 align="center">Chào mừng đến với FAQ</h1>
+<p align="center">
+  <a href="FAQ.md">English 🇺🇸</a>
+  •
+  <a href="FAQ-vn.md">Tiếng Việt 🇻🇳</a>
+</p>
 
 # FAQ
 ### 1. `HoneygainPot` là gì?
