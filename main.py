@@ -13,7 +13,8 @@ header: dict[str, str] = {'Authorization': ''}
 
 print('-------- Welcome to HoneygainPot --------')
 print('Made by GFx and MrLolf')
-print('Powered by GitHub Actions V3 and Python')
+if os.getenv('IsGit') == '1':
+   print('Powered by GitHub Actions V3 and Python')   
 print('-----------------------------------------')
 print('Starting HoneygainPot 🍯')
 
