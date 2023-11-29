@@ -1,4 +1,9 @@
 <h1 align="center">Debug</h1>
+<p align="center">
+  <a href="Debug.md">English 🇺🇸</a>
+  •
+  <a href="Debug-vn.md">Tiếng Việt 🇻🇳</a>
+</p>
 
 > [!NOTE]
 > Error code list:
