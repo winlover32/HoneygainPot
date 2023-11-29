@@ -14,7 +14,7 @@
   •
   <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
 <p align="center">
-  <a href="Debug.md">Sửa các lỗi thường gặp</a>     
+  <a href="Debug-vn.md">Sửa các lỗi thường gặp</a>     
   •
   <a href="#tính-năng">Tính năng</a>
   •
