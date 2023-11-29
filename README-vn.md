@@ -22,7 +22,7 @@
   •
   <a href="#xem-trước">Xem trước</a>
   •
-  <a href="FAQ.md">FAQ</a>  
+  <a href="FAQ-vn.md">FAQ</a>  
 </p>
 <p align="left">
 <img src="Img/Logo.png"               
