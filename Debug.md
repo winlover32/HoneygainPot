@@ -87,7 +87,7 @@ KeyError: 'data'
 ```
 
 > [!TIP]
-> You are not eligible to get the lucky pot if you do not reach 15mb of sharing
+> You are not eligible to get the lucky pot if you do not reach 15mb of sharing bandwich everyday (following to Honeygain's TOS)
 
 ### Error code 3
 
@@ -111,7 +111,7 @@ Email:
 ```
 
 > [!TIP]
-> This is because GitHub Actions is basically a non-input console, so the code cannot receive the input, make sure that `IsGit` is set to 1 in the workflows file `daily.yml`
+> This is because GitHub Actions is basically a non-input console, so the code cannot receive the input, make sure that `IsGit` is set to 1 in the workflows file `daily.yml` and `manual.yml`
 
 
 ### Error code 4
@@ -121,7 +121,7 @@ Email:
 ```
 
 > [!TIP]
-> Check your credenrials again
+> Check your credentials again
 
 ### Error code 10
 
@@ -130,4 +130,4 @@ Email:
 ```
 
 > [!TIP]
-> Ask for GitHub
+> Ask GitHub idk how to fix this
