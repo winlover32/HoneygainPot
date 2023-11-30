@@ -1,5 +1,5 @@
-<h1 align="center">Honeygain Pot</h1>
-<h4 align="center">🐝A Bot that claim Honeygain pot every day🍯</h4>
+<h1 align="center">HoneygainPot</h1>
+<h4 align="center">🐝 A bot that claim Honeygain lucky pot every day 🍯</h4>
 <h4 align="center">Powered by GitHub Actions and Python</h4>
 <p align="center">
 <img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
@@ -36,16 +36,16 @@
  
 > [!IMPORTANT]
 > **Read all** documents in this repo before doing anything!
-> - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
+> - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated
 > - If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
 > - **Do not** enter your information such as email and password into 2 workflow file ( `daily.yml` and `manual.yml` ) cause it will not work and may leak your infomation to everyone
-> - (*): Do not fork this repo if two of these (not only 1 and CodeQL) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
+> - (*): Do not fork this repo if two of these ( not only 1 and CodeQL ) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
 > - 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
 > <img src="https://i.imgur.com/htGeFlY.jpg">
   
 # Feature 
 
-- Claim Honeygain pot and achievements rewards every day with GitHub Actions 🔥
+- Claim Honeygain lucky pot and achievements rewards every day with GitHub Actions 🔥
 - Checking your current balance
 
 # Usage 
@@ -61,11 +61,11 @@
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
 > [!IMPORTANT]
-Daily workflows file path (default is 14:00 UTC +0, and **DO NOT** enter your email and password here cause it will not work and may leak your infomation to everyone): `.github/workflows/daily.yml`
+Daily workflows file path ( default is 14:00 UTC +0, and **DO NOT** enter your email and password here cause it will not work and may leak your infomation to everyone ): `.github/workflows/daily.yml`
 
-Well, GitHub uses UTC time (UTC +0) for scheduling workflows, so we should convert it to our timezone.
+- Well, GitHub uses UTC time ( UTC +0 ) for scheduling workflows, so we should convert it to our timezone
 
-For example: If I want to set the daily trigger to trigger at 9:00 PM (UTC +7), I have to set it to 2:00 PM or 14:00 (24-hour format) (UTC±0) (2+7=9).
+- For example: If I want to set the daily trigger to trigger at 9:00 PM ( UTC +7 ), I have to set it to 2:00 PM or 14:00 ( 24-hour format ) ( UTC±0 ) ( ( 2+7=9 )
 
 ```
 name: Daily claim
@@ -73,7 +73,7 @@ on:
   schedule:
     - cron: '0 14 * * *' # <- UTC Time, replace 0 14
 ```
-So, if I want the daily trigger to run at 5:00 AM (UTC +7), I have to set it to 10:00 PM (UTC±0) (use 24-hour format):
+- So, if I want the daily trigger to run at 5:00 AM ( UTC +7 ), I have to set it to 10:00 PM ( UTC±0 ) ( use 24-hour format ):
 ```
 name: Daily claim
 on:
@@ -94,6 +94,9 @@ on:
 # Disclaimer
 
 > [!WARNING]
+> This project is licensed under the [MIT License](https://mit-license.org/)
+> 
+> For more information, see the [LICENSE file](./LICENSE)
 > - This script is **not** affiliated with or endorsed by Honeygain. Use it at your **own risk** and responsibility.  
 > - The **author** is **not responsible** for any consequences that may arise from using this script. If Honeygain wants me 
 to delete this bot, I'll do it.
