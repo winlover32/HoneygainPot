@@ -38,7 +38,7 @@
 > **Read all** documents in this repo before doing anything!
 > - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated
 > - If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
-> - **Do not** enter your information such as email and password into 2 workflow file ( `daily.yml` and `manual.yml` ) cause it will not work and may leak your infomation to everyone
+> - **Do not** enter your information such as email and password into 2 workflows file ( `daily.yml` and `manual.yml` ) cause it will not work and may leak your infomation to everyone
 > - (*): Do not fork this repo if two of these ( not only 1 and CodeQL ) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
 > - 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
 > <img src="https://i.imgur.com/htGeFlY.jpg">
@@ -61,7 +61,7 @@
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
 > [!IMPORTANT]
-Daily workflows file path ( default is 14:00 UTC +0, and **DO NOT** enter your email and password here cause it will not work and may leak your infomation to everyone ): `.github/workflows/daily.yml`
+Daily workflow file path ( default is 14:00 UTC +0, and **DO NOT** enter your email and password here cause it will not work and may leak your infomation to everyone ): `.github/workflows/daily.yml`
 
 - Well, GitHub uses UTC time ( UTC +0 ) for scheduling workflows, so we should convert it to our timezone
 
@@ -73,7 +73,7 @@ on:
   schedule:
     - cron: '0 14 * * *' # <- UTC Time, replace 0 14
 ```
-- So, if I want the daily trigger to run at 5:00 AM ( UTC +7 ), I have to set it to 10:00 PM ( UTC±0 ) ( use 24-hour format ):
+- So, if I want the daily trigger to run at 5:00 AM ( UTC +7 ), I have to set it to 10:00 PM ( UTC ±0 ) ( use 24-hour format ):
 ```
 name: Daily claim
 on:
