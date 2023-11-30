@@ -14,7 +14,9 @@
   •
   <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
 <p align="center">
-  <a href="Debug.md">Debug</a>     
+  <a href="Debug.md">Debug</a>  
+  •
+  <a href="FAQ.md">FAQ</a> 
   •
   <a href="#feature">Feature</a>
   •
@@ -22,21 +24,18 @@
   •
   <a href="#preview">Preview</a>
   •
-  <a href="FAQ.md">FAQ</a>   
+  <a href="#disclaimer">Disclaimer</a>
  <p align="left">
    
 <img src="Img/Logo.png"               
      width="170" 
      height="170"></p>
 
-### [Honeygain](https://r.honeygain.me/BADBO762DE) is a service that allows you to 💵 earn **passive income** by **sharing** your **internet** connection with businesses  for web statistics, price comparison, and other verified business processes
+### [Honeygain](https://r.honeygain.me/BADBO762DE) is a service that allows you to earn **passive income** by **sharing** your **internet** connection with businesses  for web statistics, price comparison, and other verified business processes
 
-> [!WARNING]
-> This script is **not** affiliated with or endorsed by Honeygain. Use it at your **own risk** and responsibility.  
-The **author** is **not responsible** for any consequences that may arise from using this script. If Honeygain wants me 
-to delete this bot, I'll do it.
-  
+ 
 > [!NOTE]
+> **Read all** documents in this repo before doing anything!
 > - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
 > - If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
 > - (*): Do not fork this repo if two of these (not only 1 and CodeQL) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
@@ -61,7 +60,7 @@ to delete this bot, I'll do it.
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
 > [!IMPORTANT]
-Daily workflows file path (default is 14:00 UTC +0): `.github/workflows/daily.yml`
+Daily workflows file path (default is 14:00 UTC +0, and **DO NOT** enter your email and password here cause it will not work and may leak your infomation to everyone): `.github/workflows/daily.yml`
 
 Well, GitHub uses UTC time (UTC +0) for scheduling workflows, so we should convert it to our timezone.
 
@@ -90,6 +89,13 @@ on:
   <img src="Img/preview (1).jpeg">
   <img src="Img/preview.jpeg">
 </p>
+
+# Disclaimer
+
+> [!WARNING]
+> - This script is **not** affiliated with or endorsed by Honeygain. Use it at your **own risk** and responsibility.  
+> - The **author** is **not responsible** for any consequences that may arise from using this script. If Honeygain wants me 
+to delete this bot, I'll do it.
 
 ## Thanks to
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
