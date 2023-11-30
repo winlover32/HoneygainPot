@@ -1,6 +1,6 @@
 <h1 align="center">HoneygainPot</h1>
 <h4 align="center">🐝 A bot that claim Honeygain lucky pot every day 🍯</h4>
-<h4 align="center">Powered by GitHub Actions and Python</h4>
+<h4 align="center">Powered by GitHub Actions 🐙 and Python 🐍</h4>
 <p align="center">
 <img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
 <img src="https://img.shields.io/github/stars/gorouflex/HoneygainPot?style=flat">
@@ -46,7 +46,7 @@
 # Feature 
 
 - Claim Honeygain lucky pot and achievements rewards every day with GitHub Actions 🔥
-- Checking your current balance
+- Checking your current balance 💵
 
 # Usage 
 
@@ -82,7 +82,7 @@ on:
 ```
 
 > [!NOTE]
-> GitHub Actions schedules can sometimes be delayed by up to 15 minutes due to high demand, so don’t worry!
+> GitHub Actions schedules can sometimes be delayed by up to 15 minutes due to high demand, so don’t worry! ⏱️
 
 # Preview
 
@@ -101,6 +101,6 @@ on:
 > - The **author** is **not responsible** for any consequences that may arise from using this script. If Honeygain wants me 
 to delete this bot, I'll do it.
 
-## Thanks to
+### Special thanks to 💖
 - [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
 - [rfoal](https://github.com/rfoel/) x [duolingo](https://github.com/rfoel/duolingo) for idea
