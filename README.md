@@ -45,7 +45,7 @@
   
 # Feature 
 
-- Claim Honeygain lucky pot and achievements rewards every day with GitHub Actions 🔥
+- Claim Honeygain’s lucky pot and achievement rewards every day with GitHub Actions 🔥
 - Checking your current balance 💵
 
 # Usage 
