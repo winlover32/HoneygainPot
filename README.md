@@ -40,7 +40,7 @@
 > - If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
 > - **Do not** enter your information such as email and password into 2 workflows file ( `daily.yml` and `manual.yml` ) cause it will not work and may leak your infomation to everyone
 > - (*): Do not fork this repo if two of these ( not only 1 and CodeQL ) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
-> - 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
+> - `Daily claim` workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
 > <img src="https://i.imgur.com/htGeFlY.jpg">
   
 # Feature 
@@ -52,20 +52,20 @@
 
   1. [Fork this repository 🍴](https://github.com/gorouflex/HoneygainPot/fork)
   2. Go to your forked repository 🍴
-  3. Go to `Settings > Secrets and Variables > Actions`, and click the button `New Repository secret`
-  4. For the secret name, use `MAIL_JWD` to set your honeygain mail and `PASS_JWD` for your password
-  5. Go to your forked repository and go to the Actions tab and press the button `I understand my workflows, go ahead and enable them`
+  3. Go to `Settings > Secrets and Variables > Actions`, and click `New Repository secret`
+  4. For the secret name, use `MAIL_JWD` and set your honeygain mail and `PASS_JWD` for your password
+  5. Go to your forked repository 🍴 and go to the Actions tab and press `I understand my workflows, go ahead and enable them`
 
 ![GitSettings](https://github.com/gorouflex/HoneygainPot/assets/98001973/d8d33621-5717-488d-9a80-6db395c8ac9d)
 
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
 > [!IMPORTANT]
-Daily workflow file path ( default is 14:00 UTC +0, and **DO NOT** enter your email and password here cause it will not work and may leak your infomation to everyone ): `.github/workflows/daily.yml`
+Daily workflow file path ( default is 14:00 UTC +0, and **DO NOT** enter your email and password here cause it will **not work** and may leak your information to everyone ): `.github/workflows/daily.yml`
 
 - Well, GitHub uses UTC time ( UTC +0 ) for scheduling workflows, so we should convert it to our timezone
 
-- For example: If I want to set the daily trigger to trigger at 9:00 PM ( UTC +7 ), I have to set it to 2:00 PM or 14:00 ( 24-hour format ) ( UTC±0 ) ( ( 2+7=9 )
+- For example: If I want to set the daily trigger to trigger at 9:00 PM ( UTC +7 ), I have to set it to 2:00 PM or 14:00 ( 24-hour format ) ( UTC±0 ) ( ( 2+7=9 ) :
 
 ```
 name: Daily claim
