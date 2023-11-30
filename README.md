@@ -34,10 +34,11 @@
 ### [Honeygain](https://r.honeygain.me/BADBO762DE) is a service that allows you to earn **passive income** by **sharing** your **internet** connection with businesses  for web statistics, price comparison, and other verified business processes
 
  
-> [!NOTE]
+> [!IMPORTANT]
 > **Read all** documents in this repo before doing anything!
 > - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated.
 > - If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
+> - **Do not** enter your infomation such as email and password into 2 workflow file ( `daily.yml` and `manual.ymn` ) cause it will not work and may leak your infomation to everyone
 > - (*): Do not fork this repo if two of these (not only 1 and CodeQL) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
 > - 'Daily claim' workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
 > <img src="https://i.imgur.com/htGeFlY.jpg">
