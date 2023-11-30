@@ -1,6 +1,6 @@
 <h1 align="center">HoneygainPot</h1>
 <h4 align="center">🐝 Một con bot giúp bạn nhận lucky pot của Honeygain mỗi ngày🍯 </h4>
-<h4 align="center">Dưới sự hỗ trợ của GitHub Actions và Python</h4>
+<h4 align="center">Dưới sự hỗ trợ của GitHub Actions 🐙 và Python 🐍</h4>
 <p align="center">
 <img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
 <img src="https://img.shields.io/github/stars/gorouflex/HoneygainPot?style=flat">
@@ -46,12 +46,12 @@
 # Tính năng
 
 - Giúp bạn nhận lucky pot và thưởng thành tựu của Honeygain mỗi ngày mà không cần treo máy với sự hỗ trợ của GitHub Actions, tăng thêm thu nhập cho bạn 🔥
-- Kiểm tra được số dư tài khoản Honeygain của bạn
+- Kiểm tra được số dư tài khoản Honeygain của bạn 💵
 
 # Cách sử dụng
 
-  1. [Fork repo này](https://github.com/gorouflex/HoneygainPot/fork)  
-  2. Đến repo mà bạn đã fork
+  1. [🍴Fork repo này](https://github.com/gorouflex/HoneygainPot/fork)  
+  2. Đến repo mà bạn đã fork🍴
   3. Vào `Settings > Secrets and Variables > Actions`, và ấn nút `New Repository secret`
   4. Đặt tên secrets đầu tiên tên là `MAIL_JWD` và điền mail Honeygain của bạn vào, sau đó tạo thêm secrets thứ 2 tên là `PASS_JWD` rồi nhập pass của bạn vào
   5. Trở lại repo của bạn đã fork, vào Actions trên thanh công cụ repo rồi ấn `I understand my workflows, go ahead and enable them`
@@ -83,7 +83,7 @@ on:
 ```
 
 > [!NOTE]
-> GitHub Actions có thể bị delay hơn so với giờ dự kiến đã đặt khoảng từ 3p đến 15p vì do nhu cầu chạy đang cao nên đừng lo lắng vì sao nó không chạy đúng giờ nhé!
+> GitHub Actions có thể bị delay hơn so với giờ dự kiến đã đặt khoảng từ 3p đến 15p vì do nhu cầu chạy đang cao nên đừng lo lắng vì sao nó không chạy đúng giờ nhé!⏱️
 
 # Xem trước
 
@@ -95,13 +95,13 @@ on:
 # Trách nhiệm
 
 > [!WARNING]
-> Dự án này được bảo hộ dưới dưới giấy phép [MIT License](https://mit-license.org/)
+> Dự án này được bảo hộ dưới giấy phép [MIT License](https://mit-license.org/)
 > 
 > Thông tin chi tiết ,vui lòng xem [file LICENSE](./LICENSE)
 > - Script/Bot này **KHÔNG** có liên kết hay được xác nhận bởi Honeygain
 > - **Tôi GorouFlex và MrLolf** **không có trách nhiệm** cho bất kỳ hậu quả mà có thể phát sinh trong quá trình dùng Script/Bot này
 > - Nếu Honeygain muốn chúng tôi xoá con bot này thì chúng tôi sẽ làm
 
-## Cảm ơn
+### Đặt biệt cảm ơn 💖
 - [MrLolf](https://github.com/MrLoLf/) cho [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
 - [rfoal](https://github.com/rfoel/) x [duolingo](https://github.com/rfoel/duolingo) cho ý tưởng
