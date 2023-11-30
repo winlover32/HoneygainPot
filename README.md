@@ -50,8 +50,8 @@
 
 # Usage 
 
-  1. [Fork this repository](https://github.com/gorouflex/HoneygainPot/fork)
-  2. Go to your forked repository
+  1. [Fork this repository 🍴](https://github.com/gorouflex/HoneygainPot/fork)
+  2. Go to your forked repository 🍴
   3. Go to `Settings > Secrets and Variables > Actions`, and click the button `New Repository secret`
   4. For the secret name, use `MAIL_JWD` to set your honeygain mail and `PASS_JWD` for your password
   5. Go to your forked repository and go to the Actions tab and press the button `I understand my workflows, go ahead and enable them`
