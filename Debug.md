@@ -65,12 +65,13 @@ Error: Process completed with exit code 1.
 ```
 
 > [!TIP]
-> This means you did not set `MAIL_JWD` and `PASS_JWD` secrets in the GitHub repo settings
+> This means you did not set `MAIL_JWD` and `PASS_JWD` secrets in the GitHub repo setting
 
 ### Error code 2
 
 ```
-❌ Error code 2: You are not eligible to get the lucky pot
+❌ Error code 2: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS )
+
 ```
 
 or
@@ -87,7 +88,7 @@ KeyError: 'data'
 ```
 
 > [!TIP]
-> You are not eligible to get the lucky pot if you do not reach 15mb of sharing bandwich everyday (following to Honeygain's TOS)
+> You are not eligible to get the lucky pot if you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS )
 
 ### Error code 3
 
