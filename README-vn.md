@@ -14,7 +14,9 @@
   •
   <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
 <p align="center">
-  <a href="Debug-vn.md">Sửa các lỗi thường gặp</a>     
+  <a href="Debug-vn.md">Sửa các lỗi thường gặp</a>
+  •
+  <a href="FAQ-vn.md">FAQ</a>  
   •
   <a href="#tính-năng">Tính năng</a>
   •
@@ -22,7 +24,7 @@
   •
   <a href="#xem-trước">Xem trước</a>
   •
-  <a href="FAQ-vn.md">FAQ</a>  
+  <a href="#trách-nhiệm">Trách nhiệm</a>  
 </p>
 <p align="left">
 <img src="Img/Logo.png"               
@@ -31,12 +33,9 @@
 
   ### [Honeygain](https://r.honeygain.me/BADBO762DE)  là một nền tảng trực tuyến sử dụng các thiết bị mạng của bạn như một cánh cổng để giúp các nhà doanh nghiệp hay các nhà phân tích dữ liệu để thực hiện các chiến dịch SEO, nghiên cứu thị trường, bảo vệ thương hiệu....
 
-> [!WARNING]
-> - Script/Bot này **KHÔNG** có liên kết hay được xác nhận bởi Honeygain
-> - **Tôi GorouFlex và MrLolf** **không có trách nhiệm** cho bất kỳ hậu quả mà có thể phát sinh trong quá trình dùng Script/Bot này
-> - Nếu Honeygain muốn chúng tôi xoá con bot này thì chúng tôi sẽ làm
 
 > [!NOTE]
+> **Vui lòng đọc hết tất cả** tài liệu và văn bản hướng dẫn trong repo này trước khi làm!
 > - Luôn cập nhật repo của các bạn theo repo gốc này để nhận được những bản cập nhật và vá lỗi mới nhất, và tôi GorouFlex sẽ không hỗ trợ nếu phát hiện repo của bạn đã lỗi thời và không được cập nhật theo repo chính.
 > - Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Debug.md](Debug.md).
 > - (*) Không được fork repo nếu bạn thấy cả 2 ( không phải chỉ có 1 và không bao gồm cả CodeQL ) trạng thái của GitHub Actions đều chuyển sang đỏ, hãy chờ cho đến khi 1 trong 2 hoặc cả 2 chuyển sang màu xanh thì có thể fork.
@@ -91,6 +90,13 @@ on:
   <img src="Img/preview (1).jpeg">
   <img src="Img/preview.jpeg">
 </p>
+
+# Trách nhiệm
+
+> [!WARNING]
+> - Script/Bot này **KHÔNG** có liên kết hay được xác nhận bởi Honeygain
+> - **Tôi GorouFlex và MrLolf** **không có trách nhiệm** cho bất kỳ hậu quả mà có thể phát sinh trong quá trình dùng Script/Bot này
+> - Nếu Honeygain muốn chúng tôi xoá con bot này thì chúng tôi sẽ làm
 
 ## Cảm ơn
 - [MrLolf](https://github.com/MrLoLf/) cho [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
