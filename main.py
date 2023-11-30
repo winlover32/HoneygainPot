@@ -137,7 +137,7 @@ def achievements_claim(s: requests.session) -> bool:
         try:
           achievements: dict = achievements.json()
         except:
-            print("------ Traceback log ------\n❌ Error code 2: You are not eligible to get the lucky pot.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
+            print("------ Traceback log ------\n❌ Error code 2: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS ).\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
             exit(-1)
         try:
             for achievement in achievements['data']:
@@ -172,7 +172,7 @@ def main() -> None:
         header = {'Authorization': f'Bearer {token}'}
         if not achievements_claim(s):
             print('Failed to claim achievements ❌')
-            print("------ Traceback log ------\n❌ Error code 2: You are not eligible to get the lucky pot because you still did not reach 15mb of sharing.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
+            print("------ Traceback log ------\n❌ Error code 2: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS ).\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
             exit(-1)
         dashboard: Response = s.get(urls['balance'], headers=header)
         dashboard: dict = dashboard.json()
@@ -188,7 +188,7 @@ def main() -> None:
             try:
               print(f'Claimed {pot_claim["data"]["credits"]} credits.')
             except:
-              print("------ Traceback log ------\n❌ Error code 2: You are not eligible to get the lucky pot because you still did not reach 15mb of sharing.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
+              print("------ Traceback log ------\n❌ Error code 2: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS ).\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
               exit(-1)
         pot_winning: Response = s.get(urls['pot'], headers=header)
         pot_winning: dict = pot_winning.json()
