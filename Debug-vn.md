@@ -70,7 +70,8 @@ Error: Process completed with exit code 1.
 ### Error code 2
 
 ```
-❌ Error code 2: You are not eligible to get the lucky pot
+❌ Error code 2: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS )
+
 ```
 
 hoặc ( với phiên bản cũ hơn chưa sync với repo chính ) :
