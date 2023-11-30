@@ -34,10 +34,11 @@
   ### [Honeygain](https://r.honeygain.me/BADBO762DE)  là một nền tảng trực tuyến sử dụng các thiết bị mạng của bạn như một cánh cổng để giúp các nhà doanh nghiệp hay các nhà phân tích dữ liệu để thực hiện các chiến dịch SEO, nghiên cứu thị trường, bảo vệ thương hiệu....
 
 
-> [!NOTE]
+> [!IMPORTANT]
 > **Vui lòng đọc hết tất cả** tài liệu và văn bản hướng dẫn trong repo này trước khi làm!
 > - Luôn cập nhật repo của các bạn theo repo gốc này để nhận được những bản cập nhật và vá lỗi mới nhất, và tôi GorouFlex sẽ không hỗ trợ nếu phát hiện repo của bạn đã lỗi thời và không được cập nhật theo repo chính.
 > - Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Debug.md](Debug.md).
+> - **Vui lòng không** nhập thông tin tài khoản của bạn vào 2 file workflow ( `daily.yml` và `manual.yml`)  vì nó sẽ không hoạt động mà sẽ gây ra lỗi và còn có thể bị lộ thông tin cho người khác xem
 > - (*) Không được fork repo nếu bạn thấy cả 2 ( không phải chỉ có 1 và không bao gồm cả CodeQL ) trạng thái của GitHub Actions đều chuyển sang đỏ, hãy chờ cho đến khi 1 trong 2 hoặc cả 2 chuyển sang màu xanh thì có thể fork.
 > - 'Daily claim' sẽ luôn luôn tự động chạy vào lúc 14:00 giờ UTC +0 tức là 9:00 tối theo giờ UTC +7, nếu muốn chỉnh thì tham khảo tại [đây](https://github.com/gorouflex/HoneygainPot/blob/main/README-vn.md#l%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-ch%E1%BB%89nh-l%E1%BA%A1i-th%E1%BB%9Di-gian-t%E1%BB%B1-%C4%91%E1%BB%99ng-ch%E1%BA%A1y-m%E1%BB%97i-ng%C3%A0y).
 > <img src="https://i.imgur.com/htGeFlY.jpg">
@@ -60,7 +61,7 @@
 ## Làm thế nào để chỉnh lại thời gian tự động chạy mỗi ngày?
 
 > [!IMPORTANT]
-File tự động chạy mỗi ngày ở ( mặc định là 14:00 UTC +0 ): `.github/workflows/daily.yml`
+File tự động chạy mỗi ngày ở ( mặc định là 14:00 UTC +0, và vui lòng **không** nhập email tài khoản và mật khẩu của bạn vào vì nó sẽ không hoạt động dẫn đến lỗi và còn có thể bị lộ thông tim cho người bên ngoài ): `.github/workflows/daily.yml`
 
 GitHub sử dụng giờ UTC quốc tế (UTC +0) để đặt lịch trình chạy GitHub Actions, nên chúng ta phải đổi sang múi giờ của mình
 
