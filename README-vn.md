@@ -1,5 +1,5 @@
-<h1 align="center">Honeygain Pot</h1>
-<h4 align="center">🐝Một con bot giúp bạn nhận lucky pot của Honeygain mỗi ngày🍯</h4>
+<h1 align="center">HoneygainPot</h1>
+<h4 align="center">🐝 Một con bot giúp bạn nhận lucky pot của Honeygain mỗi ngày🍯 </h4>
 <h4 align="center">Dưới sự hỗ trợ của GitHub Actions và Python</h4>
 <p align="center">
 <img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
@@ -37,7 +37,7 @@
 > [!IMPORTANT]
 > **Vui lòng đọc hết tất cả** tài liệu và văn bản hướng dẫn trong repo này trước khi làm!
 > - Luôn cập nhật repo của các bạn theo repo gốc này để nhận được những bản cập nhật và vá lỗi mới nhất, và tôi GorouFlex sẽ không hỗ trợ nếu phát hiện repo của bạn đã lỗi thời và không được cập nhật theo repo chính.
-> - Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Debug.md](Debug.md).
+> - Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Debug.md](Debug-vn.md).
 > - **Vui lòng không** nhập thông tin tài khoản của bạn vào 2 file workflow ( `daily.yml` và `manual.yml`)  vì nó sẽ không hoạt động mà sẽ gây ra lỗi và còn có thể bị lộ thông tin cho người khác xem
 > - (*) Không được fork repo nếu bạn thấy cả 2 ( không phải chỉ có 1 và không bao gồm cả CodeQL ) trạng thái của GitHub Actions đều chuyển sang đỏ, hãy chờ cho đến khi 1 trong 2 hoặc cả 2 chuyển sang màu xanh thì có thể fork.
 > - 'Daily claim' sẽ luôn luôn tự động chạy vào lúc 14:00 giờ UTC +0 tức là 9:00 tối theo giờ UTC +7, nếu muốn chỉnh thì tham khảo tại [đây](https://github.com/gorouflex/HoneygainPot/blob/main/README-vn.md#l%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-ch%E1%BB%89nh-l%E1%BA%A1i-th%E1%BB%9Di-gian-t%E1%BB%B1-%C4%91%E1%BB%99ng-ch%E1%BA%A1y-m%E1%BB%97i-ng%C3%A0y).
@@ -45,8 +45,8 @@
   
 # Tính năng
 
-- Giúp bạn nhận lucky pot của Honeygain mỗi ngày mà không cần treo máy với sự hỗ trợ của GitHub Actions, tăng thêm thu nhập cho bạn🔥
-- Kiểm tra được số dư tài khoản Honeygain của bạn.
+- Giúp bạn nhận lucky pot và thưởng thành tựu của Honeygain mỗi ngày mà không cần treo máy với sự hỗ trợ của GitHub Actions, tăng thêm thu nhập cho bạn 🔥
+- Kiểm tra được số dư tài khoản Honeygain của bạn
 
 # Cách sử dụng
 
@@ -63,9 +63,9 @@
 > [!IMPORTANT]
 File tự động chạy mỗi ngày ở ( mặc định là 14:00 UTC +0, và vui lòng **không** nhập email tài khoản và mật khẩu của bạn vào vì nó sẽ không hoạt động dẫn đến lỗi và còn có thể bị lộ thông tim cho người bên ngoài ): `.github/workflows/daily.yml`
 
-GitHub sử dụng giờ UTC quốc tế (UTC +0) để đặt lịch trình chạy GitHub Actions, nên chúng ta phải đổi sang múi giờ của mình
+- GitHub sử dụng giờ UTC quốc tế (UTC +0) để đặt lịch trình chạy GitHub Actions, nên chúng ta phải đổi sang múi giờ của mình
 
-Ví dụ: Nếu tôi muốn đặt lịch để cho GitHub Actions chạy vào lúc 9:00 tối ( múi giờ UTC +7) thì tôi phải chuyển thành là 2 giờ chiều theo múi giờ UTC +0, vì 2+7 là 9!
+- Ví dụ: Nếu tôi muốn đặt lịch để cho GitHub Actions chạy vào lúc 9:00 tối ( múi giờ UTC +7 ) thì tôi phải chuyển thành là 2 giờ chiều theo múi giờ UTC +0, vì 2+7 là 9!
 Lưu ý là phải sử dụng định dạng 24 giờ để đặt lịch: 
 ```
 name: Daily claim
@@ -73,7 +73,7 @@ on:
   schedule:
     - cron: '0 14 * * *' # <- UTC Time
 ```
-Nên nếu tôi muốn đặt vào lúc 5h sáng theo giờ UTC +7 thì tôi phải đặt thành 10h tối theo giờ UTC +0, và phải sử dụng định dạng 24 giờ
+- Nên nếu tôi muốn đặt vào lúc 5h sáng theo giờ UTC +7 thì tôi phải đặt thành 10h tối theo giờ UTC +0, và phải sử dụng định dạng 24 giờ:
 
 ```
 name: Daily claim
@@ -95,6 +95,9 @@ on:
 # Trách nhiệm
 
 > [!WARNING]
+> Dự án này được bảo hộ dưới dưới giấy phép [MIT License](https://mit-license.org/)
+> 
+> Thông tin chi tiết ,vui lòng xem [file LICENSE](./LICENSE)
 > - Script/Bot này **KHÔNG** có liên kết hay được xác nhận bởi Honeygain
 > - **Tôi GorouFlex và MrLolf** **không có trách nhiệm** cho bất kỳ hậu quả mà có thể phát sinh trong quá trình dùng Script/Bot này
 > - Nếu Honeygain muốn chúng tôi xoá con bot này thì chúng tôi sẽ làm
