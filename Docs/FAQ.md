@@ -1,8 +1,8 @@
 <h1 align="center">Welcome to FAQ</h1>
 <p align="center">
-  <a href="Docs/FAQ.md">English 🇺🇸</a>
+  <a href="FAQ.md">English 🇺🇸</a>
   •
-  <a href="Docs/FAQ-vn.md">Tiếng Việt 🇻🇳</a>
+  <a href="FAQ-vn.md">Tiếng Việt 🇻🇳</a>
 </p>
 
 # FAQ

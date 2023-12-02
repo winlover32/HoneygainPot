@@ -27,9 +27,10 @@
   <a href="#trách-nhiệm">Trách nhiệm</a>  
 </p>
 <p align="left">
-<img src="main/Img/Logo.png"               
+<img src="/Img/Logo.png"               
      width="170" 
-     height="170"></p>
+     height="170">
+</p>
 
   ### [Honeygain](https://r.honeygain.me/BADBO762DE)  là một nền tảng trực tuyến sử dụng các thiết bị mạng của bạn như một cánh cổng để giúp các nhà doanh nghiệp hay các nhà phân tích dữ liệu để thực hiện các chiến dịch SEO, nghiên cứu thị trường, bảo vệ thương hiệu....
 
@@ -40,7 +41,7 @@
 > - Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Docs/Debug-vn.md](Debug-vn.md).
 > - **Vui lòng không** nhập thông tin tài khoản của bạn vào 2 file workflow ( `daily.yml` và `manual.yml`)  vì nó sẽ không hoạt động mà sẽ gây ra lỗi và còn có thể bị lộ thông tin cho người khác xem
 > - (*) Không được fork repo nếu bạn thấy cả 2 ( không phải chỉ có 1 và không bao gồm cả CodeQL ) trạng thái của GitHub Actions đều chuyển sang đỏ, hãy chờ cho đến khi 1 trong 2 hoặc cả 2 chuyển sang màu xanh thì có thể fork.
-> - `Daily claim` sẽ luôn luôn tự động chạy vào lúc 14:00 giờ UTC +0 tức là 9:00 tối theo giờ UTC +7, nếu muốn chỉnh thì tham khảo tại [đây](https://github.com/gorouflex/HoneygainPot/blob/main/README-vn.md#l%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-ch%E1%BB%89nh-l%E1%BA%A1i-th%E1%BB%9Di-gian-t%E1%BB%B1-%C4%91%E1%BB%99ng-ch%E1%BA%A1y-m%E1%BB%97i-ng%C3%A0y).
+> - `Daily claim` sẽ luôn luôn tự động chạy vào lúc 14:00 giờ UTC +0 tức là 9:00 tối theo giờ UTC +7, nếu muốn chỉnh thì tham khảo tại [đây](https://github.com/gorouflex/HoneygainPot/blob/main/Docs/README-vn.md#l%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-ch%E1%BB%89nh-l%E1%BA%A1i-th%E1%BB%9Di-gian-t%E1%BB%B1-%C4%91%E1%BB%99ng-ch%E1%BA%A1y-m%E1%BB%97i-ng%C3%A0y).
 > <img src="https://i.imgur.com/htGeFlY.jpg">
   
 # Tính năng
@@ -88,8 +89,8 @@ on:
 # Xem trước
 
 <p align="center">
-  <img src="Img/preview (1).jpeg">
-  <img src="Img/preview.jpeg">
+  <img src="/Img/preview (1).jpeg">
+  <img src="/Img/preview.jpeg">
 </p>
 
 # Trách nhiệm
@@ -97,7 +98,7 @@ on:
 > [!WARNING]
 > Dự án này được bảo hộ dưới giấy phép [MIT License](https://mit-license.org/)
 > 
-> Thông tin chi tiết ,vui lòng xem [file LICENSE](./LICENSE)
+> Thông tin chi tiết ,vui lòng xem [file LICENSE](/LICENSE)
 > - Script/Bot này **KHÔNG** có liên kết hay được xác nhận bởi Honeygain
 > - **Tôi GorouFlex và MrLolf** **không có trách nhiệm** cho bất kỳ hậu quả mà có thể phát sinh trong quá trình dùng Script/Bot này
 > - Nếu Honeygain muốn chúng tôi xoá con bot này thì chúng tôi sẽ làm

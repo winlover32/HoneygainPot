@@ -1,8 +1,8 @@
 <h1 align="center">Debug</h1>
 <p align="center">
-  <a href="Docs/Debug.md">English 🇺🇸</a>
+  <a href="Debug.md">English 🇺🇸</a>
   •
-  <a href="Docs/Debug-vn.md">Tiếng Việt 🇻🇳</a>
+  <a href="Debug-vn.md">Tiếng Việt 🇻🇳</a>
 </p>
 
 > [!NOTE]
@@ -20,16 +20,16 @@
 3. Then click to `Manual` or `Daily` tab then click to the `Run HoneygainPot` section, you will see the debug logs
 
 <p align="left">
-  <img src="Img/step-1.png">
+  <img src="/Img/step-1.png">
 </p>
 <p align="center">
-  <img src="Img/step-2.png">
+  <img src="/Img/step-2.png">
 </p>
 <p align="center">
-  <img src="Img/step-3.png">
+  <img src="/Img/step-3.png">
 </p>
 <p align="left">
-  <img src="Img/step-4.png">
+  <img src="/Img/step-4.png">
 </p>
   
 ## GitHub Actions

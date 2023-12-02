@@ -1,8 +1,8 @@
 <h1 align="center">Sửa các lỗi thường gặp</h1>
 <p align="center">
-  <a href="Docs/Debug.md">English 🇺🇸</a>
+  <a href="Debug.md">English 🇺🇸</a>
   •
-  <a href="Docs/Debug-vn.md">Tiếng Việt 🇻🇳</a>
+  <a href="Debug-vn.md">Tiếng Việt 🇻🇳</a>
 </p>
 
 > [!NOTE]
@@ -20,16 +20,16 @@
 3. Chọn tab `Manual` hoặc `Daily` rồi chọn tab `Run HoneygainPot` bạn sẽ thấy mã lỗi/nhật ký báo lỗi
 
 <p align="left">
-  <img src="Img/step-1.png">
+  <img src="/Img/step-1.png">
 </p>
 <p align="center">
-  <img src="Img/step-2.png">
+  <img src="/Img/step-2.png">
 </p>
 <p align="center">
-  <img src="Img/step-3.png">
+  <img src="/Img/step-3.png">
 </p>
 <p align="left">
-  <img src="Img/step-4.png">
+  <img src="/Img/step-4.png">
 </p>
   
 ## GitHub Actions
