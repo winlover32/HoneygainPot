@@ -31,22 +31,17 @@ def create_config() -> None:
     cfg: ConfigParser = ConfigParser()
     cfg.add_section('User')
     if os.getenv('IsGit') == '1':
-        try:
-          if os.getenv('IsGit') == '1':
-             email = os.getenv('MAIL')
-             password = os.getenv('PASS')
-             cfg.set('User', 'email', f"{email}")
-             cfg.set('User', 'password', f"{password}")
-          elif os.getenv('IsJWT') == '1':
-              try:
-                token = os.getenv('JWT_TOKEN')
-              except:
-                print("-------- Traceback log --------\n❌ Error code 5: Cannot find 'JWT_TOKEN' for Honeygain.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
-                exit(-1)
-              cfg.set('User', 'token', f"{token}")
-        except:
-          print("-------- Traceback log --------\n❌ Error code 1: Cannot find 'MAIL' and 'PASS'.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
-          exit(-1)
+       email = os.getenv('MAIL')
+       password = os.getenv('PASS')
+       cfg.set('User', 'email', f"{email}")
+       cfg.set('User', 'password', f"{password}")
+    elif os.getenv('IsJWT') == '1':
+         try:
+            token = os.getenv('JWT_TOKEN')
+            cfg.set('User', 'token', f"{token}")
+          except:
+            print("-------- Traceback log --------\n❌ Error code 5: Cannot find 'JWT_TOKEN' for Honeygain.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
+            exit(-1)
     else:
         try:
           is_token = input("Do you want to log in to Honeygain using a JWT token instead of using an email and password? (Y/N):")
