@@ -28,8 +28,8 @@ def create_config() -> None:
     cfg.add_section('User')
     if os.getenv('IsGit') == '1':
         try:
-          email = os.getenv('MAIL_JWD')
-          password = os.getenv('PASS_JWD')
+          email = os.getenv('MAIL')
+          password = os.getenv('PASS')
         except:
           print("-------- Traceback log --------\n❌ Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD'.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
           exit(-1)
