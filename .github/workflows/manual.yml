@@ -14,4 +14,4 @@ jobs:
           PASS: ${{ secrets.PASS }}
           JWT_TOKEN: ${{ secrets.JWT_TOKEN }}
           IsGit: 1
-          IsJWT: 0 # <- 0 = Use Mail and Pass ; 1 = Use Token (Default is 1)
+          IsJWT: 1 # <- 0 = Use Mail and Pass ; 1 = Use Token (Default is 1)

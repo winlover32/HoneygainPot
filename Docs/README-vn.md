@@ -63,10 +63,10 @@
   8. Đi đến file [`.github/workflows/daily.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/daily.yml) và file [`.github/workflows/manual.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/manual.yml) rồi đặt `IsJWT` thành 1 như thế này: `IsJWT: 1`
   9. Trở lại repo của bạn đã fork 🍴, vào Actions trên thanh công cụ repo rồi ấn `I understand my workflows, go ahead and enable them`
 
-<p align="center">
-  <img src="Img/get_token.png">
-  <img src="Img/IsJWT(1).png">
-  <img src="Img/GitSettings-Token.png">
+<p align="left">
+  <img src="/Img/get_token.png">
+  <img src="/Img/IsJWT(1).png">
+  <img src="/Img/GitSettings-Token.png">
 </p>
 
 ## Sử dụng Mail và Pass
@@ -78,9 +78,9 @@
   5. Đi đến file [`.github/workflows/daily.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/daily.yml) và file [`.github/workflows/manual.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/manual.yml) rồi đặt `IsJWT` thành 0 như thế này: `IsJWT: 0`
   6. Trở lại repo của bạn đã fork 🍴, vào Actions trên thanh công cụ repo rồi ấn `I understand my workflows, go ahead and enable them`
 
-<p align="center">
-  <img src="Img/IsJWT(0).png">
-  <img src="Img/GitSettings.png">
+<p align="left">
+  <img src="/Img/IsJWT(0).png">
+  <img src="/Img/GitSettings.png">
 </p>
 
 
@@ -114,8 +114,8 @@ on:
 # Xem trước
 
 <p align="center">
-  <img src="/Img/preview (1).jpeg">
-  <img src="/Img/preview.jpeg">
+  <img src="/Img/preview.png">
+  <img src="/Img/preview-1.png">
 </p>
 
 # Trách nhiệm

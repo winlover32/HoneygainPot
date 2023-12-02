@@ -113,7 +113,7 @@ on:
 
 <p align="center">
   <img src="Img/preview.png">
-  <img src="Img/preview.jpeg">
+  <img src="Img/preview-1.png">
 </p>
 
 # Disclaimer
