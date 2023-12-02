@@ -162,12 +162,16 @@ def gen_token(s: requests.session, invalid: bool = False) -> str | None:
             f.seek(0)
             token: dict = login(s)
             if "title" in token:
-                print("-------- Traceback log --------\n❌ Error code 4: Wrong login credentials,please enter the right ones.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
+                print("-------- Traceback log --------\n❌ Error code 4: Wrong login credentials, please enter the right ones.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
                 return None
-            json.dump(token, f)
+            if os.getenv('IsJWT') == '1':
+                token_str = token['data']['access_token']
+            else:
+                token_str = token['data']['token']
+            json.dump({"token": token_str}, f)
     with open(token_file, 'r+') as f:
         token: dict = json.load(f)
-    return token["data"]["access_token"]
+    return token["token"]
 
 def achievements_claim(s: requests.session) -> bool:
     global header
