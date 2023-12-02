@@ -142,17 +142,16 @@ except configparser.NoOptionError or configparser.NoSectionError:
 def login(s: requests.session) -> json.loads:
     print('Logging in to Honeygain 🐝')
     if os.getenv('IsJWT') == '1':
-        token = payload['token']
+        token = payload.get('token')
         return {'data': {'access_token': token}}
     else:
-        token: Response = s.post(urls['login'], json=payload)
+        token_response: Response = s.post(urls['login'], json=payload)
         try:
-            return json.loads(token.text)
+            return json.loads(token_response.text)
         except json.decoder.JSONDecodeError:
             print(
                 "-------- Traceback log --------\n❌ Error code 10: You have exceeded your login tries.\nPlease wait a few hours or return tomorrow\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you")
             exit(-1)
-
 
 def gen_token(s: requests.session, invalid: bool = False) -> str | None:
     if not os.path.isfile(token_file) or os.stat(token_file).st_size == 0 or invalid:
