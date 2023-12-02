@@ -93,6 +93,7 @@ def get_urls(cfg: ConfigParser) -> dict[str, str]:
         create_config()
     return urls_conf
 
+
 def get_login(cfg: ConfigParser) -> dict[str, str]:
     user: dict[str, str] = {}
     try:
@@ -105,6 +106,7 @@ def get_login(cfg: ConfigParser) -> dict[str, str]:
     except configparser.NoOptionError or configparser.NoSectionError:
         create_config()
     return user
+
 
 def get_settings(cfg: ConfigParser) -> dict[str, bool]:
     settings_dict: dict[str, bool] = {}
@@ -152,7 +154,6 @@ def login(s: requests.session) -> json.loads:
             print(
                 "-------- Traceback log --------\n❌ Error code 10: You have exceeded your login tries.\nPlease wait a few hours or return tomorrow\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you")
             exit(-1)
-
 
 def gen_token(s: requests.session, invalid: bool = False) -> str | None:
     if not os.path.isfile(token_file) or os.stat(token_file).st_size == 0 or invalid:
@@ -203,50 +204,38 @@ def achievements_claim(s: requests.session) -> bool:
 def main() -> None:
     global header
     with requests.session() as s:
-        if os.getenv('IsJWT') == '0':
-            token: str = gen_token(s)
-            if token is None:
-                print("Closing HoneygainPot due to false login credentials ❌")
-                exit(-1)
-            header = {'Authorization': f'Bearer {token}'}
-
+        token: str = gen_token(s)
+        if token is None:
+            print("Closing HoneygainPot due to false login credentials ❌")
+            exit(-1)
+        header = {'Authorization': f'Bearer {token}'}
         if not achievements_claim(s):
             print('Failed to claim achievements ❌')
             print("-------- Traceback log --------\n❌ Error code 2: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS ).\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
             exit(-1)
-
         dashboard: Response = s.get(urls['balance'], headers=header)
         dashboard: dict = dashboard.json()
-
         if 'code' in dashboard and dashboard['code'] == 401:
             print('Invalid token generating new one.')
-            if os.getenv('IsJWT') == '0':
-                token: str = gen_token(s, True)
-                header['Authorization'] = f'Bearer {token}'
-
+            token: str = gen_token(s, True)
+            header['Authorization'] = f'Bearer {token}'
         pot_winning: Response = s.get(urls['pot'], headers=header)
         pot_winning: dict = pot_winning.json()
-
         if settings['lucky_pot'] and pot_winning['data']['winning_credits'] is None:
             pot_claim: Response = s.post(urls['pot'], headers=header)
             pot_claim: dict = pot_claim.json()
             try:
-                print(f'Claimed {pot_claim["data"]["credits"]} credits.')
+              print(f'Claimed {pot_claim["data"]["credits"]} credits.')
             except:
-                print("-------- Traceback log --------\n❌ Error code 2: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS ).\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
-                exit(-1)
-
+              print("-------- Traceback log --------\n❌ Error code 2: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS ).\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
+              exit(-1)
         pot_winning: Response = s.get(urls['pot'], headers=header)
         pot_winning: dict = pot_winning.json()
-
         print(f'Won today {pot_winning["data"]["winning_credits"]} credits ✅')
-
         balance: Response = s.get(urls['balance'], headers=header)
         balance: dict = balance.json()
-
         print(f'You currently have {balance["data"]["payout"]["credits"]} credits 🍯')
         print('Closing HoneygainPot ✅')
 
 if __name__ == '__main__':
     main()
-
