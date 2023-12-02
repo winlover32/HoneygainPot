@@ -18,6 +18,10 @@ if os.getenv('IsGit') is None:
 else:
    print('Powered by GitHub Actions V3 and Python')
    print('IsGit status: Yes')
+if os.getenv('IsJWT') is None:
+   print('IsJWT status: No')
+else:
+   print('IsJWT status: Yes')
 print('Config folder:', os.getcwd())
 print('-----------------------------------------')
 print('Starting HoneygainPot 🍯')
@@ -28,21 +32,41 @@ def create_config() -> None:
     cfg.add_section('User')
     if os.getenv('IsGit') == '1':
         try:
-          email = os.getenv('MAIL_JWD')
-          password = os.getenv('PASS_JWD')
+          if os.getenv('IsGit') == '1':
+             email = os.getenv('MAIL')
+             password = os.getenv('PASS')
+             cfg.set('User', 'email', f"{email}")
+             cfg.set('User', 'password', f"{password}")
+          elif os.getenv('IsJWT') == '1':
+              try:
+                token = os.getenv('JWT_TOKEN')
+              except:
+                print("-------- Traceback log --------\n❌ Error code 5: Cannot find 'JWT_TOKEN' for Honeygain.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
+                exit(-1)
+              cfg.set('User', 'token', f"{token}")
         except:
-          print("-------- Traceback log --------\n❌ Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD'.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
+          print("-------- Traceback log --------\n❌ Error code 1: Cannot find 'MAIL' and 'PASS'.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
           exit(-1)
     else:
         try:
-          email = input("Email: ")
-          password = getpass("Password: ")
+          is_token = input("Do you want to log in to Honeygain using a JWT token instead of using an email and password? (Y/N):")
+          if is_token.lower() == "y":
+              try:
+                print("If you don't know how to get token then read my guide on the main repo")
+                token = input("Token: ")
+              except:
+                print("-------- Traceback log --------\n❌ Error code 5: Cannot find 'JWT_TOKEN' for Honeygain.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
+                exit(-1)
+              cfg.set('User', 'token', f"{token}")
+          else:
+             email = input("Email: ")
+             password = getpass("Password: ")
+             cfg.set('User', 'email', f"{email}")
+             cfg.set('User', 'password', f"{password}")
         except:
           print("-------- Traceback log --------\n❌ Error code 3: Cannot receive any input, make sure 'IsGit' = 1.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
           exit(-1)
             
-    cfg.set('User', 'email', f"{email}")
-    cfg.set('User', 'password', f"{password}")
     cfg.add_section('Settings')
     cfg.set('Settings', 'Lucky Pot', 'True')
     cfg.set('Settings', 'Achievements', 'True')
@@ -72,8 +96,12 @@ def get_urls(cfg: ConfigParser) -> dict[str, str]:
 def get_login(cfg: ConfigParser) -> dict[str, str]:
     user: dict[str, str] = {}
     try:
-        user: dict[str, str] = {'email': cfg.get('User', 'email'),
-                                'password': cfg.get('User', 'password')}
+        if os.getenv('IsJWT') == '1':
+            token = cfg.get('User', 'token')
+            user: dict[str, str] = {'token': token}
+        else:
+            user: dict[str, str] = {'email': cfg.get('User', 'email'),
+                                    'password': cfg.get('User', 'password')}
     except configparser.NoOptionError or configparser.NoSectionError:
         create_config()
     return user
@@ -110,14 +138,21 @@ except configparser.NoOptionError or configparser.NoSectionError:
     urls: dict[str, str] = get_urls(config)
     payload: dict[str, str] = get_login(config)
 
+
 def login(s: requests.session) -> json.loads:
     print('Logging in to Honeygain 🐝')
-    token: Response = s.post(urls['login'], json=payload)
-    try:
-        return json.loads(token.text)
-    except json.decoder.JSONDecodeError:
-        print("-------- Traceback log --------\n❌ Error code 10: You have exceeded your login tries.\nPlease wait a few hours or return tomorrow\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you")
-        exit(-1)
+    if os.getenv('IsJWT') == '1':
+        token = payload['token']
+        return {'data': {'access_token': token}}
+    else:
+        token: Response = s.post(urls['login'], json=payload)
+        try:
+            return json.loads(token.text)
+        except json.decoder.JSONDecodeError:
+            print(
+                "-------- Traceback log --------\n❌ Error code 10: You have exceeded your login tries.\nPlease wait a few hours or return tomorrow\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you")
+            exit(-1)
+
 
 def gen_token(s: requests.session, invalid: bool = False) -> str | None:
     if not os.path.isfile(token_file) or os.stat(token_file).st_size == 0 or invalid:

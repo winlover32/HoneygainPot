@@ -12,6 +12,7 @@
 > <a href="#error-code-2">2 </a>
 > <a href="#error-code-2">3 </a>
 > <a href="#error-code-4">4 </a>
+> <a href="#error-code-5">5 </a>
 > <a href="#error-code-10">10 </a>
 > </p>
 # How to get debug logs?
@@ -124,6 +125,15 @@ Email:
 > [!TIP]
 > Check your credentials again
 
+### Error code 5
+
+```
+❌ Error code 5: Cannot find 'JWT_TOKEN' for Honeygain
+``` 
+
+> [!TIP]
+> This means you did not set `JWT_TOKEN` secrets in the GitHub repo setting
+
 ### Error code 10
 
 ```
@@ -131,4 +141,4 @@ Email:
 ```
 
 > [!TIP]
-> Ask GitHub idk how to fix this
+> Ask GitHub, idk how to fix this

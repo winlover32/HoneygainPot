@@ -10,6 +10,8 @@ jobs:
       - name: Run HoneygainPot
         run: python main.py
         env:
-         MAIL_JWD: ${{ secrets.MAIL_JWD }}
-         PASS_JWD: ${{ secrets.PASS_JWD }}
-         IsGit: 1
+          MAIL: ${{ secrets.MAIL }}
+          PASS: ${{ secrets.PASS }}
+          JWT_TOKEN: ${{ secrets.JWT_TOKEN }}
+          IsGit: 1
+          IsJWT: 1 # <- 0 = Use Mail and Pass ; 1 = Use Token (Default is 1)

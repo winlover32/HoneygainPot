@@ -50,13 +50,38 @@
 
 # Usage 
 
+## Use JWT Token
+
+  1. Go to your Honeygain Dashboard or click [here](https://dashboard.honeygain.com/) and login your Honeygain account
+  2. Open the browser's console by pressing `F12` button ( or `Fn+F12` on some laptop )
+  3. Click on tab `Application` than click to `Local storage` and click to `https://dashboard.honeygain.com` then you will see key `JWT` that include your token, copy this for next steps
+  4. [Fork this repository 🍴](https://github.com/gorouflex/HoneygainPot/fork)
+  5. Go to your forked repository 🍴
+  6. Go to `Settings > Secrets and Variables > Actions`, and click `New Repository secret`
+  7. Use `JWT_TOKEN` and paste your JWT Token from Steps 3
+  8. Go to [`.github/workflows/daily.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/daily.yml) and [`.github/workflows/manual.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/manual.yml) and set `IsJWT` to 1 like this `IsJWT: 1`
+  9. Go to your forked repository 🍴 and go to the Actions tab and press `I understand my workflows, go ahead and enable them`
+
+<p align="center">
+  <img src="Img/get_token.png">
+  <img src="Img/IsJWT(1).png">
+  <img src="Img/GitSettings-Token.png">
+</p>
+
+## Use Mail and Password
+
   1. [Fork this repository 🍴](https://github.com/gorouflex/HoneygainPot/fork)
   2. Go to your forked repository 🍴
   3. Go to `Settings > Secrets and Variables > Actions`, and click `New Repository secret`
-  4. For the secret name, use `MAIL_JWD` and set your honeygain mail and `PASS_JWD` for your password
-  5. Go to your forked repository 🍴 and go to the Actions tab and press `I understand my workflows, go ahead and enable them`
+  4. For the secret name, use `MAIL` and set your honeygain mail and `PASS` for your password
+  5. Go to [`.github/workflows/daily.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/daily.yml) and [`.github/workflows/manual.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/manual.yml) and set `IsJWT` to 0 like this `IsJWT: 0`
+  6. Go to your forked repository 🍴 and go to the Actions tab and press `I understand my workflows, go ahead and enable them`
 
-![GitSettings](https://github.com/gorouflex/HoneygainPot/assets/98001973/d8d33621-5717-488d-9a80-6db395c8ac9d)
+<p align="center">
+  <img src="Img/IsJWT(0).png">
+  <img src="Img/GitSettings.png">
+</p>
+
 
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
@@ -87,7 +112,7 @@ on:
 # Preview
 
 <p align="center">
-  <img src="Img/preview (1).jpeg">
+  <img src="Img/preview.png">
   <img src="Img/preview.jpeg">
 </p>
 

@@ -12,6 +12,7 @@
 > <a href="#error-code-2">2 </a>
 > <a href="#error-code-2">3 </a>
 > <a href="#error-code-4">4 </a>
+> <a href="#error-code-5">5 </a>
 > <a href="#error-code-10">10 </a>
 > </p>
 # Cách nào để có mã lỗi/nhật ký báo lỗi?
@@ -122,6 +123,16 @@ Email:
 
 > [!TIP]
 > Kiểm tra lại thông tin tài khoản lại
+
+### Error code 5
+
+```
+❌ Error code 5: Cannot find 'JWT_TOKEN' for Honeygain
+``` 
+
+> [!TIP]
+> Có nghĩa là bạn chưa set biến `JWT_TOKEN` phần cài đặt repo của GitHub
+
 
 ### Error code 10
 
