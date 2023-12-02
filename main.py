@@ -29,6 +29,7 @@ def create_config() -> None:
     if os.getenv('IsGit') == '1':
        if os.getenv('IsJWT') == '1':
           token = os.getenv('JWT_TOKEN')
+          cfg.set('User', 'token', f"{token}")
        else:
         try:
           email = os.getenv('MAIL')
@@ -38,16 +39,21 @@ def create_config() -> None:
           exit(-1)
     else:
         try:
-        #  email = input("Email: ")
-        #  password = getpass("Password: ")
-           token = input("Token:")
-           cfg.set('User', 'token', f"{token}")
+       
+           z = input("Y/N: ")
+           if z.lower() == 'y':
+              token = input("Token:")
+              cfg.set('User', 'token', f"{token}")
+           else:
+              email = input("Email: ")
+              password = getpass("Password: ")
+              cfg.set('User', 'email', f"{email}")
+              cfg.set('User', 'password', f"{password}")
+              
         except:
           print("-------- Traceback log --------\n❌ Error code 3: Cannot receive any input, make sure 'IsGit' = 1.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
           exit(-1)
             
- #   cfg.set('User', 'email', f"{email}")
-  #  cfg.set('User', 'password', f"{password}")
     cfg.add_section('Settings')
     cfg.set('Settings', 'Lucky Pot', 'True')
     cfg.set('Settings', 'Achievements', 'True')
