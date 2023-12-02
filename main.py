@@ -111,7 +111,7 @@ except configparser.NoOptionError or configparser.NoSectionError:
 
 def login(s: requests.session) -> json.loads:
     print('Logging in to Honeygain 🐝')
-    if os.getenv('IsJWT') == '0':
+    if os.getenv('IsJWT') == '1':
         token = payload['token']
         return {'data': {'access_token': token}}
     else:
