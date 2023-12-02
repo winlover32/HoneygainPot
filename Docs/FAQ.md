@@ -11,7 +11,7 @@
 - I've also added this feature to the original repo but cannot guarantee good support for GitHub Actions ([PR #9](https://github.com/MrLoLf/HoneygainAutoClaim/pull/9)).
 
 ### 2. What's the difference between `HoneygainPot` and `HoneygainAutoClaim`?
-- `HoneygainPot` aims to provide 100% support for GitHub Actions and still supports running on ' physical ' machines ( like your computer ). I have removed features that I felt were somewhat useless, such as logging, and added a debug section for easier troubleshooting. In contrast, `HoneygainAutoClaim` does not have these.
+- `HoneygainPot` aims to provide 100% support for GitHub Actions and still supports running on ' physical ' machines ( like your computer ). I have removed features that I felt were somewhat useless, such as logging, and added a debug section for easier troubleshooting, new CLI interface. In contrast, `HoneygainAutoClaim` does not have these.
 
 ### 3. Which one should I use, `HoneygainPot` or `HoneygainAutoClaim`?
 - If you want to use this script/bot online without using your computer's resources and only run the Honeygain app to earn money by sharing network bandwidth, then you should use `HoneygainPot`.

@@ -25,13 +25,13 @@
   <a href="#preview">Preview</a>
   •
   <a href="#disclaimer">Disclaimer</a>
- <p align="left">
-   
+<p align="left">
 <img src="Img/Logo.png"               
      width="170" 
-     height="170"></p>
+     height="170">
+</p>
 
-### [Honeygain](https://r.honeygain.me/BADBO762DE) is a service that allows you to earn **passive income** by **sharing** your **internet** connection with businesses  for web statistics, price comparison, and other verified business processes
+### [Honeygain](https://r.honeygain.me/BADBO762DE) is a service that allows you to earn **passive income** by **sharing** your **internet** connection with businesses for web statistics, price comparison, and other verified business processes
 
  
 > [!IMPORTANT]
@@ -62,10 +62,10 @@
   8. Go to [`.github/workflows/daily.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/daily.yml) and [`.github/workflows/manual.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/manual.yml) and set `IsJWT` to 1 like this `IsJWT: 1`
   9. Go to your forked repository 🍴 and go to the Actions tab and press `I understand my workflows, go ahead and enable them`
 
-<p align="center">
+<p align="left">
   <img src="Img/get_token.png">
-  <img src="Img/IsJWT(1).png">
   <img src="Img/GitSettings-Token.png">
+  <img src="Img/IsJWT(1).png">
 </p>
 
 ## Use Mail and Password
@@ -77,33 +77,36 @@
   5. Go to [`.github/workflows/daily.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/daily.yml) and [`.github/workflows/manual.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/manual.yml) and set `IsJWT` to 0 like this `IsJWT: 0`
   6. Go to your forked repository 🍴 and go to the Actions tab and press `I understand my workflows, go ahead and enable them`
 
-<p align="center">
-  <img src="Img/IsJWT(0).png">
+<p align="left">
   <img src="Img/GitSettings.png">
+  <img src="Img/IsJWT(0).png">
 </p>
 
 
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
 > [!IMPORTANT]
-Daily workflow file path ( default is 14:00 UTC +0, and **DO NOT** enter your email and password here cause it will **not work** and may leak your information to everyone ): `.github/workflows/daily.yml`
+Daily workflow file path ( default is 14:00 UTC ± 0, and **DO NOT** enter your email and password here cause it will **not work** and may leak your information to everyone ): `.github/workflows/daily.yml`
 
-- Well, GitHub uses UTC time ( UTC +0 ) for scheduling workflows, so we should convert it to our timezone
+- Well, GitHub uses UTC time ( UTC ± 0 ) for scheduling workflows, so we should convert it to our timezone
 
-- For example: If I want to set the daily trigger to trigger at 9:00 PM ( UTC +7 ), I have to set it to 2:00 PM or 14:00 ( 24-hour format ) ( UTC±0 ) ( ( 2+7=9 ) :
+- For example: If I want to set the daily trigger to trigger at 9:00 PM ( UTC + 7 ), I have to set it to 2:00 PM or 14:00 ( 24-hour format ) ( UTC±0 ) ( 2+7=9 ) :
 
 ```
 name: Daily claim
 on:
   schedule:
-    - cron: '0 14 * * *' # <- UTC Time, replace 0 14
+    - cron: '0 14 * * *' # <- Use UTC Time +0 , change your time here ( 14 is hour , 0 is minutes) and use 24-hour format
+
 ```
-- So, if I want the daily trigger to run at 5:00 AM ( UTC +7 ), I have to set it to 10:00 PM ( UTC ±0 ) ( use 24-hour format ):
+- So, if I want the daily trigger to run at 5:00 AM ( UTC + 7 ), I have to set it to 10:00 PM ( UTC ± 0 ) ( use 24-hour format ):
+
 ```
 name: Daily claim
 on:
   schedule:
-    - cron: '0 22 * * *' # UTC Time
+    - cron: '0 22 * * *' # <- Use UTC Time +0 , change your time here ( 14 is hour , 0 is minutes) and use 24-hour format
+
 ```
 
 > [!NOTE]
@@ -111,7 +114,7 @@ on:
 
 # Preview
 
-<p align="center">
+<p align="left">
   <img src="Img/preview.png">
   <img src="Img/preview-1.png">
 </p>
@@ -120,12 +123,12 @@ on:
 
 > [!WARNING]
 > This project is licensed under the [MIT License](https://mit-license.org/)
-> 
+>
 > For more information, see the [LICENSE file](./LICENSE)
 > - This script is **not** affiliated with or endorsed by Honeygain. Use it at your **own risk** and responsibility.  
 > - The **author** is **not responsible** for any consequences that may arise from using this script. If Honeygain wants me 
 to delete this bot, I'll do it.
 
 ### Special thanks to 💖
-- [MrLolf](https://github.com/MrLoLf/) for [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim)
+- [MrLolf](https://github.com/MrLoLf/) x [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim) for based code
 - [rfoal](https://github.com/rfoel/) x [duolingo](https://github.com/rfoel/duolingo) for idea

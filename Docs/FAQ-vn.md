@@ -11,7 +11,7 @@
 - Tôi cũng đã bổ sung tính năng này cho repo gốc nhưng không đảm bảo hỗ trợ tốt với GitHub Actions ([PR #9](https://github.com/MrLoLf/HoneygainAutoClaim/pull/9)).
 
 ### 2. `HoneygainPot` và `HoneygainAutoClaim` có gì khác nhau?
-- `HoneygainPot` hướng đến việc hỗ trợ 100% đối với GitHub Actions và vẫn hỗ trợ để chạy trên các máy tính ' vật lí ' ( như máy tính của bạn ) và tôi cũng đã cắt bỏ các tính năng mà tôi cảm giác hơi vô dụng như tính năng ghi nhật ký lỗi ( logging ) và đã bổ sung phần debug ( gỡ lỗi ) để có thể khắc phục lỗi dễ dàng hơn mà trong khi `HoneygainAutoClaim` không có
+- `HoneygainPot` hướng đến việc hỗ trợ 100% đối với GitHub Actions và vẫn hỗ trợ để chạy trên các máy tính ' vật lí ' ( như máy tính của bạn ) và tôi cũng đã cắt bỏ các tính năng mà tôi cảm giác hơi vô dụng như tính năng ghi nhật ký lỗi ( logging ) và đã bổ sung phần debug ( gỡ lỗi ) để có thể khắc phục lỗi dễ dàng hơn và 1 giao diện người dùng mới mà trong khi `HoneygainAutoClaim` không có
 
 ### 3. Giữa `HoneygainPot` và `HoneygainAutoClaim` tôi nên dùng cái nào?
 - Nếu bạn muốn dùng script/bot này trên online mà không phải chiếm dung lượng và tài nguyên máy tính của bạn và chỉ chạy app Honeygain để chia sẻ băng thông mạng kiếm tiền thì nên dùng `HoneygainPot`

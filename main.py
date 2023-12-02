@@ -31,7 +31,7 @@ elif os.getenv('IsJWT') == '1':
     print('IsJWT status: Yes')
 else:
     print('IsJWT status: No')
-print('Config folder:', os.path.join(os.getcwd(), 'Config\\'))
+print('Config folder:', os.path.join(os.getcwd(), 'Config'))
 print('-----------------------------------------')
 print('Starting HoneygainPot 🍯')
 
