@@ -26,34 +26,15 @@ def create_config() -> None:
     print('Collecting information from OS env 💻')
     cfg: ConfigParser = ConfigParser()
     cfg.add_section('User')
-    if os.getenv('IsGit') == '1':
-       if os.getenv('IsJWT') == '1':
-          token = os.getenv('JWT_TOKEN')
-          cfg.set('User', 'token', f"{token}")
-       else:
-        try:
-          email = os.getenv('MAIL')
-          password = os.getenv('PASS')
-        except:
-          print("-------- Traceback log --------\n❌ Error code 1: Cannot find 'MAIL_JWD' and 'PASS_JWD'.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
-          exit(-1)
+    if os.getenv('IsJWT') == '1':
+       token = os.getenv('JWT_TOKEN')
+       cfg.set('User', 'token', f"{token}")
     else:
-        try:
-       
-           z = input("Y/N: ")
-           if z.lower() == 'y':
-              token = input("Token:")
-              cfg.set('User', 'token', f"{token}")
-           else:
-              email = input("Email: ")
-              password = getpass("Password: ")
-              cfg.set('User', 'email', f"{email}")
-              cfg.set('User', 'password', f"{password}")
-              
-        except:
-          print("-------- Traceback log --------\n❌ Error code 3: Cannot receive any input, make sure 'IsGit' = 1.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
-          exit(-1)
-            
+       email = os.getenv('MAIL')
+       password = os.getenv('PASS')
+       cfg.set('User', 'email', f"{email}")
+       cfg.set('User', 'password', f"{password}")
+                          
     cfg.add_section('Settings')
     cfg.set('Settings', 'Lucky Pot', 'True')
     cfg.set('Settings', 'Achievements', 'True')
@@ -84,7 +65,7 @@ def get_urls(cfg: ConfigParser) -> dict[str, str]:
 def get_login(cfg: ConfigParser) -> dict[str, str]:
     user: dict[str, str] = {}
     try:
-        if os.getenv('IsJWT') is None:
+        if os.getenv('IsJWT') == '1':
             token = cfg.get('User', 'token')
             user: dict[str, str] = {'token': token}
         else:
@@ -130,7 +111,7 @@ except configparser.NoOptionError or configparser.NoSectionError:
 
 def login(s: requests.session) -> json.loads:
     print('Logging in to Honeygain 🐝')
-    if os.getenv('IsJWT') is None:
+    if os.getenv('IsJWT') == '1':
         token = payload['token']
         return {'data': {'access_token': token}}
     else:
