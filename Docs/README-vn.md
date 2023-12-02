@@ -12,11 +12,11 @@
 <p align="center">
   <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
-  <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
+  <a href="Docs/README-vn.md">Tiếng Việt 🇻🇳</a>
 <p align="center">
-  <a href="Debug-vn.md">Sửa các lỗi thường gặp</a>
+  <a href="Docs/Debug-vn.md">Sửa các lỗi thường gặp</a>
   •
-  <a href="FAQ-vn.md">FAQ</a>  
+  <a href="Docs/FAQ-vn.md">FAQ</a>  
   •
   <a href="#tính-năng">Tính năng</a>
   •
@@ -37,7 +37,7 @@
 > [!IMPORTANT]
 > **Vui lòng đọc hết tất cả** tài liệu và văn bản hướng dẫn trong repo này trước khi làm!
 > - Luôn cập nhật repo của các bạn theo repo gốc này để nhận được những bản cập nhật và vá lỗi mới nhất, và tôi GorouFlex sẽ không hỗ trợ nếu phát hiện repo của bạn đã lỗi thời và không được cập nhật theo repo chính.
-> - Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Debug-vn.md](Debug-vn.md).
+> - Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Docs/Debug-vn.md](Docs/Debug-vn.md).
 > - **Vui lòng không** nhập thông tin tài khoản của bạn vào 2 file workflow ( `daily.yml` và `manual.yml`)  vì nó sẽ không hoạt động mà sẽ gây ra lỗi và còn có thể bị lộ thông tin cho người khác xem
 > - (*) Không được fork repo nếu bạn thấy cả 2 ( không phải chỉ có 1 và không bao gồm cả CodeQL ) trạng thái của GitHub Actions đều chuyển sang đỏ, hãy chờ cho đến khi 1 trong 2 hoặc cả 2 chuyển sang màu xanh thì có thể fork.
 > - `Daily claim` sẽ luôn luôn tự động chạy vào lúc 14:00 giờ UTC +0 tức là 9:00 tối theo giờ UTC +7, nếu muốn chỉnh thì tham khảo tại [đây](https://github.com/gorouflex/HoneygainPot/blob/main/README-vn.md#l%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-ch%E1%BB%89nh-l%E1%BA%A1i-th%E1%BB%9Di-gian-t%E1%BB%B1-%C4%91%E1%BB%99ng-ch%E1%BA%A1y-m%E1%BB%97i-ng%C3%A0y).

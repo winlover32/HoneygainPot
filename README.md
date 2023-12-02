@@ -12,11 +12,11 @@
 <p align="center">
   <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
-  <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
+  <a href="Docs/README-vn.md">Tiếng Việt 🇻🇳</a>
 <p align="center">
-  <a href="Debug.md">Debug</a>  
+  <a href="Docs/Debug.md">Debug</a>  
   •
-  <a href="FAQ.md">FAQ</a> 
+  <a href="Docs/FAQ.md">FAQ</a> 
   •
   <a href="#feature">Feature</a>
   •
@@ -37,7 +37,7 @@
 > [!IMPORTANT]
 > **Read all** documents in this repo before doing anything!
 > - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated
-> - If you facing with errors when using GitHub Actions, please refer to this [debug section](Debug.md)
+> - If you facing with errors when using GitHub Actions, please refer to this [Docs/Debug.md](Docs/Debug.md)
 > - **Do not** enter your information such as email and password into 2 workflows file ( `daily.yml` and `manual.yml` ) cause it will not work and may leak your infomation to everyone
 > - (*): Do not fork this repo if two of these ( not only 1 and CodeQL ) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
 > - `Daily claim` workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)

@@ -1,8 +1,8 @@
 <h1 align="center">Sửa các lỗi thường gặp</h1>
 <p align="center">
-  <a href="Debug.md">English 🇺🇸</a>
+  <a href="Docs/Debug.md">English 🇺🇸</a>
   •
-  <a href="Debug-vn.md">Tiếng Việt 🇻🇳</a>
+  <a href="Docs/Debug-vn.md">Tiếng Việt 🇻🇳</a>
 </p>
 
 > [!NOTE]
