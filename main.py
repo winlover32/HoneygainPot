@@ -39,7 +39,7 @@ def create_config() -> None:
          try:
             token = os.getenv('JWT_TOKEN')
             cfg.set('User', 'token', f"{token}")
-          except:
+         except:
             print("-------- Traceback log --------\n❌ Error code 5: Cannot find 'JWT_TOKEN' for Honeygain.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
             exit(-1)
     else:
