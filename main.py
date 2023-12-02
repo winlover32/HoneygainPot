@@ -141,15 +141,15 @@ except configparser.NoOptionError or configparser.NoSectionError:
     payload: dict[str, str] = get_login(config)
 
 
-def login(s: requests.session) -> json.loads:
+def login(s: requests.session) -> dict:
     print('Logging in to Honeygain 🐝')
     if os.getenv('IsJWT') == '1':
         token = payload['token']
         return {'data': {'access_token': token}}
     else:
-        token: Response = s.post(urls['login'], json=payload)
+        response: Response = s.post(urls['login'], json=payload)
         try:
-            return json.loads(token.text)
+            return response.json()
         except json.decoder.JSONDecodeError:
             print(
                 "-------- Traceback log --------\n❌ Error code 10: You have exceeded your login tries.\nPlease wait a few hours or return tomorrow\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you")
@@ -160,18 +160,19 @@ def gen_token(s: requests.session, invalid: bool = False) -> str | None:
         with open(token_file, 'w') as f:
             f.truncate(0)
             f.seek(0)
-            token: dict = login(s)
-            if "title" in token:
+            login_response: dict = login(s)
+            if "title" in login_response:
                 print("-------- Traceback log --------\n❌ Error code 4: Wrong login credentials, please enter the right ones.\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information.\nOr create an Issue on GitHub if it still doesn't work for you.")
                 return None
             if os.getenv('IsJWT') == '1':
-                token_str = token['data']['access_token']
+                token_str = login_response['data']['access_token']
             else:
-                token_str = token['data']['token']
+                token_str = login_response['data']['token']
             json.dump({"token": token_str}, f)
     with open(token_file, 'r+') as f:
         token: dict = json.load(f)
     return token["token"]
+
 
 def achievements_claim(s: requests.session) -> bool:
     global header
