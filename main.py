@@ -25,19 +25,25 @@ else:
 print('Config folder:', os.getcwd())
 print('-----------------------------------------')
 print('Starting HoneygainPot 🍯')
-
+            
 def create_config() -> None:
     print('Collecting information from OS env 💻')
     cfg: ConfigParser = ConfigParser()
     cfg.add_section('User')
-    if os.getenv('IsJWT') == '1':
-       token = os.getenv('JWT_TOKEN')
-       cfg.set('User', 'token', f"{token}")
+    if os.getenv('IsGit') == '1':
+       if os.getenv('IsJWT') == '1':
+          token = os.getenv('JWT_TOKEN')
+          cfg.set('User', 'token', f"{token}")
+       else:
+          email = os.getenv('MAIL')
+          password = os.getenv('PASS')
+          cfg.set('User', 'email', f"{email}")
+          cfg.set('User', 'password', f"{password}") 
     else:
-       email = os.getenv('MAIL')
-       password = os.getenv('PASS')
-       cfg.set('User', 'email', f"{email}")
-       cfg.set('User', 'password', f"{password}")
+          email = input("Email: ")
+          password = getpass("Password: ")
+          cfg.set('User', 'email', f"{email}")
+          cfg.set('User', 'password', f"{password}")
                           
     cfg.add_section('Settings')
     cfg.set('Settings', 'Lucky Pot', 'True')
@@ -72,7 +78,7 @@ def get_login(cfg: ConfigParser) -> dict[str, str]:
         if os.getenv('IsJWT') == '1':
             token = cfg.get('User', 'token')
             user: dict[str, str] = {'token': token}
-        if os.getenv('IsJWT') == '0':
+        else:
             user: dict[str, str] = {'email': cfg.get('User', 'email'),
                                     'password': cfg.get('User', 'password')}
     except configparser.NoOptionError or configparser.NoSectionError:
