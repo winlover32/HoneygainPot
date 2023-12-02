@@ -18,6 +18,10 @@ if os.getenv('IsGit') is None:
 else:
    print('Powered by GitHub Actions V3 and Python')
    print('IsGit status: Yes')
+if os.getenv('IsJWT') is None:
+   print('IsJWT status: No')
+else:
+   print('IsJWT status: Yes')
 print('Config folder:', os.getcwd())
 print('-----------------------------------------')
 print('Starting HoneygainPot 🍯')
