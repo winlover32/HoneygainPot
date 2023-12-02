@@ -54,7 +54,7 @@
 ## Sử dụng Token
 
   1. Đến Honeygain Dashboard của bạn hoặc nhấn [vào đây](https://dashboard.honeygain.com/) và đăng nhập tài khoản Honeygain của bạn vào
-  2. Sau khi đã đăng nhập mở công cụ cho lập trình viên của trình duyệt bằng ấn nút `F12` ( hoặc `Fn+F12` trên laptop )
+  2. Sau khi đã đăng nhập mở công cụ cho lập trình viên của trình duyệt bằng cách ấn nút `F12` ( hoặc `Fn+F12` trên laptop )
   3. Ấn vào tab  `Application` trên thanh công cụ rồi ấn vào danh sách `Local storage` rồi click vào `https://dashboard.honeygain.com` sau đó bạn sẽ thấy được 1 cái key tên là `JWT` và đó sẽ là nơi chứa token của bạn, copy token rồi để dành cho những bước sau
   4. [Fork repo này 🍴](https://github.com/gorouflex/HoneygainPot/fork)  
   5. Đến repo mà bạn đã fork🍴
