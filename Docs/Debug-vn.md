@@ -12,7 +12,7 @@
 > <a href="#error-code-2">2 </a>
 > <a href="#error-code-2">3 </a>
 > </p>
-# Cách nào để có mã lỗi/nhật ký báo lỗi?
+# Cách để có mã lỗi/nhật ký báo lỗi?
 1. Vào tab Actions trên repo đã fork của bạn
 2. Chọn tiến trình chạy bị lỗi
 3. Chọn tab `Manual` hoặc `Daily` rồi chọn tab `Run HoneygainPot` bạn sẽ thấy mã lỗi/nhật ký báo lỗi
