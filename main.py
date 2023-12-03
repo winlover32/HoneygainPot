@@ -48,7 +48,9 @@ if original_repo_url:
    else:
        print("Your repo is not up-to-date with the original repo")
        print("Update to the latest commit for new features and bug fixes!")
-       
+
+print("Forked Repo Commit:", forked_repo_commit)
+print("Original Repo Commit:", original_repo_commit)       
 print('Repo: ',os.getenv('GITHUB_REPOSITORY'))
 print('-----------------------------------------')
 print('Starting HoneygainPot 🍯')
