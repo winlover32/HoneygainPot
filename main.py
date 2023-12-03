@@ -41,8 +41,9 @@ original_repo_url = data.get('parent', {}).get('clone_url')
 if original_repo_url:
    subprocess.call(['git', 'remote', 'add', 'upstream', original_repo_url])
    subprocess.call(['git', 'fetch', 'upstream'])
-   status = subprocess.check_output(['git', 'status', '-uno']).decode('utf-8')
-   if "Your branch is up to date" in status:
+   forked_repo_commit = subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode('utf-8').strip()
+   original_repo_commit = subprocess.check_output(['git', 'ls-remote', original_repo_url, 'HEAD']).decode('utf-8').split()[0]
+   if forked_repo_commit == original_repo_commit:
        print("Your repo is up-to-date with the original repo")
    else:
        print("Your repo is not up-to-date with the original repo")
