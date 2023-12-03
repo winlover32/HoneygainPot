@@ -26,9 +26,9 @@ if os.getenv('GITHUB_ACTIONS') == 'true':
     user_repo = os.getenv('GITHUB_REPOSITORY')
     original_repo = 'gorouflex/HoneygainPot'
 
-    user_url = f'https://api.github.com/repos/{user_repo}/commits/master'
-    original_url = f'https://api.github.com/repos/{original_repo}/commits/master'
-
+    user_url = f'https://api.github.com/repos/{user_repo}/commits/main'
+    original_url = f'https://api.github.com/repos/{original_repo}/commits/main'
+ 
     user_response = requests.get(user_url)
     original_response = requests.get(original_url)
 
