@@ -36,6 +36,8 @@
  
 > [!IMPORTANT]
 > **Read all** documents in this repo before doing anything!
+> 
+> Don't forget to star ⭐ this repository
 > - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated
 > - If you facing with errors when using GitHub Actions, please refer to this [Docs/Debug.md](Docs/Debug.md)
 > - **Do not** enter your information such as email and password into 2 workflows file ( `daily.yml` and `manual.yml` ) cause it will not work and may leak your infomation to everyone
