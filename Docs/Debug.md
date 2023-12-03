@@ -10,7 +10,8 @@
 > <p align="left">
 > <a href="#error-code-1">1 </a>
 > <a href="#error-code-2">2 </a>
-> <a href="#error-code-2">3 </a>
+> <a href="#error-code-3">3 </a>
+> <a href="#error-code-4">4 </a>
 > </p>
 # How to get debug logs?
 1. Go to Actions tab
@@ -36,7 +37,6 @@
 
 ```
 ❌ Error code 1: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS )
-
 ```
 
 
@@ -47,7 +47,6 @@
 
 ```
 ❌ Error code 2: Wrong login credentials,please enter the right ones
-
 ```
 
 
@@ -58,9 +57,16 @@
 
 ```
 ❌ Error code 3: You have exceeded your login tries
-
 ```
 
 > [!TIP]
 > Ask GitHub, idk how to fix this
 
+### Error code 4
+
+```
+❌ Error code 4: Failed to fetch commit information
+```
+
+> [!TIP]
+> This is because it failed to get the commit SHA, please contact me if this occurs

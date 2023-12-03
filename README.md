@@ -99,7 +99,6 @@ name: Daily claim
 on:
   schedule:
     - cron: '0 14 * * *' # <- Use UTC Time +0 , change your time here ( 14 is hour , 0 is minutes) and use 24-hour format
-
 ```
 - So, if I want the daily trigger to run at 5:00 AM ( UTC + 7 ), I have to set it to 10:00 PM ( UTC ± 0 ) ( use 24-hour format ):
 
@@ -108,7 +107,6 @@ name: Daily claim
 on:
   schedule:
     - cron: '0 22 * * *' # <- Use UTC Time +0 , change your time here ( 14 is hour , 0 is minutes) and use 24-hour format
-
 ```
 
 > [!NOTE]

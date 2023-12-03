@@ -1,9 +1,11 @@
-name: Manual trigger
+name: CL
 on:
-   workflow_dispatch:
+  push:
+    branches:
+      - main
    
 jobs:
-  Manual:
+  CodeCL:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3    

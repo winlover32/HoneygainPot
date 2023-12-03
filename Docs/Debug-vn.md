@@ -10,7 +10,8 @@
 > <p align="left">
 > <a href="#error-code-1">1 </a>
 > <a href="#error-code-2">2 </a>
-> <a href="#error-code-2">3 </a>
+> <a href="#error-code-3">3 </a>
+> <a href="#error-code-4">4 </a>
 > </p>
 # Cách để lấy mã lỗi/nhật ký báo lỗi?
 1. Vào tab Actions trên repo đã fork của bạn
@@ -36,7 +37,6 @@
 
 ```
 ❌ Error code 1: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS )
-
 ```
 
 > [!TIP]
@@ -47,7 +47,6 @@
 
 ```
 ❌ Error code 2: Wrong login credentials,please enter the right ones
-
 ```
 
 > [!TIP]
@@ -62,3 +61,12 @@
 
 > [!TIP]
 > Hỏi GitHub đi, lỗi này tôi bó tay
+
+### Error code 4
+
+```
+❌ Error code 4: Failed to fetch commit information
+```
+
+> [!TIP]
+> Do trong quá trình lấy SHA của commit có xảy ra vấn đề, hãy liên hệ với tôi nếu nó xuất hiện

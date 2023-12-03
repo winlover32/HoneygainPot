@@ -101,7 +101,6 @@ name: Daily claim
 on:
   schedule:
     - cron: '0 14 * * *' # <- Use UTC Time +0 , change your time here ( 14 is hour , 0 is minutes) and use 24-hour format
-
 ```
 
 - Nên nếu tôi muốn đặt vào lúc 5h sáng theo giờ UTC +7 thì tôi phải đặt thành 10h tối theo giờ UTC +0, và phải sử dụng định dạng 24 giờ:
@@ -111,7 +110,6 @@ name: Daily claim
 on:
   schedule:
     - cron: '0 22 * * *' # <- Use UTC Time +0 , change your time here ( 14 is hour , 0 is minutes) and use 24-hour format
-
 ```
 
 > [!NOTE]
