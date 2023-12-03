@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import os
+import subprocess
 import configparser
 from configparser import ConfigParser
 from getpass import getpass
@@ -18,20 +19,35 @@ print('Made by GFx and MrLolf')
 config: ConfigParser = ConfigParser()
 config.read(config_path)
 
-if os.getenv('IsGit') is None:
-    print('IsGit status: No')
-else:
+if os.getenv('GITHUB_ACTIONS') == 'true':
     print('Powered by GitHub Actions V3 and Python')
-    print('IsGit status: Yes')
+    print('Run with GitHub Actions status: Yes')
+else:
+    print('Run with GitHub Actions status: No')
 is_jwt = config.get('User', 'IsJWT', fallback='0')
 if is_jwt == '1':
     print('IsJWT status: Yes')
     os.environ['IsJWT'] = '1'
 elif os.getenv('IsJWT') == '1':
-    print('IsJWT status: Yes')
+    print('Using JWT Token status: Yes')
 else:
-    print('IsJWT status: No')
+    print('Using JWT Token status: No')
 print('Config folder:', os.path.join(os.getcwd(), 'Config'))
+
+repo = os.getenv('GITHUB_REPOSITORY')
+response = requests.get(f'https://api.github.com/repos/{repo}')
+data = response.json()
+original_repo_url = data.get('parent', {}).get('clone_url')
+if original_repo_url:
+   subprocess.call(['git', 'remote', 'add', 'upstream', original_repo_url])
+   subprocess.call(['git', 'fetch', 'upstream'])
+   status = subprocess.check_output(['git', 'status', '-uno'])
+   if "Your branch is up to date" in status:
+       print("Your repo is up-to-date with the original repo")
+   else:
+       print("Your repo is not up-to-date with the original repo")
+       print("Update to the latest commit for new features and bug fixes!")
+       
 print('-----------------------------------------')
 print('Starting HoneygainPot 🍯')
 
@@ -39,7 +55,7 @@ def create_config() -> None:
     print('Collecting information from OS env 💻')
     cfg: ConfigParser = ConfigParser()
     cfg.add_section('User')
-    if os.getenv('IsGit') == '1':
+    if os.getenv('GITHUB_ACTIONS') == 'true':
         if os.getenv('IsJWT') == '1':
             token = os.getenv('JWT_TOKEN')
             cfg.set('User', 'token', f"{token}")
