@@ -41,7 +41,7 @@ original_repo_url = data.get('parent', {}).get('clone_url')
 if original_repo_url:
    subprocess.call(['git', 'remote', 'add', 'upstream', original_repo_url])
    subprocess.call(['git', 'fetch', 'upstream'])
-   status = subprocess.check_output(['git', 'status', '-uno'])
+   status = subprocess.check_output(['git', 'status', '-uno']).decode('utf-8')
    if "Your branch is up to date" in status:
        print("Your repo is up-to-date with the original repo")
    else:
