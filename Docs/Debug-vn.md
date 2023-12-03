@@ -13,7 +13,7 @@
 > <a href="#error-code-3">3 </a>
 > <a href="#error-code-4">4 </a>
 > </p>
-# Cách để lấy mã lỗi/nhật ký báo lỗi?
+# Làm thế nào để lấy mã lỗi/nhật ký báo lỗi?
 1. Vào tab Actions trên repo đã fork của bạn
 2. Chọn tiến trình chạy bị lỗi
 3. Chọn tab `Manual` hoặc `Daily` rồi chọn tab `Run HoneygainPot` bạn sẽ thấy mã lỗi/nhật ký báo lỗi
@@ -40,7 +40,7 @@
 ```
 
 > [!TIP]
-> Bạn chưa đủ điều kiện chia sẻ đủ 15mb băng thông mỗi ngày (theo chính sách của Honeygain) để nhận được lucky pot, hãy để cho máy farm đến khi đủ 15mb băng thông!
+> Bạn chưa đủ điều kiện chia sẻ đủ 15mb băng thông mỗi ngày ( theo chính sách của Honeygain ) để nhận được lucky pot, hãy để cho máy farm đến khi đủ 15mb băng thông!
 
 
 ### Error code 2

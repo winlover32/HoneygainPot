@@ -1,5 +1,5 @@
 <h1 align="center">HoneygainPot</h1>
-<h4 align="center">🐝 A bot that claim Honeygain lucky pot every day 🍯</h4>
+<h4 align="center">🐝 A bot that claims Honeygain lucky pot every day 🍯</h4>
 <h4 align="center">Powered by GitHub Actions 🐙 and Python 🐍</h4>
 <p align="center">
 <img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
@@ -38,11 +38,11 @@
 > **Read all** documents in this repo before doing anything!
 > 
 > Don't forget to star ⭐ this repository
-> - Always update your repo following the orginal repo to get latest update + bug fixes, i will not support anything if your repo is outdated
-> - If you facing with errors when using GitHub Actions, please refer to this [Docs/Debug.md](Docs/Debug.md)
-> - **Do not** enter your information such as email and password into 2 workflows file ( `daily.yml` and `manual.yml` ) cause it will not work and may leak your infomation to everyone
-> - (*): Do not fork this repo if two of these ( not only 1 and CodeQL ) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
-> - `Daily claim` workflows always run every 14:00 UTC +0, if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
+> - Always update your repo following the original repo to get the latest update + bug fixes; I will not support anything if your repo is outdated
+> - If you face errors when using GitHub Actions, please refer to this [Docs/Debug.md](Docs/Debug.md)
+> - **Do not** enter your information such as email and password into 2 workflows file ( `daily.yml` and `manual.yml` ) because it will not work and may leak your information to everyone
+> - (*): Do not fork this repo if two of these ( not only 1 and CodeQL, QL ) GitHub Actions status badge show failing, and wait until 1 of these or two of these show passing then you can fork again
+> - `Daily claim` workflows always run every 14:00 UTC + 0; if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
 > <img src="https://i.imgur.com/htGeFlY.jpg">
   
 # Feature 
@@ -54,9 +54,9 @@
 
 ## Use JWT Token
 
-  1. Go to your Honeygain Dashboard or click [here](https://dashboard.honeygain.com/) and login your Honeygain account
-  2. Open the browser's console by pressing `F12` button ( or `Fn+F12` on some laptop )
-  3. Click on tab `Application` than click to `Local storage` and click to `https://dashboard.honeygain.com` then you will see key `JWT` that include your token, copy this for next steps
+  1. Go to your Honeygain Dashboard or click [here](https://dashboard.honeygain.com/) and log in to your Honeygain account
+  2. Open the browser's console by pressing `F12` button ( or `Fn+F12` on some laptops )
+  3. Click on the tab `Application` than click to `Local storage` and click to `https://dashboard.honeygain.com`; then you will see key `JWT` that includes your token, copy this for next steps
   4. [Fork this repository 🍴](https://github.com/gorouflex/HoneygainPot/fork)
   5. Go to your forked repository 🍴
   6. Go to `Settings > Secrets and Variables > Actions`, and click `New Repository secret`
@@ -75,7 +75,7 @@
   1. [Fork this repository 🍴](https://github.com/gorouflex/HoneygainPot/fork)
   2. Go to your forked repository 🍴
   3. Go to `Settings > Secrets and Variables > Actions`, and click `New Repository secret`
-  4. For the secret name, use `MAIL` and set your honeygain mail and `PASS` for your password
+  4. For the secret name, use `MAIL` and set your Honeygain mail and `PASS` for your password
   5. Go to [`.github/workflows/daily.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/daily.yml) and [`.github/workflows/manual.yml`](https://github.com/gorouflex/HoneygainPot/blob/main/.github/workflows/manual.yml) and set `IsJWT` to 0 like this `IsJWT: 0`
   6. Go to your forked repository 🍴 and go to the Actions tab and press `I understand my workflows, go ahead and enable them`
 
@@ -92,13 +92,13 @@ Daily workflow file path ( default is 14:00 UTC ± 0, and **DO NOT** enter your 
 
 - Well, GitHub uses UTC time ( UTC ± 0 ) for scheduling workflows, so we should convert it to our timezone
 
-- For example: If I want to set the daily trigger to trigger at 9:00 PM ( UTC + 7 ), I have to set it to 2:00 PM or 14:00 ( 24-hour format ) ( UTC±0 ) ( 2+7=9 ) :
+- For example: If I want to set the daily trigger to trigger at 9:00 PM ( UTC + 7 ) , I have to set it to 2:00 PM or 14:00 ( 24-hour format ) ( UTC ± 0 ) ( 2+7=9 ):
 
 ```
 name: Daily claim
 on:
   schedule:
-    - cron: '0 14 * * *' # <- Use UTC Time +0 , change your time here ( 14 is hour , 0 is minutes) and use 24-hour format
+    - cron: '0 14 * * *' # <- Use UTC Time +0 , change your time here ( 14 is hour , 0 is minutes ) and use 24-hour format
 ```
 - So, if I want the daily trigger to run at 5:00 AM ( UTC + 7 ), I have to set it to 10:00 PM ( UTC ± 0 ) ( use 24-hour format ):
 
@@ -106,7 +106,7 @@ on:
 name: Daily claim
 on:
   schedule:
-    - cron: '0 22 * * *' # <- Use UTC Time +0 , change your time here ( 14 is hour , 0 is minutes) and use 24-hour format
+    - cron: '0 22 * * *' # <- Use UTC Time +0 , change your time here ( 14 is hour , 0 is minutes ) and use 24-hour format
 ```
 
 > [!NOTE]
@@ -131,4 +131,4 @@ to delete this bot, I'll do it.
 
 ### Special thanks to 💖
 - [MrLolf](https://github.com/MrLoLf/) x [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim) for based code
-- [rfoal](https://github.com/rfoel/) x [duolingo](https://github.com/rfoel/duolingo) for idea
+- [rfoal](https://github.com/rfoel/) x [duolingo](https://github.com/rfoel/duolingo) for the idea

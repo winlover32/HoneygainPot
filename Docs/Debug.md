@@ -15,8 +15,8 @@
 > </p>
 # How to get debug logs?
 1. Go to Actions tab
-2. Click to the failure task
-3. Then click to `Manual` or `Daily` tab then click to the `Run HoneygainPot` section, you will see the debug logs
+2. Click on the failure task
+3. Then click on the `Manual` or `Daily` tab, and click on the `Run HoneygainPot` section; you will see the debug logs
 
 <p align="left">
   <img src="/Img/step-1.png">
@@ -39,16 +39,14 @@
 ❌ Error code 1: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS )
 ```
 
-
 > [!TIP]
-> You are not eligible to get the lucky pot if you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS )
+> You are not eligible to get the lucky pot if you do not reach 15mb of sharing bandwidth every day ( following to Honeygain's TOS )
 
 ### Error code 2
 
 ```
 ❌ Error code 2: Wrong login credentials,please enter the right ones
 ```
-
 
 > [!TIP]
 > Check your credentials again
@@ -60,7 +58,7 @@
 ```
 
 > [!TIP]
-> Ask GitHub, idk how to fix this
+> Ask GitHub; I don't know how to fix this
 
 ### Error code 4
 
@@ -69,4 +67,4 @@
 ```
 
 > [!TIP]
-> This is because it failed to get the commit SHA, please contact me if this occurs
+> This is because it failed to get the commit SHA; please contact me if this occurs
