@@ -13,7 +13,7 @@
 > <a href="#error-code-2">3 </a>
 > </p>
 # How to get debug logs?
-1. Go Actions tab
+1. Go to Actions tab
 2. Click to the failure task
 3. Then click to `Manual` or `Daily` tab then click to the `Run HoneygainPot` section, you will see the debug logs
 
