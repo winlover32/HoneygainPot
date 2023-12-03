@@ -33,24 +33,6 @@ elif os.getenv('IsJWT') == '1':
 else:
     print('Using JWT Token status: No')
 print('Config folder:', os.path.join(os.getcwd(), 'Config'))
-
-repo = os.getenv('GITHUB_REPOSITORY')
-response = requests.get(f'https://api.github.com/repos/{repo}')
-data = response.json()
-original_repo_url = data.get('parent', {}).get('clone_url')
-if original_repo_url:
-   subprocess.call(['git', 'remote', 'add', 'upstream', original_repo_url])
-   subprocess.call(['git', 'fetch', 'upstream'])
-   forked_repo_commit = subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode('utf-8').strip()
-   original_repo_commit = subprocess.check_output(['git', 'ls-remote', original_repo_url, 'HEAD']).decode('utf-8').split()[0]
-   if forked_repo_commit == original_repo_commit:
-       print("Your repo is up-to-date with the original repo")
-   else:
-       print("Your repo is not up-to-date with the original repo")
-       print("Update to the latest commit for new features and bug fixes!")
-
-print("Forked Repo Commit:", forked_repo_commit)
-print("Original Repo Commit:", original_repo_commit)       
 print('Repo: ',os.getenv('GITHUB_REPOSITORY'))
 print('-----------------------------------------')
 print('Starting HoneygainPot 🍯')
