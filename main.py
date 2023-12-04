@@ -8,8 +8,8 @@ import requests
 from requests import Response
 
 config_folder: str = 'Config'
-token_file: str = config_folder + '/HoneygainToken.json'
-config_path: str = config_folder + '/HoneygainConfig.toml'
+token_file: str = f'{config_folder}/HoneygainToken.json'
+config_path: str = f'{config_folder}/HoneygainConfig.toml'
 header: dict[str, str] = {'Authorization': ''}
 
 print('----------- Welcome to HoneygainPot -----------')
@@ -157,15 +157,13 @@ except configparser.NoOptionError or configparser.NoSectionError:
 def login(s: requests.session) -> json.loads:
     print('Logging in to Honeygain 🐝')
     if os.getenv('IsJWT') == '1':
-        token = payload['token']
-        return {'data': {'access_token': token}}
-    else:
-        token: Response = s.post(urls['login'], json=payload)
-        try:
-            return json.loads(token.text)
-        except json.decoder.JSONDecodeError:
-            print("------------- Traceback log -------------\n❌ Error code 3: You have exceeded your login tries\nPlease wait a few hours or return tomorrow\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you")
-            exit(-1)
+        return {'data': {'access_token': payload['token']}}
+    token: Response = s.post(urls['login'], json=payload)
+    try:
+        return json.loads(token.text)
+    except json.decoder.JSONDecodeError:
+        print("------------- Traceback log -------------\n❌ Error code 3: You have exceeded your login tries\nPlease wait a few hours or return tomorrow\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you")
+        exit(-1)
 
 def gen_token(s: requests.session, invalid: bool = False) -> str | None:
     if not os.path.isfile(token_file) or os.stat(token_file).st_size == 0 or invalid:
