@@ -37,7 +37,6 @@ if os.getenv('GITHUB_ACTIONS') == 'true':
             print('Your repo is not up-to-date with the original repo')
             print('Please update your repo to the latest commit to get new updates and bug fixes')
     else:
-        print('Failed to fetch commit information')
         print("------------- Traceback log -------------\n❌ Error code 4: Failed to fetch commit information\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.")
 else:
     print('Run with GitHub Actions status: No')
@@ -67,7 +66,8 @@ def create_config() -> None:
             cfg.set('User', 'email', f"{email}")
             cfg.set('User', 'password', f"{password}")
     else:
-        print("Please choose authentication method:")
+        print("### First time setup ###")
+        print("Please choose your main authentication method:")
         print("1. Using Token")
         print("2. Using Email and Password")
 
