@@ -8,6 +8,8 @@
 <p align="center">
 <a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml/badge.svg"></a>
 <a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml/badge.svg"></a>
+</p>
+<p align="center">
 <a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg"></a>
 <a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"></a> (*)
 </p>
@@ -43,7 +45,7 @@
 > - Always update your repo following the original repo to get the latest update + bug fixes; I will not support anything if your repo is outdated
 > - If you face errors when using GitHub Actions, please refer to this [Docs/Debug.md](Docs/Debug.md)
 > - **Do not** enter your information such as email and password into 2 workflows file ( `daily.yml` and `manual.yml` ) because it will not work and may leak your information to everyone
-> - (*): Do not fork this repo if one of three or all of these ( not CodeQL ) GitHub Actions status badge show failing, and wait until one of these or three of these show passing then you can fork again
+> - (*): Do not fork this repo if one of these or all of these ( not CodeQL and CL ) GitHub Actions status badge show failing, and wait until one of these or two of these show passing then you can fork again
 > - `Daily claim` workflows always run every 14:00 UTC + 0; if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset)
 > <img src="https://i.imgur.com/htGeFlY.jpg">
   
