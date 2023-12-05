@@ -21,8 +21,8 @@ config.read(config_path)
 
 if os.getenv('GITHUB_ACTIONS') == 'true':
     print('Powered by GitHub Actions V3 and Python')
-    print('Run with GitHub Actions status: Yes')
-    print('Repo:',os.getenv('GITHUB_REPOSITORY'))
+    print('Run with GitHub Actions: Yes')
+    print('Current repo:',os.getenv('GITHUB_REPOSITORY'))
     user_repo = os.getenv('GITHUB_REPOSITORY')
     original_repo = 'gorouflex/HoneygainPot'
     user_url = f'https://api.github.com/repos/{user_repo}/commits/main'
@@ -40,15 +40,18 @@ if os.getenv('GITHUB_ACTIONS') == 'true':
     else:
         print("------------- Traceback log -------------\n❌ Error code 4: Failed to fetch commit information\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.")
 else:
-    print('Run with GitHub Actions status: No')
+    print('Run with GitHub Actions: No')
 is_jwt = config.get('User', 'IsJWT', fallback='0')
 if is_jwt == '1':
-    print('Using JWT Token status: Yes')
+    print('Using JWT Token: Yes')
+    print('Using Mail and Pass: No')
     os.environ['IsJWT'] = '1'
 elif os.getenv('IsJWT') == '1':
-    print('Using JWT Token status: Yes')
+    print('Using JWT Token: Yes')
+    print('Using Mail and Pass: No')
 else:
     print('Using JWT Token status: No')
+    print('Using Mail and Pass: Yes')
 print('Config folder:', os.path.join(os.getcwd(), 'Config'))
 print('-----------------------------------------------')
 print('Starting HoneygainPot 🍯')
