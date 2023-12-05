@@ -245,7 +245,7 @@ def main() -> None:
         print(f'Won today {pot_winning["data"]["winning_credits"]} credits ✅')
         balance: Response = s.get(urls['balance'], headers=header)
         balance: dict = balance.json()
-        try
+        try:
           print(f'You currently have {balance["data"]["payout"]["credits"]} credits 🍯')
         except:
           print('Failed to gather information because some keys is missing')
