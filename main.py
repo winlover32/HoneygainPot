@@ -13,6 +13,7 @@ config_path: str = f'{config_folder}/HoneygainConfig.toml'
 header: dict[str, str] = {'Authorization': ''}
 
 print('----------- Welcome to HoneygainPot -----------')
+print('Codename: Sandy')
 print('Made by GFx and MrLolf')
 
 config: ConfigParser = ConfigParser()
