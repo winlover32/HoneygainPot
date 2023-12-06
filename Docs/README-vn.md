@@ -1,3 +1,8 @@
+<p align="center">
+<img src="Img/Banner.png"               
+     width="640" 
+     height="320">
+</p>
 <h1 align="center">HoneygainPot - Project Sandy</h1>
 <h4 align="center">🐝 Một con bot giúp bạn nhận lucky pot của Honeygain mỗi ngày🍯 </h4>
 <h4 align="center">Dưới sự hỗ trợ của GitHub Actions 🐙 và Python 🐍</h4>
