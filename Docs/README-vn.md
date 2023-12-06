@@ -33,8 +33,6 @@
   •
   <a href="#trách-nhiệm">Trách nhiệm</a>  
 </p>
-<p align="left">
-</p>
 
   ### [Honeygain](https://r.honeygain.me/BADBO762DE)  là một nền tảng trực tuyến sử dụng các thiết bị mạng của bạn như một cánh cổng để giúp các nhà doanh nghiệp hay các nhà phân tích dữ liệu để thực hiện các chiến dịch SEO, nghiên cứu thị trường, bảo vệ thương hiệu....
 
