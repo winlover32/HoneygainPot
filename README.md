@@ -32,10 +32,6 @@
   <a href="#preview">Preview</a>
   •
   <a href="#disclaimer">Disclaimer</a>
-<p align="left">
-<img src="Img/Logo.png"               
-     width="170" 
-     height="170">
 </p>
 
 ### [Honeygain](https://r.honeygain.me/BADBO762DE) is a service that allows you to earn **passive income** by **sharing** your **internet** connection with businesses for web statistics, price comparison, and other verified business processes
