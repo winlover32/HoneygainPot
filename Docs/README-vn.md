@@ -2,12 +2,16 @@
 <img src="/Img/Banner.png">
 </p>
 <h1 align="center">HoneygainPot - Project Sandy</h1>
-<h4 align="center">🐝 Một con bot giúp bạn nhận lucky pot của Honeygain mỗi ngày🍯 </h4>
+<h4 align="center">🐝 Tự động nhận Honeygain lucky pot của bạn mỗi ngày🍯 </h4>
 <h4 align="center">Dưới sự hỗ trợ của GitHub Actions 🐙 và Python 🐍</h4>
 <p align="center">
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/gorouflex/HoneygainPot?style=flat">
 <img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
+<p align="center">
 <img src="https://img.shields.io/github/stars/gorouflex/HoneygainPot?style=flat">
+<img alt="GitHub watchers" src="https://img.shields.io/github/watchers/gorouflex/HoneygainPot?style=flat">
 <img src="https://img.shields.io/github/contributors/gorouflex/HoneygainPot?style=flat">
+</p>
 <p align="center">
 <a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml/badge.svg"></a>
 <a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml/badge.svg"></a>
@@ -134,6 +138,14 @@ on:
 > - **Tôi GorouFlex và MrLolf** **không có trách nhiệm** cho bất kỳ hậu quả mà có thể phát sinh trong quá trình dùng Script/Bot này
 > - Nếu Honeygain muốn chúng tôi xoá con bot này thì chúng tôi sẽ làm
 
+## Recent activity [![Time period](https://images.repography.com/44739709/gorouflex/HoneygainPot/recent-activity/tXCw9M5i0HgQ3S3BsxKFTCsKpg43C6MCG6gN6bnFCTc/fRHoqaVaReVH-CrjejSHavn1gHM4SFsKAtm_P7QJivk_badge.svg)](https://repography.com)
+[![Timeline graph](https://images.repography.com/44739709/gorouflex/HoneygainPot/recent-activity/tXCw9M5i0HgQ3S3BsxKFTCsKpg43C6MCG6gN6bnFCTc/fRHoqaVaReVH-CrjejSHavn1gHM4SFsKAtm_P7QJivk_timeline.svg)](https://github.com/gorouflex/HoneygainPot/commits)
+[![Issue status graph](https://images.repography.com/44739709/gorouflex/HoneygainPot/recent-activity/tXCw9M5i0HgQ3S3BsxKFTCsKpg43C6MCG6gN6bnFCTc/fRHoqaVaReVH-CrjejSHavn1gHM4SFsKAtm_P7QJivk_issues.svg)](https://github.com/gorouflex/HoneygainPot/issues)
+[![Pull request status graph](https://images.repography.com/44739709/gorouflex/HoneygainPot/recent-activity/tXCw9M5i0HgQ3S3BsxKFTCsKpg43C6MCG6gN6bnFCTc/fRHoqaVaReVH-CrjejSHavn1gHM4SFsKAtm_P7QJivk_prs.svg)](https://github.com/gorouflex/HoneygainPot/pulls)
+[![Trending topics](https://images.repography.com/44739709/gorouflex/HoneygainPot/recent-activity/tXCw9M5i0HgQ3S3BsxKFTCsKpg43C6MCG6gN6bnFCTc/fRHoqaVaReVH-CrjejSHavn1gHM4SFsKAtm_P7QJivk_words.svg)](https://github.com/gorouflex/HoneygainPot/commits)
+[![Top contributors](https://images.repography.com/44739709/gorouflex/HoneygainPot/recent-activity/tXCw9M5i0HgQ3S3BsxKFTCsKpg43C6MCG6gN6bnFCTc/fRHoqaVaReVH-CrjejSHavn1gHM4SFsKAtm_P7QJivk_users.svg)](https://github.com/gorouflex/HoneygainPot/graphs/contributors)
+[![Activity map](https://images.repography.com/44739709/gorouflex/HoneygainPot/recent-activity/tXCw9M5i0HgQ3S3BsxKFTCsKpg43C6MCG6gN6bnFCTc/fRHoqaVaReVH-CrjejSHavn1gHM4SFsKAtm_P7QJivk_map.svg)](https://github.com/gorouflex/HoneygainPot/commits)
+
 ### Đặt biệt cảm ơn 💖
-- [MrLolf](https://github.com/MrLoLf/) x [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim) cho nền tảng ban đầu của repo
+- [MrLolf](https://github.com/MrLoLf/) x [HoneygainAutoClaim](https://github.com/MrLoLf/HoneygainAutoClaim) cho mã nguồn mở
 - [rfoal](https://github.com/rfoel/) x [duolingo](https://github.com/rfoel/duolingo) cho ý tưởng
