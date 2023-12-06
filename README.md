@@ -1,3 +1,8 @@
+<p align="center">
+<img src="Img/Banner.png"               
+     width="640" 
+     height="320">
+</p>
 <h1 align="center">HoneygainPot - Project Sandy</h1>
 <h4 align="center">🐝 A bot that claims Honeygain lucky pot every day 🍯</h4>
 <h4 align="center">Powered by GitHub Actions 🐙 and Python 🐍</h4>
