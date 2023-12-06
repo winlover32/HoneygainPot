@@ -8,7 +8,7 @@
 <img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
 <img src="https://img.shields.io/github/stars/gorouflex/HoneygainPot?style=flat">
 <img src="https://img.shields.io/github/contributors/gorouflex/HoneygainPot?style=flat">
-<<p align="center">
+<p align="center">
 <a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml/badge.svg"></a>
 <a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml/badge.svg"></a>
 <a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg"></a>
@@ -34,9 +34,6 @@
   <a href="#trách-nhiệm">Trách nhiệm</a>  
 </p>
 <p align="left">
-<img src="/Img/Logo.png"               
-     width="170" 
-     height="170">
 </p>
 
   ### [Honeygain](https://r.honeygain.me/BADBO762DE)  là một nền tảng trực tuyến sử dụng các thiết bị mạng của bạn như một cánh cổng để giúp các nhà doanh nghiệp hay các nhà phân tích dữ liệu để thực hiện các chiến dịch SEO, nghiên cứu thị trường, bảo vệ thương hiệu....
