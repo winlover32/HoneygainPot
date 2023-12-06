@@ -13,7 +13,6 @@ config_path: str = f'{config_folder}/HoneygainConfig.toml'
 header: dict[str, str] = {'Authorization': ''}
 
 print('----------- Welcome to HoneygainPot -----------')
-print('Codename: Sandy')
 print('Made by GFx and MrLolf')
 
 config: ConfigParser = ConfigParser()
@@ -52,6 +51,7 @@ elif os.getenv('IsJWT') == '1':
 else:
     print('Using JWT Token status: No')
     print('Using Mail and Pass: Yes')
+print('Codename: Sandy')
 print('Config folder:', os.path.join(os.getcwd(), 'Config'))
 print('-----------------------------------------------')
 print('Starting HoneygainPot 🍯')
