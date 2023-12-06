@@ -1,7 +1,5 @@
 <p align="center">
-<img src="Img/Banner.png"               
-     width="640" 
-     height="320">
+<img src="Img/Banner.png"             
 </p>
 <h1 align="center">HoneygainPot - Project Sandy</h1>
 <h4 align="center">🐝 A bot that claims Honeygain lucky pot every day 🍯</h4>
