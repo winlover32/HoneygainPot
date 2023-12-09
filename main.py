@@ -2,10 +2,13 @@
 import json
 import os
 import configparser
+from colorama import init, Fore
 from configparser import ConfigParser
 from getpass import getpass
 import requests
 from requests import Response
+
+init()
 
 config_folder: str = 'Config'
 token_file: str = f'{config_folder}/HoneygainToken.json'
@@ -32,7 +35,7 @@ if os.getenv('GITHUB_ACTIONS') == 'true':
         user_commit = user_response.json()['sha']
         original_commit = original_response.json()['sha']
         if user_commit == original_commit:
-            print('Your repo is up-to-date with the original repo')
+            print(f"{Fore.RED}Your repo is up-to-date with the original repo")
         else:
             print('Your repo is not up-to-date with the original repo')
             print('Please update your repo to the latest commit to get new updates and bug fixes')
