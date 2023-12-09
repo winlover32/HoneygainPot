@@ -18,7 +18,7 @@ class colors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
-    WHITE = '\033[37m'
+    WHITE = '\033[97m'
 
 config_folder: str = 'Config'
 token_file: str = f'{config_folder}/HoneygainToken.json'
