@@ -275,15 +275,15 @@ def main() -> None:
                 return
 
 
-            print(f"{colors.OKGREEN}Claimed {pot_claim["data"]["credits"]} credits ✅{colors.ENDC}")
+            print(f"{colors.OKGREEN}Claimed {pot_claim['data']['credits']} credits ✅{colors.ENDC}")
 
         pot_winning: Response = s.get(urls['pot'], headers=heade)
         pot_winning: dict = pot_winning.json()
-        print(f"{colors.OKGREEN}Won today {pot_winning["data"]["winning_credits"]} credits ✅{colors.ENDC}")
+        print(f"{colors.OKGREEN}Won today {pot_winning['data']['winning_credits']} credits ✅{colors.ENDC}")
 
         balance: Response = s.get(urls['balance'], headers=heade)
         balance: dict = balance.json()
-        print(f"{colors.OKGREEN}You currently have {balance["data"]["payout"]["credits"]} credits 🍯{colors.ENDC}")
+        print(f"{colors.OKGREEN}You currently have {balance['data']['payout']['credits']} credits 🍯{colors.ENDC}")
 
 
 if __name__ == '__main__':
