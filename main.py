@@ -233,13 +233,13 @@ def achievements_claim(s: requests.session, heade: dict[str, str]) -> bool:
                         s.post(urls['achievement_claim'],
                                json={"user_achievement_id": achievement['id']},
                                headers=heade)
-                        print(f"{colors.OKGREEN}Claimed {achievement["title"]} ✅{colors.ENDC}")
+                        print(f"{colors.OKGREEN}Claimed {achievement['title']} ✅{colors.ENDC}")
                 except IndexError:
                     if not achievement['is_claimed']:
                         s.post(urls['achievement_claim'],
                                json={"user_achievement_id": achievement['id']},
                                headers=heade)
-                        print(f"{colors.OKGREEN}Claimed {achievement["title"]} ✅{colors.ENDC}")
+                        print(f"{colors.OKGREEN}Claimed {achievement['title']} ✅{colors.ENDC}")
         except KeyError:
             return False
         return True
