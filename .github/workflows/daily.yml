@@ -7,11 +7,7 @@ jobs:
     Daily:
         runs-on: windows-latest
         steps:
-          - uses: actions/checkout@v3  
-          - name: Install dependencies
-            run: |
-             python -m pip install --upgrade pip
-             pip install requests  
+          - uses: actions/checkout@v3   
           - name: Run HoneygainPot
             run: python main.py
             env:
