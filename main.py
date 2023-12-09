@@ -8,7 +8,7 @@ from getpass import getpass
 import requests
 from requests import Response
 
-init()
+init(autoreset=True)
 
 config_folder: str = 'Config'
 token_file: str = f'{config_folder}/HoneygainToken.json'
