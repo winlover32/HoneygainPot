@@ -36,7 +36,7 @@ is_jwt = config.get('User', 'IsJWT', fallback='0')
 if os.getenv('GITHUB_ACTIONS') == 'true':
     print(f"{colors.OKBLUE}Powered by GitHub Actions V3 and Python{colors.ENDC}")
     print(f"{colors.OKGREEN}Run with GitHub Actions: Yes{colors.ENDC}")
-    print(f"{colors.WHITE}Current repo:,os.getenv('GITHUB_REPOSITORY'){colors.ENDC}")
+    print(f"{colors.WHITE}Current repo:,{os.getenv('GITHUB_REPOSITORY')}{colors.ENDC}")
     user_repo = os.getenv('GITHUB_REPOSITORY')
     ORIGINAL_REPO = 'gorouflex/HoneygainPot'
     user_url = f'https://api.github.com/repos/{user_repo}/commits/main'
