@@ -193,7 +193,13 @@ except configparser.NoSectionError:
     urls: dict[str, str] = get_urls(config)
     payload: dict[str, str] = get_login(config)
 
-
+if not config.has_section('User') or not config.has_section('Settings') or not config.has_section('Url'):
+    print(f"{Colors.FAIL}Incomplete or missing information in the config{Colors.ENDC}")
+    print(f"{Colors.WARNING}Removed the existing configuration file...{Colors.ENDC}")
+    if os.path.exists(config_path):
+        os.remove(config_path)
+    create_config()
+    
 def login(s: requests.session) -> json.loads:
     print(f"{colors.WHITE}Logging in to Honeygain 🐝{colors.ENDC}")
     if os.getenv('IsJWT') == '1':
