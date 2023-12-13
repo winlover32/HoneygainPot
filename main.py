@@ -165,7 +165,7 @@ def get_settings(cfg: ConfigParser) -> dict[str, bool]:
 
 
 if not os.path.exists(config_folder):
-    print(f"{colors.WARNING}Creating new config folder at:", os.path.join(os.getcwd(), f"{colors.WHITE}Config{colors.ENDC}"))
+    print(f"{colors.WARNING}Creating new config folder at:", os.path.join(os.getcwd()))
     os.mkdir(config_folder)
 
 if not os.path.isfile(config_path) or os.stat(config_path).st_size == 0:
