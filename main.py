@@ -158,12 +158,12 @@ def get_urls(cfg: ConfigParser) -> dict[str, str]:
 
 
 def get_login(cfg: ConfigParser) -> dict[str, str]:
-     user: dict[str, str] = {}
-     try:
-         if os.getenv('IsJWT') == '1':
-             token = cfg.get('User', 'token')
-             user: dict[str, str] = {'token': token}
-         else:
+    user: dict[str, str] = {}
+    try:
+        if os.getenv('IsJWT') == '1':
+            token = cfg.get('User', 'token')
+            user: dict[str, str] = {'token': token}
+        else:
             user: dict[str, str] = {'email': cfg.get('User', 'email'),
                                     'password': cfg.get('User', 'password')}
     except configparser.NoOptionError:
