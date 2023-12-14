@@ -138,11 +138,7 @@ def get_urls(cfg: ConfigParser) -> dict[str, str]:
 def get_login(cfg: ConfigParser) -> dict[str, str]:
     user: dict[str, str] = {}
     try:
-<<<<<<< HEAD
         if os.getenv('IsJWT') == '1':
-=======
-        if is_jwt == '1':
->>>>>>> parent of 51c8608 (fix)
             token = cfg.get('User', 'token')
             user: dict[str, str] = {'token': token}
         else:
