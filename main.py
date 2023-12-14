@@ -29,7 +29,6 @@ print(f"{colors.OKBLUE}Made by GFx and MrLolf{colors.ENDC}")
 
 config: ConfigParser = ConfigParser()
 config.read(config_path)
-
 is_jwt = config.get('User', 'IsJWT', fallback='0')
 
 if os.getenv('GITHUB_ACTIONS') == 'true':
@@ -68,7 +67,6 @@ print(f"{colors.WHITE}Config folder:", os.path.join(os.getcwd(), f"{colors.WHITE
 print(f"{colors.WARNING}-----------------------------------------------{colors.ENDC}")
 print(f"{colors.WHITE}Starting HoneygainPot 🍯{colors.ENDC}")
 print(f"{colors.WHITE}Collecting information...{colors.ENDC}")
-
 
 def create_config() -> None:
     cfg: ConfigParser = ConfigParser()
@@ -111,19 +109,16 @@ def create_config() -> None:
     cfg.add_section('Settings')
     cfg.set('Settings', 'Lucky Pot', 'True')
     cfg.set('Settings', 'Achievements', 'True')
-
     cfg.add_section('Url')
     cfg.set('Url', 'login', 'https://dashboard.honeygain.com/api/v1/users/tokens')
     cfg.set('Url', 'pot', 'https://dashboard.honeygain.com/api/v1/contest_winnings')
     cfg.set('Url', 'balance', 'https://dashboard.honeygain.com/api/v1/users/balances')
     cfg.set('Url', 'achievements', 'https://dashboard.honeygain.com/api/v1/achievements/')
     cfg.set('Url', 'achievement_claim', 'https://dashboard.honeygain.com/api/v1/achievements/claim')
-
     with open(config_path, 'w', encoding='utf-8') as configfile:
         configfile.truncate(0)
         configfile.seek(0)
         cfg.write(configfile)
-
 
 def check_config_integrity(conf: ConfigParser) -> None:
     if not os.path.exists(config_folder):
@@ -137,10 +132,8 @@ def check_config_integrity(conf: ConfigParser) -> None:
             or not conf.has_section('Url')):
         create_config()
 
-
 check_config_integrity(config)
 config.read(config_path)
-
 
 def get_urls(cfg: ConfigParser) -> dict[str, str]:
     urls_conf: dict[str, str] = {}
@@ -155,7 +148,6 @@ def get_urls(cfg: ConfigParser) -> dict[str, str]:
     except configparser.NoSectionError:
         create_config()
     return urls_conf
-
 
 def get_login(cfg: ConfigParser) -> dict[str, str]:
     user: dict[str, str] = {}
@@ -172,7 +164,6 @@ def get_login(cfg: ConfigParser) -> dict[str, str]:
         create_config()
     return user
 
-
 def get_settings(cfg: ConfigParser) -> dict[str, bool]:
     settings_dict: dict[str, bool] = {}
     try:
@@ -184,24 +175,19 @@ def get_settings(cfg: ConfigParser) -> dict[str, bool]:
     except configparser.NoSectionError:
         create_config()
     return settings_dict
-
-
+    
 try:
     settings: dict[str, bool] = get_settings(config)
     urls: dict[str, str] = get_urls(config)
     payload: dict[str, str] = get_login(config)
-
 except configparser.NoOptionError:
     create_config()
-
 except configparser.NoSectionError:
     create_config()
-
 finally:
     settings: dict[str, bool] = get_settings(config)
     urls: dict[str, str] = get_urls(config)
     payload: dict[str, str] = get_login(config)
-
 
 def login(s: requests.session) -> json.loads:
     print(f"{colors.WHITE}Logging in to Honeygain 🐝{colors.ENDC}")
@@ -213,7 +199,6 @@ def login(s: requests.session) -> json.loads:
     except json.decoder.JSONDecodeError:
         print(f"{colors.WARNING}------------- Traceback log -------------{colors.ENDC}\n{colors.FAIL}❌ Error code 3: You have exceeded your login tries\nPlease wait a few hours or return tomorrow\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
         exit(-1)
-
 
 def gen_token(s: requests.session, invalid: bool = False) -> str | None:
     if not os.path.isfile(token_file) or os.stat(token_file).st_size == 0 or invalid:
@@ -229,7 +214,6 @@ def gen_token(s: requests.session, invalid: bool = False) -> str | None:
     with open(token_file, 'r+', encoding='utf-8') as f:
         token: dict = json.load(f)
     return token["data"]["access_token"]
-
 
 def achievements_claim(s: requests.session, header: dict[str, str]) -> bool:
     if not settings['achievements_bool']:
@@ -254,7 +238,6 @@ def achievements_claim(s: requests.session, header: dict[str, str]) -> bool:
                    headers=header)
             print(f"{colors.OKGREEN}Claimed {achievement['title']} ✅{colors.ENDC}")
     return True
-
 
 def main() -> None:
     with requests.session() as s:
