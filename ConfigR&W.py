@@ -5,7 +5,7 @@ from configparser import ConfigParser
 from getpass import getpass
 import sys
 
-class Colors:
+class colors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
     OKCYAN = '\033[96m'
@@ -20,42 +20,46 @@ class Colors:
 config_folder: str = 'Config'
 token_file: str = f'{config_folder}/HoneygainToken.json'
 config_path: str = f'{config_folder}/HoneygainConfig.toml'
-header: dict[str, str] = {'Authorization': ''}
 
 def create_config():
     cfg: ConfigParser = ConfigParser()
     cfg.add_section('User')
+    cfg.set('User', 'email', "")
+    cfg.set('User', 'password', "")
+    cfg.set('User', 'token', "")
     if os.getenv('GITHUB_ACTIONS') == 'true':
         if os.getenv('IsJWT') == '1':
             token = os.getenv('JWT_TOKEN')
             cfg.set('User', 'token', f"{token}")
+            cfg.set('User', 'IsJWT', '1')
         else:
             email = os.getenv('MAIL')
             password = os.getenv('PASS')
             cfg.set('User', 'email', f"{email}")
             cfg.set('User', 'password', f"{password}")
+            cfg.set('User', 'IsJWT', '0')
     else:
-        print(f"{Colors.WARNING}### Config setup ###{Colors.ENDC}")
-        print(f"{Colors.WHITE}Please choose your main authentication method:{Colors.ENDC}")
-        print(f"{Colors.WHITE}1. Using Token{Colors.ENDC}")
-        print(f"{Colors.WHITE}2. Using Email and Password{Colors.ENDC}")
-
-        choice = input(f"{Colors.WHITE}Enter your choice (1 or 2):{Colors.ENDC}")
+        print(f"{colors.WARNING}### First time setup ###{colors.ENDC}")
+        print(f"{colors.WHITE}Please choose authentication method:{colors.ENDC}")
+        print(f"{colors.WHITE}1. Using Token{colors.ENDC}")
+        print(f"{colors.WHITE}2. Using Email and Password{colors.ENDC}")
+        choice = input(f"{colors.WHITE}Enter your choice (1 or 2):{colors.ENDC}")
         if choice == '1':
-            token = input(f"{Colors.WHITE}Token: {Colors.ENDC}")
+            token = input(f"{colors.WHITE}Token: {colors.ENDC}")
             cfg.set('User', 'token', f"{token}")
-            cfg.set('User', 'IsJWT', '1') 
+            cfg.set('User', 'IsJWT', '1')
             os.environ['IsJWT'] = '1'
         elif choice == '2':
-            email = input(f"{Colors.WHITE}Email: {Colors.ENDC}")
-            password = getpass(f"{Colors.WHITE}Password: {Colors.ENDC}")
+            email = input(f"{colors.WHITE}Email: {colors.ENDC}")
+            password = getpass(f"{colors.WHITE}Password: {colors.ENDC}")
             cfg.set('User', 'email', f"{email}")
             cfg.set('User', 'password', f"{password}")
             cfg.set('User', 'IsJWT', '0')
         else:
-            print(f"{Colors.FAIL}Wrong input, could not read it correctly. Try again!{Colors.ENDC}")
-            create_config()   
-    print(f"{Colors.WHITE}Created 'Config' folder at:", os.path.join(os.getcwd(), f"{Colors.WHITE}Config{Colors.ENDC}"))
+            print(f"{colors.FAIL}Wrong Input could not read it correctly. Try again!{colors.ENDC}")
+            create_config()
+            
+    print(f"{colors.WHITE}Created 'Config' folder at:", os.path.join(os.getcwd(), f"{colors.WHITE}Config{colors.ENDC}"))
     cfg.add_section('Settings')
     cfg.set('Settings', 'Lucky Pot', 'True')
     cfg.set('Settings', 'Achievements', 'True')
@@ -70,37 +74,48 @@ def create_config():
         configfile.seek(0)
         cfg.write(configfile)
 
-print(f"{Colors.WARNING}----------- Welcome to HoneygainPot Config Reader and Writer -----------{Colors.ENDC}")
-print(f"{Colors.OKBLUE}Made by GFx and MrLolf{Colors.ENDC}")
-
-if not os.path.exists(config_folder):
-    print(f"{Colors.FAIL}'Config' folder not found. Creating configuration...{Colors.ENDC}")
-    os.makedirs(config_folder)
-    create_config()
+print(f"{colors.WARNING}----------- Welcome to HoneygainPot Config Reader and Writer -----------{colors.ENDC}")
+print(f"{colors.OKBLUE}Made by GFx and MrLolf{colors.ENDC}")
 
 config: ConfigParser = ConfigParser()
+config.read(config_path)
+
+def check_config_integrity(conf: ConfigParser) -> None:
+    if not os.path.exists(config_folder):
+        print(f"{colors.WARNING}Creating new config folder at:", os.path.join(os.getcwd()))
+        os.mkdir(config_folder)
+    if not os.path.isfile(config_path) or os.stat(config_path).st_size == 0:
+        create_config()
+        return
+    conf.read(config_path)
+    if (not conf.has_section('User') or not conf.has_section('Settings')
+            or not conf.has_section('Url')):
+        create_config()
+
+
+check_config_integrity(config)
 config.read(config_path)
 
 is_jwt = config.get('User', 'IsJWT', fallback='0')
 
 if is_jwt == '1' or os.getenv('IsJWT') == '1':
-    print(f"{Colors.OKGREEN}Using JWT Token: Yes{Colors.ENDC}")
-    print(f"{Colors.FAIL}Using Mail and Password: No{Colors.ENDC}")
+    print(f"{colors.OKGREEN}Using JWT Token: Yes{colors.ENDC}")
+    print(f"{colors.FAIL}Using Mail and Password: No{colors.ENDC}")
     os.environ['IsJWT'] = '1'
 else:
-    print(f"{Colors.FAIL}Using JWT Token: No{Colors.ENDC}")
-    print(f"{Colors.OKGREEN}Using Mail and Password: Yes{Colors.ENDC}")
+    print(f"{colors.FAIL}Using JWT Token: No{colors.ENDC}")
+    print(f"{colors.OKGREEN}Using Mail and Password: Yes{colors.ENDC}")
 
-print(f"{Colors.WHITE}Codename: Sandy{Colors.ENDC}")
-print(f"{Colors.WHITE}Config folder:", os.path.join(os.getcwd(), f"{Colors.WHITE}Config{Colors.ENDC}"))
-print(f"{Colors.WARNING}---------------------------------------------------------------------{Colors.ENDC}")
-choice = input(f"{Colors.WHITE}Do you want to edit the config file (Y/N): ?{Colors.ENDC}")
+print(f"{colors.WHITE}Codename: Sandy{colors.ENDC}")
+print(f"{colors.WHITE}Config folder:", os.path.join(os.getcwd(), f"{colors.WHITE}Config{colors.ENDC}"))
+print(f"{colors.WARNING}---------------------------------------------------------------------{colors.ENDC}")
+choice = input(f"{colors.WHITE}Do you want to edit the config file (Y/N): {colors.ENDC}")
 if choice.lower() == 'y':
     create_config()
 
 if not config.has_section('User') or not config.has_section('Settings') or not config.has_section('Url'):
-    print(f"{Colors.FAIL}Incomplete or missing information in the config{Colors.ENDC}")
-    print(f"{Colors.WARNING}Removed the existing configuration file...{Colors.ENDC}")
+    print(f"{colors.FAIL}Incomplete or missing information in the config{colors.ENDC}")
+    print(f"{colors.WARNING}Removed the existing configuration file...{colors.ENDC}")
     if os.path.exists(config_path):
         os.remove(config_path)
     create_config()
