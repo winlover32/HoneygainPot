@@ -205,7 +205,7 @@ finally:
 
 def login(s: requests.session) -> json.loads:
     print(f"{colors.WHITE}Logging in to Honeygain 🐝{colors.ENDC}")
-    if is_jwt == '1':
+    if os.getenv('IsJWT') == '1':
         return {'data': {'access_token': payload['token']}}
     token: Response = s.post(urls['login'], json=payload)
     try:
