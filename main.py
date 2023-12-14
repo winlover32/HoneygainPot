@@ -19,11 +19,10 @@ class colors:
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
     WHITE = '\033[97m'
-
+    
 config_folder: str = 'Config'
 token_file: str = f'{config_folder}/HoneygainToken.json'
 config_path: str = f'{config_folder}/HoneygainConfig.toml'
-header: dict[str, str] = {'Authorization': ''}
 
 print(f"{colors.WARNING}----------- Welcome to HoneygainPot -----------{colors.ENDC}")
 print(f"{colors.OKBLUE}Made by GFx and MrLolf{colors.ENDC}")
@@ -74,26 +73,30 @@ print(f"{colors.WHITE}Collecting information...{colors.ENDC}")
 def create_config() -> None:
     cfg: ConfigParser = ConfigParser()
     cfg.add_section('User')
+    cfg.set('User', 'email', "")
+    cfg.set('User', 'password', "")
+    cfg.set('User', 'token', "")
     if os.getenv('GITHUB_ACTIONS') == 'true':
         if os.getenv('IsJWT') == '1':
             token = os.getenv('JWT_TOKEN')
             cfg.set('User', 'token', f"{token}")
+            cfg.set('User', 'IsJWT', '1')
         else:
             email = os.getenv('MAIL')
             password = os.getenv('PASS')
             cfg.set('User', 'email', f"{email}")
             cfg.set('User', 'password', f"{password}")
+            cfg.set('User', 'IsJWT', '0')
     else:
         print(f"{colors.WARNING}### First time setup ###{colors.ENDC}")
-        print(f"{colors.WHITE}Please choose your main authentication method:{colors.ENDC}")
+        print(f"{colors.WHITE}Please choose authentication method:{colors.ENDC}")
         print(f"{colors.WHITE}1. Using Token{colors.ENDC}")
         print(f"{colors.WHITE}2. Using Email and Password{colors.ENDC}")
-
         choice = input(f"{colors.WHITE}Enter your choice (1 or 2):{colors.ENDC}")
         if choice == '1':
             token = input(f"{colors.WHITE}Token: {colors.ENDC}")
             cfg.set('User', 'token', f"{token}")
-            cfg.set('User', 'IsJWT', '1') 
+            cfg.set('User', 'IsJWT', '1')
             os.environ['IsJWT'] = '1'
         elif choice == '2':
             email = input(f"{colors.WHITE}Email: {colors.ENDC}")
@@ -103,21 +106,40 @@ def create_config() -> None:
             cfg.set('User', 'IsJWT', '0')
         else:
             print(f"{colors.FAIL}Wrong Input could not read it correctly. Try again!{colors.ENDC}")
-            create_config()   
-
+            create_config()
+            
     cfg.add_section('Settings')
     cfg.set('Settings', 'Lucky Pot', 'True')
     cfg.set('Settings', 'Achievements', 'True')
+
     cfg.add_section('Url')
     cfg.set('Url', 'login', 'https://dashboard.honeygain.com/api/v1/users/tokens')
     cfg.set('Url', 'pot', 'https://dashboard.honeygain.com/api/v1/contest_winnings')
     cfg.set('Url', 'balance', 'https://dashboard.honeygain.com/api/v1/users/balances')
     cfg.set('Url', 'achievements', 'https://dashboard.honeygain.com/api/v1/achievements/')
     cfg.set('Url', 'achievement_claim', 'https://dashboard.honeygain.com/api/v1/achievements/claim')
+
     with open(config_path, 'w', encoding='utf-8') as configfile:
         configfile.truncate(0)
         configfile.seek(0)
         cfg.write(configfile)
+
+
+def check_config_integrity(conf: ConfigParser) -> None:
+    if not os.path.exists(config_folder):
+        print(f"{colors.WARNING}Creating new config folder at:", os.path.join(os.getcwd()))
+        os.mkdir(config_folder)
+    if not os.path.isfile(config_path) or os.stat(config_path).st_size == 0:
+        create_config()
+        return
+    conf.read(config_path)
+    if (not conf.has_section('User') or not conf.has_section('Settings')
+            or not conf.has_section('Url')):
+        create_config()
+
+
+check_config_integrity(config)
+config.read(config_path)
 
 
 def get_urls(cfg: ConfigParser) -> dict[str, str]:
@@ -138,7 +160,7 @@ def get_urls(cfg: ConfigParser) -> dict[str, str]:
 def get_login(cfg: ConfigParser) -> dict[str, str]:
     user: dict[str, str] = {}
     try:
-        if os.getenv('IsJWT') == '1':
+        if is_jwt == '1':
             token = cfg.get('User', 'token')
             user: dict[str, str] = {'token': token}
         else:
@@ -164,45 +186,26 @@ def get_settings(cfg: ConfigParser) -> dict[str, bool]:
     return settings_dict
 
 
-if not os.path.exists(config_folder):
-    print(f"{colors.WARNING}Creating new config folder at:", os.path.join(os.getcwd()))
-    os.mkdir(config_folder)
-
-if not os.path.isfile(config_path) or os.stat(config_path).st_size == 0:
-    create_config()
-
-config: ConfigParser = ConfigParser()
-config.read(config_path)
-
-if (not config.has_section('User') or not config.has_section('Settings')
-        or not config.has_section('Url')):
-    create_config()
-
 try:
     settings: dict[str, bool] = get_settings(config)
     urls: dict[str, str] = get_urls(config)
     payload: dict[str, str] = get_login(config)
+
 except configparser.NoOptionError:
     create_config()
-    settings: dict[str, bool] = get_settings(config)
-    urls: dict[str, str] = get_urls(config)
-    payload: dict[str, str] = get_login(config)
+
 except configparser.NoSectionError:
     create_config()
+
+finally:
     settings: dict[str, bool] = get_settings(config)
     urls: dict[str, str] = get_urls(config)
     payload: dict[str, str] = get_login(config)
 
-if not config.has_section('User') or not config.has_section('Settings') or not config.has_section('Url'):
-    print(f"{Colors.FAIL}Incomplete or missing information in the config{Colors.ENDC}")
-    print(f"{Colors.WARNING}Removed the existing configuration file...{Colors.ENDC}")
-    if os.path.exists(config_path):
-        os.remove(config_path)
-    create_config()
-    
+
 def login(s: requests.session) -> json.loads:
     print(f"{colors.WHITE}Logging in to Honeygain 🐝{colors.ENDC}")
-    if os.getenv('IsJWT') == '1':
+    if is_jwt == '1':
         return {'data': {'access_token': payload['token']}}
     token: Response = s.post(urls['login'], json=payload)
     try:
@@ -228,30 +231,29 @@ def gen_token(s: requests.session, invalid: bool = False) -> str | None:
     return token["data"]["access_token"]
 
 
-def achievements_claim(s: requests.session, heade: dict[str, str]) -> bool:
-    if settings['achievements_bool']:
-        achievements: Response = s.get(urls['achievements'], headers=heade)
-        achievements: dict = achievements.json()
-        try:
-            for achievement in achievements['data']:
-                try:
-                    if (not achievement['is_claimed'] and
-                            achievement['progresses'][0]['current_progress'] ==
-                            achievement['progresses'][0]['total_progress']):
-                        s.post(urls['achievement_claim'],
-                               json={"user_achievement_id": achievement['id']},
-                               headers=heade)
-                        print(f"{colors.OKGREEN}Claimed {achievement['title']} ✅{colors.ENDC}")
-                except IndexError:
-                    if not achievement['is_claimed']:
-                        s.post(urls['achievement_claim'],
-                               json={"user_achievement_id": achievement['id']},
-                               headers=heade)
-                        print(f"{colors.OKGREEN}Claimed {achievement['title']} ✅{colors.ENDC}")
-        except KeyError:
-            return False
-        return True
-    return False
+def achievements_claim(s: requests.session, header: dict[str, str]) -> bool:
+    if not settings['achievements_bool']:
+        return False
+    achievements: Response = s.get(urls['achievements'], headers=header)
+    achievements: dict = achievements.json()
+    if 'data' not in achievements:
+        return False
+    for achievement in achievements['data']:
+        if (not achievement['is_claimed'] and 'progresses' in achievement and
+                not len(achievement['progresses'][0]) > 0):
+            s.post(urls['achievement_claim'],
+                   json={"user_achievement_id": achievement['id']},
+                   headers=header)
+            print(f"{colors.WARNING}Trying to claim {achievement['title']}{colors.ENDC}")
+        elif (not achievement['is_claimed'] and 'progresses' in achievement and
+              len(achievement['progresses'][0]) > 0 and
+              achievement['progresses'][0]['current_progress'] ==
+              achievement['progresses'][0]['total_progress']):
+            s.post(urls['achievement_claim'],
+                   json={"user_achievement_id": achievement['id']},
+                   headers=header)
+            print(f"{colors.OKGREEN}Claimed {achievement['title']} ✅{colors.ENDC}")
+    return True
 
 
 def main() -> None:
@@ -260,38 +262,33 @@ def main() -> None:
         if token is None:
             print(f"{colors.FAIL}Closing HoneygainPot due to false login credentials ❌{colors.ENDC}")
             exit(-1)
-        heade: dict[str, str] = {'Authorization': f'Bearer {token}'}
-
-        if not achievements_claim(s, heade):
+        header: dict[str, str] = {'Authorization': f'Bearer {token}'}
+        if not achievements_claim(s, header):
             print(f"{colors.FAIL}Failed to claim achievements ❌{colors.ENDC}")
             exit(-1)
-            
-        dashboard: Response = s.get(urls['balance'], headers=heade)
+        dashboard: Response = s.get(urls['balance'], headers=header)
         dashboard: dict = dashboard.json()
         if 'code' in dashboard and dashboard['code'] == 401:
             print(f"{colors.FAIL}Invalid token generating new one{colors.ENDC}")
             token: str = gen_token(s, True)
             header['Authorization'] = f'Bearer {token}'
-
-        pot_winning: Response = s.get(urls['pot'], headers=heade)
+        pot_winning: Response = s.get(urls['pot'], headers=header)
         pot_winning: dict = pot_winning.json()
-
+        if 'data' not in pot_winning:
+             print(f"{colors.WARNING}------------- Traceback log -------------{colors.ENDC}\n{colors.FAIL}❌ Error code 2: Wrong login credentials,please enter the right ones\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
+             exit(-1)
         if settings['lucky_pot'] and pot_winning['data']['winning_credits'] is None:
-            pot_claim: Response = s.post(urls['pot'], headers=heade)
+            pot_claim: Response = s.post(urls['pot'], headers=header)
             pot_claim: dict = pot_claim.json()
             if 'type' in pot_claim and pot_claim['type'] == 400:
                 print(f"{colors.WARNING}------------- Traceback log -------------{colors.ENDC}\n{colors.FAIL}❌ Error code 1: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS )\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
                 exit(-1)
                 return
-
-
             print(f"{colors.OKGREEN}Claimed {pot_claim['data']['credits']} credits ✅{colors.ENDC}")
-
-        pot_winning: Response = s.get(urls['pot'], headers=heade)
+        pot_winning: Response = s.get(urls['pot'], headers=header)
         pot_winning: dict = pot_winning.json()
         print(f"{colors.OKGREEN}Won today {pot_winning['data']['winning_credits']} credits ✅{colors.ENDC}")
-
-        balance: Response = s.get(urls['balance'], headers=heade)
+        balance: Response = s.get(urls['balance'], headers=header)
         balance: dict = balance.json()
         print(f"{colors.OKGREEN}You currently have {balance['data']['payout']['credits']} credits 🍯{colors.ENDC}")
         print(f"{colors.OKGREEN}Closing HoneygainPot ✅{colors.ENDC}")
