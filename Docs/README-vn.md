@@ -1,7 +1,7 @@
 <p align="center">
 <img src="/Img/Banner.png">
 </p>
-<h1 align="center">HoneygainPot - Project Sandy</h1>
+<h1 align="center">HoneygainPot - Dự án Sandy</h1>
 <h4 align="center">🐝 Tự động nhận Honeygain lucky pot của bạn mỗi ngày🍯 </h4>
 <h4 align="center">Dưới sự hỗ trợ của GitHub Actions 🐙 và Python 🐍</h4>
 <p align="center">
@@ -40,6 +40,10 @@
 
   ### [Honeygain](https://r.honeygain.me/BADBO762DE)  là một nền tảng trực tuyến sử dụng các thiết bị mạng của bạn như một cánh cổng để giúp các nhà doanh nghiệp hay các nhà phân tích dữ liệu để thực hiện các chiến dịch SEO, nghiên cứu thị trường, bảo vệ thương hiệu....
 
+### Thuộc chuỗi dự án Sandy
+
+- [HoneygainPot](https://github.com/gorouflex/HoneygainPot/) ( 🐝 Automatically claim your Honeygain lucky pot every day 🍯 )
+- [DuoXPy](https://github.com/gorouflex/DuoXPy/) ( ⚡️ XP farm and Streak keeper for Duolingo 🔥 )
 
 > [!IMPORTANT]
 > **Vui lòng đọc hết tất cả** tài liệu và văn bản hướng dẫn trong repo này trước khi làm!
