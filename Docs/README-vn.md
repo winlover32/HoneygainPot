@@ -33,6 +33,8 @@
   •
   <a href="#cách-sử-dụng">Cách sử dụng</a>
   •
+  <a href="#config">Config</a>     
+  •
   <a href="#xem-trước">Xem trước</a>
   •
   <a href="#trách-nhiệm">Trách nhiệm</a>  
@@ -95,6 +97,10 @@
   <img src="/Img/IsJWT(0).png">
 </p>
 
+# Config
+
+- Thông thường bạn có tìm thấy thư mục config ở cùng nơi mà file `main.py` ở. Nhưng 1 số trường hợp đặc biệc thì bạn cần phải tự tìm file config thông quan cửa sổ thông tin khi chạy của file `main.py`
+- Bạn có đổi thông tin tài khoản ở file config, nhưng chắc chắn rằng `IsJWT` ở file config được đặt về `0` nếu bạn đang sử dụng email,mật khẩu và đặt thành `1` nếu bạn sử dụng jwt token hoặc sử dụng file `ConfigR&W.py` ở trong repo của tôi
 
 ## Làm thế nào để chỉnh lại thời gian tự động chạy mỗi ngày?
 

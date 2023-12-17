@@ -33,6 +33,8 @@
   •
   <a href="#usage">Usage</a>     
   •
+  <a href="#config">Config</a>     
+  •
   <a href="#preview">Preview</a>
   •
   <a href="#disclaimer">Disclaimer</a>
@@ -95,6 +97,10 @@
   <img src="Img/IsJWT(0).png">
 </p>
 
+# Config
+
+- Usually, you can find your config folder in the same place as the `main.py` file. In some specific cases, you might need to locate your config through the information window in the `main.py` file
+- You can change your information in the config file, but make sure that `IsJWT` in the config is set to `0` if you are using the email,password method and `1` if using jwt token method or just using `ConfigR&W.py` in my repo
 
 ## How to change the schedule to fit with my timezone before the pot is reset?
 
