@@ -1,5 +1,5 @@
 <p align="center">
-<img src="/Img/Banner.png">
+<img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/Banner.png">
 </p>
 <h1 align="center">HoneygainPot - Dự án Sandy</h1>
 <h4 align="center">🐝 Tự động nhận Honeygain lucky pot của bạn mỗi ngày🍯 </h4>
@@ -25,9 +25,9 @@
   •
   <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
 <p align="center">
-  <a href="Debug-vn.md">Sửa các lỗi thường gặp</a>
+  <a href="https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug-vn.md">Sửa các lỗi thường gặp</a>
   •
-  <a href="FAQ-vn.md">FAQ</a>  
+  <a href="https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/FAQ-vn.md">FAQ</a>  
   •
   <a href="#tính-năng">Tính năng</a>
   •
@@ -52,10 +52,10 @@
 > 
 > Đừng quên cho repo của mình 1 star nhé ⭐ 
 > - Luôn cập nhật repo của các bạn theo repo gốc này để nhận được những bản cập nhật và vá lỗi mới nhất, và tôi GorouFlex sẽ không hỗ trợ nếu phát hiện repo của bạn đã lỗi thời và không được cập nhật theo repo chính.
-> - Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Docs/Debug-vn.md](Debug-vn.md).
+> - Nếu bạn gặp lỗi khi sử dụng GitHub Actions, hãy kham khảo lỗi tại [Sandy/Docs/HoneygainPot/Debug-vn.md](https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug-vn.md).
 > - **Vui lòng không** nhập thông tin tài khoản của bạn vào 2 file workflow ( `daily.yml` và `manual.yml`)  vì nó sẽ không hoạt động mà sẽ gây ra lỗi và còn có thể bị lộ thông tin cho người khác xem
 > - (*) Không được fork repo nếu bạn thấy cả 1 trong 2 ( không bao gồm cả CodeQL và CL ) trạng thái của GitHub Actions đều chuyển sang đỏ, hãy chờ cho đến khi 1 trong 2 hoặc cả 2 chuyển sang màu xanh thì có thể fork
-> - `Daily claim` sẽ luôn luôn tự động chạy vào lúc 14:00 giờ ( UTC + 0 ) tức là 9:00 tối theo giờ UTC +7, nếu muốn chỉnh thì tham khảo tại [đây](https://github.com/gorouflex/HoneygainPot/blob/main/Docs/README-vn.md#l%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-ch%E1%BB%89nh-l%E1%BA%A1i-th%E1%BB%9Di-gian-t%E1%BB%B1-%C4%91%E1%BB%99ng-ch%E1%BA%A1y-m%E1%BB%97i-ng%C3%A0y).
+> - `Daily claim` sẽ luôn luôn tự động chạy vào lúc 14:00 giờ ( UTC + 0 ) tức là 9:00 tối theo giờ UTC +7, nếu muốn chỉnh thì tham khảo tại [đây](https://github.com/gorouflex/HoneygainPot/blob/main/README-vn.md#l%C3%A0m-th%E1%BA%BF-n%C3%A0o-%C4%91%E1%BB%83-ch%E1%BB%89nh-l%E1%BA%A1i-th%E1%BB%9Di-gian-t%E1%BB%B1-%C4%91%E1%BB%99ng-ch%E1%BA%A1y-m%E1%BB%97i-ng%C3%A0y).
 > <img src="https://i.imgur.com/htGeFlY.jpg">
   
 # Tính năng
@@ -78,9 +78,9 @@
   9. Trở lại repo của bạn đã fork 🍴, vào Actions trên thanh công cụ repo rồi ấn `I understand my workflows, go ahead and enable them`
 
 <p align="left">
-  <img src="/Img/get_token.png">
-  <img src="/Img/GitSettings-Token.png">
-  <img src="/Img/IsJWT(1).png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/get_token.png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/GitSettings-Token.png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/IsJWT(1).png">
 </p>
 
 ## Sử dụng Mail và Pass
@@ -93,8 +93,8 @@
   6. Trở lại repo của bạn đã fork 🍴, vào Actions trên thanh công cụ repo rồi ấn `I understand my workflows, go ahead and enable them`
 
 <p align="left">
-  <img src="/Img/GitSettings.png">
-  <img src="/Img/IsJWT(0).png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/GitSettings.png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/IsJWT(0).png">
 </p>
 
 # Config
@@ -134,8 +134,8 @@ on:
 # Xem trước
 
 <p align="center">
-  <img src="/Img/preview.png">
-  <img src="/Img/preview-1.png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/preview.png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/preview-1.png">
 </p>
 
 # Trách nhiệm

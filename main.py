@@ -50,7 +50,7 @@ if os.getenv('GITHUB_ACTIONS') == 'true':
             print(f"{colors.WARNING}Your repo is not up-to-date with the original repo{colors.ENDC}")
             print(f"{colors.FAIL}Please update your repo to the latest commit{colors.ENDC}{colors.FAIL}to get new updates and bug fixes{colors.ENDC}")
     else:
-        print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 4: Failed to fetch commit information\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
+        print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 4: Failed to fetch commit information\nPlease refer to: https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
         exit(-1)
 else:
     print(f"{colors.FAIL}Run with GitHub Actions: No{colors.ENDC}")
@@ -197,7 +197,7 @@ def login(s: requests.session) -> json.loads:
     try:
         return json.loads(token.text)
     except json.decoder.JSONDecodeError:
-        print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 3: You have exceeded your login tries\nPlease wait a few hours or return tomorrow\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
+        print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 3: You have exceeded your login tries\nPlease wait a few hours or return tomorrow\nPlease refer to: https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
         exit(-1)
 
 def gen_token(s: requests.session, invalid: bool = False) -> str | None:
@@ -207,7 +207,7 @@ def gen_token(s: requests.session, invalid: bool = False) -> str | None:
             f.seek(0)
             token: dict = login(s)
             if "title" in token:
-                print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 2: Wrong login credentials,please enter the right ones\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
+                print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 2: Wrong login credentials,please enter the right ones\nPlease refer to: https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
                 exit(-1)
                 return None
             json.dump(token, f)
@@ -258,13 +258,13 @@ def main() -> None:
         pot_winning: Response = s.get(urls['pot'], headers=header)
         pot_winning: dict = pot_winning.json()
         if 'data' not in pot_winning:
-             print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 2: Wrong login credentials,please enter the right ones\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
+             print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 2: Wrong login credentials,please enter the right ones\nPlease refer to: https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
              exit(-1)
         if settings['lucky_pot'] and pot_winning['data']['winning_credits'] is None:
             pot_claim: Response = s.post(urls['pot'], headers=header)
             pot_claim: dict = pot_claim.json()
             if 'type' in pot_claim and pot_claim['type'] == 400:
-                print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 1: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS )\nPlease refer to: https://github.com/gorouflex/HoneygainPot/blob/main/Docs/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
+                print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 1: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS )\nPlease refer to: https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
                 exit(-1)
                 return
             print(f"{colors.OKGREEN}Claimed {pot_claim['data']['credits']} credits ✅{colors.ENDC}")

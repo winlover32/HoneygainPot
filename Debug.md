@@ -1,2 +1,2 @@
-# English 🇺🇸: Moved to [Docs/Debug.md](Docs/Debug.md)
-# Tiếng Việt 🇻🇳: Đã chuyển sang [Docs/Debug-vn.md](Docs/Debug-vn.md)
+# English 🇺🇸: Moved to [Sandy/Docs/HoneygainPot/Docs/Debug.md](https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md)
+# Tiếng Việt 🇻🇳: Đã chuyển sang [Sandy/Docs/HoneygainPot/Debug-vn.md](https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug-vn.md)

@@ -1,5 +1,5 @@
 <p align="center">
-<img src="Img/Banner.png"/>            
+<img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/Banner.png"/>            
 </p>
 <h1 align="center">HoneygainPot - Project Sandy</h1>
 <h4 align="center">🐝 Automatically claim your Honeygain lucky pot every day 🍯</h4>
@@ -24,12 +24,12 @@
 <p align="center">
   <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
-  <a href="Docs/README-vn.md">Tiếng Việt 🇻🇳</a>
+  <a href="README-vn.md">Tiếng Việt 🇻🇳</a>
 </p>
 <p align="center">
-  <a href="Docs/Debug.md">Debug</a>  
+  <a href="https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md">Debug</a>  
   •
-  <a href="Docs/FAQ.md">FAQ</a> 
+  <a href="https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/FAQ.md">FAQ</a> 
   •
   <a href="#feature">Feature</a>
   •
@@ -54,7 +54,7 @@
 > 
 > Don't forget to star ⭐ this repository.
 > - Always update your repo following the original repo to get the latest update + bug fixes; I will not support anything if your repo is outdated.
-> - If you face errors when using GitHub Actions, please refer to this [Docs/Debug.md](Docs/Debug.md).
+> - If you face errors when using GitHub Actions, please refer to this [Sandy/Docs/HoneygainPot/Debug.md](https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md)
 > - **Do not** enter your information such as email and password into 2 workflows files ( `daily.yml` and `manual.yml` ) because it will not work and may leak your information to everyone.
 > - (*): Do not fork this repo if one of these or all of these ( not CodeQL and CL ) GitHub Actions status badge shows failing, and wait until one of these or two of these show passing, then you can fork again.
 > - `Daily claim` workflows always run every 14:00 UTC + 0; if you want to change it, refer to [this](https://github.com/gorouflex/HoneygainPot#how-to-change-the-schedule-to-fit-with-my-timezone-before-the-pot-is-reset).
@@ -80,9 +80,9 @@
   9. Go to your forked repository 🍴 and go to the Actions tab and press `I understand my workflows, go ahead and enable them`.
 
 <p align="left">
-  <img src="Img/get_token.png">
-  <img src="Img/GitSettings-Token.png">
-  <img src="Img/IsJWT(1).png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/get_token.png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/GitSettings-Token.png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/IsJWT(1).png">
 </p>
 
 ## Use Mail and Password
@@ -95,8 +95,8 @@
   6. Go to your forked repository 🍴 and go to the Actions tab and press `I understand my workflows, go ahead and enable them`.
 
 <p align="left">
-  <img src="Img/GitSettings.png">
-  <img src="Img/IsJWT(0).png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/GitSettings.png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/IsJWT(0).png">
 </p>
 
 # Config
@@ -134,8 +134,8 @@ on:
 # Preview
 
 <p align="left">
-  <img src="Img/preview.png">
-  <img src="Img/preview-1.png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/preview.png">
+  <img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/preview-1.png">
 </p>
 
 # Disclaimer
