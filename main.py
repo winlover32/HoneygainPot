@@ -3,6 +3,7 @@ import configparser
 import json
 import os
 import sys
+import shutil
 from configparser import ConfigParser
 from getpass import getpass
 import requests
@@ -278,3 +279,10 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+    if os.getenv('GITHUB_ACTIONS') == 'true':
+       try:
+         shutil.rmtree(config_folder)
+         print(f"{colors.WARNING}Deleting config folder...{colors.ENDC}")
+       except Exception as e:
+         print(f"{colors.FAIL}Error deleting config folder: {e}{colors.ENDC}")
+         exit(-1)
