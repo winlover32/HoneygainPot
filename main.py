@@ -275,14 +275,14 @@ def main() -> None:
         balance: Response = s.get(urls['balance'], headers=header)
         balance: dict = balance.json()
         print(f"{colors.OKGREEN}You currently have {balance['data']['payout']['credits']} credits 🍯{colors.ENDC}")
-        print(f"{colors.OKGREEN}Closing HoneygainPot ✅{colors.ENDC}")
 
 if __name__ == '__main__':
     main()
     if os.getenv('GITHUB_ACTIONS') == 'true':
        try:
          shutil.rmtree(config_folder)
-         print(f"{colors.WARNING}Deleting config folder...{colors.ENDC}")
+         print(f"{colors.WARNING}Cleaning up...{colors.ENDC}")
        except Exception as e:
          print(f"{colors.FAIL}Error deleting config folder: {e}{colors.ENDC}")
          exit(-1)
+    print(f"{colors.OKGREEN}Closing HoneygainPot ✅{colors.ENDC}")
