@@ -35,11 +35,12 @@ is_jwt = config.get('User', 'IsJWT', fallback='0')
 if os.getenv('GITHUB_ACTIONS') == 'true':
     print(f"{colors.OKBLUE}Powered by GitHub Actions V3 and Python{colors.ENDC}")
     print(f"{colors.OKGREEN}Run with GitHub Actions: Yes{colors.ENDC}")
-    print(f"{colors.WHITE}Current repo: {os.getenv('GITHUB_REPOSITORY')}{colors.ENDC}")
+    print(f"{colors.WHITE}Original repo: gorouflex/HoneygainPot{colors.ENDC}")
+    print(f"{colors.WHITE}Current forked repo: {os.getenv('GITHUB_REPOSITORY')}{colors.ENDC}")
     user_repo = os.getenv('GITHUB_REPOSITORY')
     ORIGINAL_REPO = 'gorouflex/HoneygainPot'
-    user_url = f'https://api.github.com/repos/{user_repo}/commits/main'
-    original_url = f'https://api.github.com/repos/{ORIGINAL_REPO}/commits/main'
+    user_url = f'https://api.github.com/repos/{user_repo}/commits?path=main.py'
+    original_url = f'https://api.github.com/repos/{ORIGINAL_REPO}/commits?path=main.py'
     user_response = requests.get(user_url, timeout=10000)
     original_response = requests.get(original_url, timeout=10000)
     if user_response.status_code == 200 and original_response.status_code == 200:
