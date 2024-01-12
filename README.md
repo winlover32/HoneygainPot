@@ -76,7 +76,7 @@
   4. [Fork this repository 🍴](https://github.com/gorouflex/HoneygainPot/fork)
   5. Go to your forked repository 🍴
   6. Go to `Settings > Secrets and Variables > Actions`, and click `New Repository secret`
-  7. Use `JWT_TOKEN` and paste your JWT Token from Steps 3. Create another secret and use `IsJWT` set to `1`.
+  7. Use `JWT_TOKEN` and paste your JWT Token from Steps 3. Create another secret and use `IsJWT` set to `true`.
   8. Go to your forked repository 🍴 and go to the Actions tab and press `I understand my workflows, go ahead and enable them`
 
 
@@ -90,7 +90,7 @@
   1. [Fork this repository 🍴](https://github.com/gorouflex/HoneygainPot/fork)
   2. Go to your forked repository 🍴
   3. Go to `Settings > Secrets and Variables > Actions`, and click `New Repository secret`
-  4. For the secret name, use `MAIL` and set your Honeygain email and `PASS` for your password and `IsJWT` set to `0`.
+  4. For the secret name, use `MAIL` and set your Honeygain email and `PASS` for your password and `IsJWT` set to `false`.
   5. Go to your forked repository 🍴 and go to the Actions tab and press `I understand my workflows, go ahead and enable th
 
 <p align="left">

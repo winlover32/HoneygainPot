@@ -74,7 +74,7 @@
   4. [Fork repo này 🍴](https://github.com/gorouflex/HoneygainPot/fork)  
   5. Đến repo mà bạn đã fork🍴
   6. Vào `Settings > Secrets and Variables > Actions`, và ấn nút `New Repository secret`
-  7. Tạo 1 secrets tên `JWT_TOKEN` rồi dán Token mà bạn đã làm ở bước 3, tạo thêm 1 secrets tên `IsJWT` rồi đặt thành `1`
+  7. Tạo 1 secrets tên `JWT_TOKEN` rồi dán Token mà bạn đã làm ở bước 3, tạo thêm 1 secrets tên `IsJWT` rồi đặt thành `true`
   8. Trở lại repo của bạn đã fork 🍴, vào Actions trên thanh công cụ repo rồi ấn `I understand my workflows, go ahead and enable them`
 
 <p align="left">
@@ -87,7 +87,7 @@
   1. [Fork repo này 🍴](https://github.com/gorouflex/HoneygainPot/fork)  
   2. Đến repo mà bạn đã fork🍴
   3. Vào `Settings > Secrets and Variables > Actions`, và ấn nút `New Repository secret`
-  4. Đặt tên secrets đầu tiên tên là `MAIL` và điền mail Honeygain của bạn vào, sau đó tạo thêm secrets thứ 2 tên là `PASS` rồi nhập pass của bạn vào, tạo thêm secrects thứ 3 tên `IsJWT` rồi đặt thành `0`
+  4. Đặt tên secrets đầu tiên tên là `MAIL` và điền mail Honeygain của bạn vào, sau đó tạo thêm secrets thứ 2 tên là `PASS` rồi nhập pass của bạn vào, tạo thêm secrects thứ 3 tên `IsJWT` rồi đặt thành `false`
   5. Trở lại repo của bạn đã fork 🍴, vào Actions trên thanh công cụ repo rồi ấn `I understand my workflows, go ahead and enable them`
 
 <p align="left">
