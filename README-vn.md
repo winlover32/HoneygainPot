@@ -1,25 +1,10 @@
-<p align="center">
-<img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/Banner.png">
-</p>
-<h1 align="center">HoneygainPot - Dự án Sandy</h1>
-<h4 align="center">🐝 Tự động nhận Honeygain lucky pot của bạn mỗi ngày🍯 </h4>
+<picture><img align="left" src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/SmallLogo.png" width="20%"/></picture>
+<h1>HoneygainPot - Dự án Sandy</h1>
+<h3>🐝 Tự động nhận Honeygain lucky pot của bạn mỗi ngày 🍯</h3>
 <h4 align="center">Dưới sự hỗ trợ của GitHub Actions 🐙 và Python 🐍</h4>
-<p align="center">
-<img alt="GitHub issues" src="https://img.shields.io/github/issues/gorouflex/HoneygainPot?style=flat">
-<img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
-<p align="center">
-<img src="https://img.shields.io/github/stars/gorouflex/HoneygainPot?style=flat">
-<img alt="GitHub watchers" src="https://img.shields.io/github/watchers/gorouflex/HoneygainPot?style=flat">
-<img src="https://img.shields.io/github/contributors/gorouflex/HoneygainPot?style=flat">
-</p>
-<p align="center">
-<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml/badge.svg"></a>
-<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml/badge.svg"></a>
-<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg"></a>
-</p>
-<p align="center">
-<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"></a> (*)
-</p>
+
+#
+
 <p align="center">
   <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
@@ -39,6 +24,24 @@
   •
   <a href="#trách-nhiệm">Trách nhiệm</a>  
 </p>
+<p align="center">
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/gorouflex/HoneygainPot?style=flat">
+<img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
+<p align="center">
+<img src="https://img.shields.io/github/stars/gorouflex/HoneygainPot?style=flat">
+<img alt="GitHub watchers" src="https://img.shields.io/github/watchers/gorouflex/HoneygainPot?style=flat">
+<img src="https://img.shields.io/github/contributors/gorouflex/HoneygainPot?style=flat">
+</p>
+<p align="center">
+<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml/badge.svg"></a>
+<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml/badge.svg"></a>
+<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg"></a>
+</p>
+<p align="center">
+<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"></a> (*)
+</p>
+
+#
 
 ### [Honeygain](https://r.honeygain.me/BADBO762DE)  là một nền tảng trực tuyến sử dụng các thiết bị mạng của bạn như một cánh cổng để giúp các nhà doanh nghiệp hay các nhà phân tích dữ liệu để thực hiện các chiến dịch SEO, nghiên cứu thị trường, bảo vệ thương hiệu....
 
