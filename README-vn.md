@@ -40,7 +40,7 @@
   <a href="#trách-nhiệm">Trách nhiệm</a>  
 </p>
 
-# Vì API của Honeygain đã có thay đổi, tool này không thể nhận lucky pot. Tìm hiểu thêm tại [đây](https://github.com/MrLoLf/HoneygainAutoClaim/issues/33)
+# Vì API của Honeygain đã có thay đổi, tool này không thể nhận lucky pot và tôi đang cố gắng fix nó. Tìm hiểu thêm tại [đây](https://github.com/MrLoLf/HoneygainAutoClaim/issues/33)
 
 ### [Honeygain](https://r.honeygain.me/BADBO762DE)  là một nền tảng trực tuyến sử dụng các thiết bị mạng của bạn như một cánh cổng để giúp các nhà doanh nghiệp hay các nhà phân tích dữ liệu để thực hiện các chiến dịch SEO, nghiên cứu thị trường, bảo vệ thương hiệu....
 
