@@ -1,26 +1,10 @@
-<p align="center">
-<img src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/Banner.png"/>            
-</p>
-<h1 align="center">HoneygainPot - Project Sandy</h1>
-<h4 align="center">🐝 Automatically claim your Honeygain lucky pot every day 🍯</h4>
-<h4 align="center">Powered by GitHub Actions 🐙 and Python 🐍</h4>
-<p align="center">
-<img alt="GitHub issues" src="https://img.shields.io/github/issues/gorouflex/HoneygainPot?style=flat">
-<img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
-</p>
-<p align="center">
-<img src="https://img.shields.io/github/stars/gorouflex/HoneygainPot?style=flat">
-<img alt="GitHub watchers" src="https://img.shields.io/github/watchers/gorouflex/HoneygainPot?style=flat">
-<img src="https://img.shields.io/github/contributors/gorouflex/HoneygainPot?style=flat">
-</p>
-<p align="center">
-<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml/badge.svg"></a>
-<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml/badge.svg"></a>
-</p>
-<p align="center">
-<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg"></a>
-<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"></a> (*)
-</p>
+<picture><img align="left" src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/SmallLogo.png" width="20%"/></picture>
+<h1>HoneygainPot - Project Sandy</h1>
+<h3>🐝 Automatically claim your Honeygain lucky pot every day 🍯</h3>
+<h4>Powered by GitHub Actions 🐙 and Python 🐍</h4>
+
+#
+
 <p align="center">
   <a href="https://github.com/gorouflex/HoneygainPot/">English 🇺🇸</a>
   •
@@ -41,6 +25,26 @@
   •
   <a href="#disclaimer">Disclaimer</a>
 </p>
+
+<p align="center">
+<img alt="GitHub issues" src="https://img.shields.io/github/issues/gorouflex/HoneygainPot?style=flat">
+<img src="https://img.shields.io/github/forks/gorouflex/HoneygainPot?style=flat">
+</p>
+<p align="center">
+<img src="https://img.shields.io/github/stars/gorouflex/HoneygainPot?style=flat">
+<img alt="GitHub watchers" src="https://img.shields.io/github/watchers/gorouflex/HoneygainPot?style=flat">
+<img src="https://img.shields.io/github/contributors/gorouflex/HoneygainPot?style=flat">
+</p>
+<p align="center">
+<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/codeql.yml/badge.svg"></a>
+<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/cl.yml/badge.svg"></a>
+</p>
+<p align="center">
+<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/daily.yml/badge.svg"></a>
+<a href="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml"><img src="https://github.com/gorouflex/HoneygainPot/actions/workflows/manual.yml/badge.svg"></a> (*)
+</p>
+
+#
 
 ### [Honeygain](https://r.honeygain.me/BADBO762DE) is a service that allows you to earn **passive income** by **sharing** your **internet** connection with businesses for web statistics, price comparison, and other verified business processes.
 
