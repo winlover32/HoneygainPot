@@ -278,7 +278,7 @@ def pot_claim(s: requests.Session, header: dict[str, str]) -> None:
     pot_claimed: dict = pot_claimed.json()
     if 'type' in pot_claimed and pot_claimed['type'] == 400:
         return
-    print(f"{colors.OKGREEN}Claimed {pot_claim['data']['winning_credits']} credits ✅{colors.ENDC}")
+    print(f"{colors.OKGREEN}Claimed {pot_claim['data']['credits']} credits ✅{colors.ENDC}")
 
 
 def get_balance(s: requests.Session, header: dict[str, str]) -> dict:
