@@ -42,7 +42,7 @@
   <a href="#disclaimer">Disclaimer</a>
 </p>
 
-# Due to new Honeygain API changes, this tool cannot claim the lucky pot. I'm still trying to fix this. For more [information](https://github.com/MrLoLf/HoneygainAutoClaim/issues/33)
+# Due to new Honeygain API changes, this tool cannot claim the lucky pot. I'm still trying to fix this. For more [information](https://github.com/MrLoLf/HoneygainAutoClaim/issues/33). After this [commit](https://github.com/gorouflex/HoneygainPot/commit/2a76fc5a0eca29334df47bc817ceee58bb959ca3) maybe can fix this error, please try to update your repo and run again, i still need more test
 ### [Honeygain](https://r.honeygain.me/BADBO762DE) is a service that allows you to earn **passive income** by **sharing** your **internet** connection with businesses for web statistics, price comparison, and other verified business processes.
 
 ### Belongs to the Sandy Project
