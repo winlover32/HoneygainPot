@@ -1,7 +1,7 @@
 <picture><img align="left" src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/SmallLogo.png" width="20%"/></picture>
 <h1>HoneygainPot - Dự án Sandy</h1>
 <h3>🐝 Tự động nhận Honeygain lucky pot của bạn mỗi ngày 🍯</h3>
-<h4 align="center">Dưới sự hỗ trợ của GitHub Actions 🐙 và Python 🐍</h4>
+<h4>Dưới sự hỗ trợ của GitHub Actions 🐙 và Python 🐍</h4>
 
 #
 
