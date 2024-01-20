@@ -277,8 +277,10 @@ def pot_claim(s: requests.Session, header: dict[str, str]) -> None:
     pot_claimed: Response = s.post(urls['pot'], headers=header)
     pot_claimed: dict = pot_claimed.json()
     if 'type' in pot_claimed and pot_claimed['type'] == 400:
+        print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 1: You are not eligible to get the lucky pot because you do not reach 15mb of sharing bandwich everyday ( following to Honeygain's TOS )\nPlease refer to: https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
+        exit(-1)
         return
-    print(f"{colors.OKGREEN}Claimed {pot_claim['data']['credits']} credits ✅{colors.ENDC}")
+    print(f"{colors.OKGREEN}Claimed {pot_claimed['data']['credits']} credits ✅{colors.ENDC}")
 
 
 def get_balance(s: requests.Session, header: dict[str, str]) -> dict:
