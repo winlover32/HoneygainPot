@@ -1,4 +1,9 @@
 # !/usr/bin/env python3
+# ------------------------------------- #
+# Made by GorouFlex                     #
+# Ported from MrLolf/HoneygainAutoClaim #
+# Version 2.4                           #
+# ------------------------------------- #
 import configparser
 import json
 import os
