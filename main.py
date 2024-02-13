@@ -257,10 +257,12 @@ def achievements_claim(s: requests.session, header: dict[str, str]) -> bool:
                    json={"user_achievement_id": achievement['id']},
                    headers=header)
             print(f"{colors.WARNING}Trying to claim {achievement['title']}{colors.ENDC}")
-        elif (not achievement['is_claimed'] and 'progresses' in achievement and
-              not achievement['progresses'] == [] and
-              achievement['progresses'][0]['current_progress'] ==
-              achievement['progresses'][0]['total_progress']):
+        elif (
+            not achievement['is_claimed']
+            and 'progresses' in achievement
+            and achievement['progresses'][0]['current_progress']
+            == achievement['progresses'][0]['total_progress']
+        ):
             s.post(urls['achievement_claim'],
                    json={"user_achievement_id": achievement['id']},
                    headers=header)
