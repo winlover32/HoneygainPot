@@ -304,7 +304,7 @@ def get_balance(s: requests.Session, header: dict[str, str]) -> dict:
     balance: dict = balance.json()
     return balance
 
-        def referrals_claim(s: requests.Session, header: dict[str, str], pages: int = 1) -> bool:
+def referrals_claim(s: requests.Session, header: dict[str, str], pages: int = 1) -> bool:
     if not settings['referrals_bool']:
         return False
     referrals: Response = s.get(urls['referrals'] + f"&page={pages}", headers=header)
