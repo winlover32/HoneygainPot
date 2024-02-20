@@ -152,7 +152,7 @@ def get_urls(cfg: ConfigParser) -> dict[str, str]:
                                      'pot': cfg.get('Url', 'pot'),
                                      'balance': cfg.get('Url', 'balance'),
                                      'achievements': cfg.get('Url', 'achievements'),
-                                     'achievement_claim': cfg.get('Url', 'achievement_claim')},
+                                     'achievement_claim': cfg.get('Url', 'achievement_claim'),
                                      'referrals': cfg.get('Url', 'referrals'),
                                      'referral_claim': cfg.get('Url', 'referral_claim')}
     except configparser.NoOptionError:
