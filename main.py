@@ -318,9 +318,9 @@ def referrals_claim(s: requests.Session, header: dict[str, str], pages: int = 1)
                 (referral['promo']['traffic_bytes'] >= referral['promo']['limit'])):
             claim = s.post(urls['referral_claim'] + f'{referral["id"]}/promo/claim', headers=header)
             if claim.status_code != 201:
-                print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}Could not claim referral for {referral["id"]}{colors.ENDC}")
+                print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}Could not claim referral for {referral['id']}{colors.ENDC}")
                 continue
-            print(f"{colors.OKGREEN}Claimed successfully referral for {referral["id"]}{colors.ENDC}")
+            print(f"{colors.OKGREEN}Claimed successfully referral for {referral['id']}{colors.ENDC}")
 
 
     if ('meta' in referrals and 'pagination' in referrals['meta'] and 'total_pages'
