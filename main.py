@@ -2,7 +2,7 @@
 # ------------------------------------- #
 # Made by GorouFlex                     #
 # Ported from MrLolf/HoneygainAutoClaim #
-# Version 2.4                           #
+# Version 2.5.1                         #
 # ------------------------------------- #
 import configparser
 import json
@@ -223,9 +223,20 @@ def token_valid(token: dict, s: requests.Session) -> bool:
         token = token["data"]["access_token"]
         header: dict[str, str] = {'Authorization': f'Bearer {token}'}
         dashboard: Response = s.get(urls['balance'], headers=header)
-        dashboard: dict = dashboard.json()
+
+        try:
+            dashboard: dict = dashboard.json()
+        except json.decoder.JSONDecodeError:
+            print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 2: Wrong login credentials,please enter the right ones\nPlease refer to: https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
+            exit(-1)
+
         if 'data' in dashboard:
             return True
+
+    print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 2: Wrong login credentials,please enter the right ones\nPlease refer to: https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
+    print(f"{colors.FAIL}Closing HoneygainPot due to false login credentials ❌{colors.ENDC}")
+    return False
+
 
     print(f"{colors.WARNING}--------- Traceback log ---------{colors.ENDC}\n{colors.FAIL}❌ Error code 2: Wrong login credentials,please enter the right ones\nPlease refer to: https://github.com/gorouflex/Sandy/blob/main/Docs/HoneygainPot/Debug.md for more information\nOr create an Issue on GitHub if it still doesn't work for you.{colors.ENDC}")
     print(f"{colors.FAIL}Closing HoneygainPot due to false login credentials ❌{colors.ENDC}")
