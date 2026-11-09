@@ -36,26 +36,75 @@ config: ConfigParser = ConfigParser()
 config.read(config_path)
 is_jwt = config.get('User', 'IsJWT', fallback='0')
 
-if os.getenv('GITHUB_ACTIONS') == 'true':
-    print(f"{colors.OKBLUE}Powered by GitHub Actions V3 and Python{colors.ENDC}")
-    print(f"{colors.OKGREEN}Run with GitHub Actions: Yes{colors.ENDC}")
-    print(f"{colors.WHITE}Current forked repo: {os.getenv('GITHUB_REPOSITORY')}{colors.ENDC}")
+def check_github_update() -> None:
+    """Check the latest main.py commits without interrupting the main program."""
     user_repo = os.getenv('GITHUB_REPOSITORY')
-    ORIGINAL_REPO = 'gorouflex/HoneygainPot'
-    user_url = f'https://api.github.com/repos/{user_repo}/commits?path=main.py'
-    original_url = f'https://api.github.com/repos/{ORIGINAL_REPO}/commits?path=main.py'
-    user_response = requests.get(user_url, timeout=10000)
-    original_response = requests.get(original_url, timeout=10000)
-    if user_response.status_code == 200 and original_response.status_code == 200:
-        user_commit = user_response.json()[0]['sha']
-        original_commit = original_response.json()[0]['sha']
+    original_repo = 'gorouflex/HoneygainPot'
+
+    if not user_repo:
+        print(f"{colors.WARNING}GitHub repository name is unavailable. Skipping update check.{colors.ENDC}")
+        return
+
+    print(f"{colors.WHITE}Current forked repo: {user_repo}{colors.ENDC}")
+
+    user_url = (
+        f'https://api.github.com/repos/{user_repo}/commits'
+        '?path=main.py&per_page=1'
+    )
+    original_url = (
+        f'https://api.github.com/repos/{original_repo}/commits'
+        '?path=main.py&per_page=1'
+    )
+    headers = {
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+    }
+
+    try:
+        user_response = requests.get(user_url, headers=headers, timeout=20)
+        original_response = requests.get(original_url, headers=headers, timeout=20)
+
+        if user_response.status_code != 200 or original_response.status_code != 200:
+            print(f"{colors.WARNING}Could not fetch commit information. Skipping update check.{colors.ENDC}")
+            print(
+                f"Fork API status: {user_response.status_code}; "
+                f"original API status: {original_response.status_code}"
+            )
+            return
+
+        user_commits = user_response.json()
+        original_commits = original_response.json()
+
+        if not isinstance(user_commits, list) or not isinstance(original_commits, list):
+            print(f"{colors.WARNING}GitHub returned an unexpected response. Skipping update check.{colors.ENDC}")
+            return
+
+        if not user_commits or not original_commits:
+            print(f"{colors.WARNING}No matching main.py commit history was returned. Skipping update check.{colors.ENDC}")
+            return
+
+        user_commit = user_commits[0].get('sha')
+        original_commit = original_commits[0].get('sha')
+
+        if not user_commit or not original_commit:
+            print(f"{colors.WARNING}Commit SHA was missing from the GitHub response. Skipping update check.{colors.ENDC}")
+            return
+
         if user_commit == original_commit:
             print(f"{colors.OKGREEN}Your repo is up-to-date with the original repo{colors.ENDC}")
         else:
             print(f"{colors.WARNING}Your repo is not up-to-date with the original repo{colors.ENDC}")
-            print(f"{colors.FAIL}Please update your repo to the latest commit{colors.ENDC}{colors.FAIL}to get new updates and bug fixes{colors.ENDC}")
-    else:
-        print(f"{colors.FAIL}❌ Error code 4: Failed to fetch commit information{colors.ENDC}")
+            print(f"{colors.FAIL}Please update your repo to the latest commit to get new updates and bug fixes{colors.ENDC}")
+
+    except (requests.RequestException, ValueError, TypeError, KeyError) as error:
+        print(f"{colors.WARNING}GitHub update check failed: {error}{colors.ENDC}")
+        print(f"{colors.WARNING}Continuing without the update check.{colors.ENDC}")
+
+
+if os.getenv('GITHUB_ACTIONS') == 'true':
+    print(f"{colors.OKBLUE}Powered by GitHub Actions V3 and Python{colors.ENDC}")
+    print(f"{colors.OKGREEN}Run with GitHub Actions: Yes{colors.ENDC}")
+    check_github_update()
 else:
     print(f"{colors.FAIL}Run with GitHub Actions: No{colors.ENDC}")
 is_jwt = config.get('User', 'IsJWT', fallback='0')
@@ -260,7 +309,7 @@ def get_token(s: requests.Session, invalid: bool = False) -> str:
         token: dict = json.load(f)
     if not token_valid(token, s) and not invalid:
         gen_token(s)
-        get_token(s, True)
+        return get_token(s, True)
     return token["data"]["access_token"]
 
 
@@ -363,10 +412,10 @@ def main() -> None:
 if __name__ == '__main__':
     main()
     if os.getenv('GITHUB_ACTIONS') == 'true':
-       try:
-         shutil.rmtree(config_folder)
-         print(f"{colors.WARNING}Cleaning up...{colors.ENDC}")
-       except:
-         print(f"{colors.FAIL}Cannot delete Config folder, check if any programs are using it or not?{colors.ENDC}")
-         exit(-1)
+        try:
+            shutil.rmtree(config_folder)
+            print(f"{colors.WARNING}Cleaning up...{colors.ENDC}")
+        except OSError as error:
+            print(f"{colors.FAIL}Cannot delete Config folder: {error}{colors.ENDC}")
+            exit(-1)
     print(f"{colors.OKGREEN}Closing HoneygainPot ✅{colors.ENDC}")
